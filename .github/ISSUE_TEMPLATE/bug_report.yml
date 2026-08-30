@@ -1,0 +1,96 @@
+name: Bug report
+description: Report a reproducible problem in Right Display 0.1 Beta
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Right Display.
+
+        Do not post passwords, tokens, Apple IDs, pairing credentials, private keys, display serial numbers, or other personal information. Review and redact diagnostic files before uploading them.
+  - type: input
+    id: mac_model
+    attributes:
+      label: Mac model
+      placeholder: Mac mini (M2 Pro)
+    validations:
+      required: true
+  - type: input
+    id: macos_version
+    attributes:
+      label: macOS version
+      placeholder: macOS 15.6
+    validations:
+      required: true
+  - type: input
+    id: display_model
+    attributes:
+      label: Display model
+      placeholder: Manufacturer and model
+    validations:
+      required: true
+  - type: dropdown
+    id: connection_type
+    attributes:
+      label: Connection type
+      options:
+        - HDMI
+        - DisplayPort
+        - USB-C / Thunderbolt
+        - Dock or adapter
+        - Built-in display
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: resolution
+    attributes:
+      label: Resolution
+      placeholder: Physical output and HiDPI logical resolution, if known
+    validations:
+      required: true
+  - type: input
+    id: refresh_rate
+    attributes:
+      label: Refresh rate
+      placeholder: 60 Hz, 120 Hz, VRR range, etc.
+    validations:
+      required: true
+  - type: dropdown
+    id: hdr_state
+    attributes:
+      label: HDR state
+      options:
+        - HDR enabled
+        - HDR disabled
+        - HDR unavailable
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem description
+      description: Describe what happened and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Right Display
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Right Display diagnostic information
+      description: Paste only reviewed and redacted information. Do not include private or identifying data.
+    validations:
+      required: false
+
