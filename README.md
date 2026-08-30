@@ -1,86 +1,87 @@
 # Right Display
 
-See what your Mac is actually sending to your display.
+Right Display 是一款用于查看并调整 Mac 实际输出的显示信号的实用工具。对于使用 Mac、LG 电视、Apple TV 和 HomePod 组合的用户，可以方便地查看和调整相关显示与音频设置。
 
-Right Display is a display signal diagnostics and safe display control utility for macOS.
+目前经过实际测试，Right Display 已可以在 **Mac mini（M4）+ LG G6（55 英寸）+ Apple TV 4K（第 3 代）+ HomePod（新款）** 的组合中识别并调整 RGB、12 Bit、165 Hz 和 HDR 等显示状态，同时调节显示器亮度以及通过 eARC 连接的 HomePod 设备音量，并实现与 Mac 键盘音量快捷键的联动。
 
-> **Current release: Right Display 0.1 Beta (Build 1)**
+此外，Redmi G27 Pro U 显示器也已经完成测试，可以正确切换至 RGB 模式显示。
+
+> **当前版本：Right Display 0.1 Beta（Build 1）**
 >
-> [Download Right Display 0.1 Beta](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1)
+> [下载 Right Display 0.1 Beta](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1)
 
-This is an early testing release. Back up important work and record your current display settings before testing display-mode changes.
+这是一个早期测试版本。测试显示模式切换前，请保存重要工作，并记录当前可用的显示设置。
 
-## Download
+## 下载
 
-Download **Right-Display-0.1-Beta.zip** from the [v0.1 release page](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1).
+请从 [v0.1 Release 页面](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1) 下载 **Right-Display-0.1-Beta.zip**。
 
-SHA-256: **da1270012eb18402b152af4d87a4e003de26c8e1c0ac9ccf90245c9b0b549792**
+SHA-256：**da1270012eb18402b152af4d87a4e003de26c8e1c0ac9ccf90245c9b0b549792**
 
-The release also provides Apple TV helper rebuild materials and the exact corresponding source for zeroconf 0.150.0.
+Release 页面同时提供 Apple TV helper 重建材料，以及 zeroconf 0.150.0 的精确对应源码。
 
-## Main features
+## 主要功能
 
-- Distinguishes physical output resolution, HiDPI logical resolution, and rendering-buffer size.
-- Reports refresh rate and the VRR modes exposed by macOS.
-- Reports HDR/SDR and available RGB or YCbCr signal information.
-- Reports available bit-depth information.
-- Estimates whether DSC is likely in use. DSC is explicitly shown as an inference, not a receiver-reported fact.
-- Reads and exports EDID and display diagnostics.
-- Changes supported resolution and refresh-rate modes with confirmation and attempted automatic recovery.
-- Controls brightness when macOS exposes a writable control for the display.
-- Controls writable Core Audio outputs and provides optional Apple TV/HomePod-compatible audio functionality.
+- 区分物理输出分辨率、HiDPI 逻辑分辨率和渲染缓冲尺寸。
+- 显示当前刷新率，以及 macOS 提供的 VRR 模式。
+- 显示 HDR/SDR 和系统可读取的 RGB、YCbCr 信号信息。
+- 显示系统可读取的色深信息。
+- 根据显示模式和链路带宽推断是否可能使用 DSC；DSC 会明确标注为推断，并非显示器接收端直接报告。
+- 读取、解析并导出 EDID 和显示诊断信息。
+- 切换系统支持的分辨率与刷新率模式，并提供确认期限和自动恢复尝试。
+- 在 macOS 提供可写接口时控制显示器亮度。
+- 控制可写的 Core Audio 输出，并提供可选的 Apple TV/HomePod 兼容音频功能。
 
-## Screenshots
+## 截图
 
-Screenshots will be added as testing expands. The 0.1 Beta can be downloaded now from the release page.
+随着测试继续进行，后续会补充界面截图。目前可以直接从 Release 页面下载 0.1 Beta。
 
-## Compatibility and requirements
+## 兼容性与系统要求
 
-- macOS 14 or later.
-- Apple silicon Mac build.
-- Some diagnostics and controls are available only for external displays.
-- Feature availability depends on the Mac, macOS version, display, dock or adapter, cable, and connection type.
-- Accessibility permission is required for relevant display-control features.
-- Local Network permission is required for Apple TV/HomePod discovery and control.
+- macOS 14 或更高版本。
+- 当前安装包面向 Apple 芯片 Mac。
+- 部分诊断和控制功能仅适用于外接显示器。
+- 功能可用性取决于 Mac、macOS 版本、显示器、扩展坞或转接器、线材和连接方式。
+- 部分显示控制功能需要辅助功能权限。
+- Apple TV/HomePod 发现与控制需要本地网络权限。
 
-Not every display supports every control. Right Display reports unavailable or inferred information where macOS does not provide a verified value.
+并非所有显示器都支持全部控制功能。当 macOS 无法提供可验证的数据时，Right Display 会显示不可用或推断结果。
 
-## Known limitations
+## 已知限制
 
-- macOS and the display driver negotiate many RGB/YCbCr and bit-depth combinations. Right Display cannot guarantee that every requested combination will be accepted or remain active.
-- DSC status is inferred from mode and bandwidth information; it is not read directly from the display receiver.
-- HDR control depends partly on macOS interfaces that may change between system releases.
-- VRR, brightness, HDR, color-format, bit-depth, and audio behavior vary by hardware and connection path.
-- Apple TV/HomePod discovery has been tested. Existing Apple TV pairing recovery, status, volume reading, and volume changes have been tested. First-time pairing and every HomePod configuration have not yet been fully verified.
-- This Beta is ad-hoc signed, is not signed with an Apple Developer ID, and is not notarized.
+- 许多 RGB/YCbCr 和色深组合由 macOS、驱动与显示器协商。Right Display 无法保证每个请求组合都能被采用或持续生效。
+- DSC 状态来自显示模式和链路带宽推断，并非直接从显示器接收端读取。
+- HDR 控制部分依赖可能随 macOS 版本变化的系统接口。
+- VRR、亮度、HDR、颜色格式、色深和音频行为会因硬件与连接链路而异。
+- Apple TV/HomePod 设备发现已经测试；现有 Apple TV 配对恢复、状态读取、音量读取和音量修改已经测试。首次配对以及所有 HomePod 组合尚未完整验证。
+- 当前 Beta 使用 ad-hoc 签名，没有 Apple Developer ID 签名，也未经过 Apple notarization。
 
-## Installation
+## 安装
 
-1. Download and extract **Right-Display-0.1-Beta.zip**.
-2. Move **Right Display.app** to the Applications folder.
-3. Open the app.
-4. If macOS blocks the first launch, open **System Settings → Privacy & Security** and choose **Open Anyway** for Right Display.
-5. Grant Accessibility or Local Network access only if you want to use the related features.
+1. 下载并解压 **Right-Display-0.1-Beta.zip**。
+2. 将 **Right Display.app** 移动到“应用程序”文件夹。
+3. 打开应用。
+4. 如果 macOS 阻止首次启动，请打开 **系统设置 → 隐私与安全性**，找到 Right Display 并选择 **仍要打开（Open Anyway）**。
+5. 仅在需要相关功能时授予辅助功能或本地网络权限。
 
-Do not disable SIP. Do not disable Gatekeeper, and do not use **spctl --master-disable**.
+不需要关闭 SIP。不要关闭 Gatekeeper，也不要使用 **spctl --master-disable**。
 
-## Feedback and issues
+## 反馈与 Issues
 
-Use [GitHub Issues](https://github.com/RedoRosetta/RightDisplay/issues) and select the bug report template.
+请使用 [GitHub Issues](https://github.com/RedoRosetta/RightDisplay/issues)，并选择 Bug Report 模板。
 
-Please include your Mac model, macOS version, display model, connection type, resolution, refresh rate, HDR state, a clear problem description, and reproduction steps. Right Display diagnostic information can help when available.
+请尽量提供 Mac 型号、macOS 版本、显示器型号、连接方式、分辨率、刷新率、HDR 状态、问题描述和重现步骤。如果条件允许，也可以提供经过检查的 Right Display 诊断信息。
 
-Diagnostic reports and EDID data can contain device names, serial numbers, display identifiers, network details, or other personal information. Review and redact files before uploading them publicly. Never post passwords, tokens, Apple IDs, pairing credentials, or other secrets.
+诊断报告和 EDID 可能包含设备名称、序列号、显示器标识符、网络信息或其他个人信息。公开上传前请先检查并删除不希望公开的内容。不要发布密码、Token、Apple ID、配对凭据或其他敏感信息。
 
-## Third-party licenses
+## 第三方许可证
 
-The downloadable app includes required third-party license and notice files. The Apple TV/HomePod helper rebuild bundle and corresponding source materials are available on the [v0.1 release page](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1).
+用户安装包内包含所需的第三方许可证和 NOTICE。Apple TV/HomePod helper 重建包及对应源码材料可从 [v0.1 Release 页面](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1) 获取。
 
-See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for the public distribution summary.
+公开分发摘要见 [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)。
 
-## Source availability
+## 源码公开范围
 
-Right Display's proprietary Swift display-control source and private Xcode project are not published in this repository.
+Right Display 自有的 Swift 显示控制核心源码和私有 Xcode 工程未在本仓库公开。
 
-Source and rebuild materials required for the separately packaged Apple TV/HomePod helper's third-party license compliance are provided as a release asset.
-
+为满足独立 Apple TV/HomePod helper 第三方许可证要求所需的源码和重建材料，已作为 Release Asset 提供。
