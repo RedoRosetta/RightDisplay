@@ -11,7 +11,7 @@ Right Display 是一款用于查看并调整 Mac 实际输出的显示信号的�
 
 ## 下载
 
-请从 [v0.1 Release 页面](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1) 下载 **Right-Display-0.1-Beta.zip**。
+请从 [Right Display 0.1 Beta Release 页面](https://github.com/RedoRosetta/RightDisplay/releases/tag/RightDisplay0.1Beta)]下载 **Right-Display-0.1-Beta.zip**。
 
 SHA-256：**da1270012eb18402b152af4d87a4e003de26c8e1c0ac9ccf90245c9b0b549792**
 
