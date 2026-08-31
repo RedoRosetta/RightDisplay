@@ -36,7 +36,7 @@ Release 页面同时提供 Apple TV helper 重建材料，以及 zeroconf 0.150.
 - 在 macOS 提供可写接口时控制显示器亮度。
 - 控制可写的 Core Audio 输出，并提供可选的 Apple TV/HomePod 兼容音频功能。
 
-## 截图
+## 软件截图
 
 <p align="center">
   <img src="docs/screenshots/quick-panel.png" width="420" alt="Right Display 状态栏快捷面板">
