@@ -1,5 +1,9 @@
 # Right Display
 
+<p align="center">
+  <img src="docs/assets/right-display-app-icon.png" width="160" alt="Right Display 应用图标">
+</p>
+
 Right Display 是一款用于查看并调整 Mac 实际输出的显示信号的实用工具。对于使用 Mac、LG 电视、Apple TV 和 HomePod 组合的用户，可以方便地查看和调整相关显示与音频设置。
 
 目前经过实际测试，Right Display 已可以在 **Mac mini（M4）+ LG G6（55 英寸）+ Apple TV 4K（Gen3）+ HomePod（Gen2）** 的组合中识别并调整 RGB、12 Bit、165 Hz 和 HDR 等显示状态，同时调节显示器亮度以及通过 eARC 连接的 HomePod 设备音量，并实现与 Mac 键盘音量快捷键的联动。
@@ -34,7 +38,15 @@ Release 页面同时提供 Apple TV helper 重建材料，以及 zeroconf 0.150.
 
 ## 截图
 
-随着测试继续进行，后续会补充界面截图。目前可以直接从 Release 页面下载 0.1 Beta。
+<p align="center">
+  <img src="docs/screenshots/quick-panel.png" width="420" alt="Right Display 状态栏快捷面板">
+</p>
+
+![Right Display 高级设置概览](docs/screenshots/advanced-overview.png)
+
+![Right Display 连接与信号页面](docs/screenshots/connection-signal.png)
+
+![Right Display EDID 页面](docs/screenshots/edid-details.png)
 
 ## 兼容性与系统要求
 
