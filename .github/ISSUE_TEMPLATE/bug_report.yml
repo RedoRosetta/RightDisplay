@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible problem in Right Display 0.1 Beta
+description: Report a reproducible problem in RightDisplay
 title: "[Bug] "
 labels:
   - bug
@@ -93,4 +93,3 @@ body:
       description: Paste only reviewed and redacted information. Do not include private or identifying data.
     validations:
       required: false
-

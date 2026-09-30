@@ -1,15 +1,21 @@
-# Third-Party License Information
+# Third-party information / 第三方说明
 
-Right Display 0.1 Beta includes third-party components in its separately packaged Apple TV/HomePod helper.
+RightDisplay's proprietary source is not licensed as open source here. Third-party components retain their own terms.
 
-- zeroconf 0.150.0: LGPL-2.1-or-later. Exact corresponding source and SHA-256 are published with the v0.1 Release.
-- certifi 2026.7.22: MPL-2.0. Exact corresponding Covered Source is included in the Apple TV helper rebuild materials.
-- Other runtime dependencies use permissive MIT, BSD, Apache, PSF, or equivalent terms.
-- PyInstaller is distributed under GPL-2.0-or-later with its exception permitting use of the bootloader in non-free programs.
+自有源码不因本仓库获得开源许可，第三方遵循各自条款。
 
-Complete license texts, notices, package versions, SBOM information, helper source, build configuration, and replacement instructions are contained in the three v0.1 Release assets.
+The published [0.1](https://github.com/RedoRosetta/RightDisplay/releases/tag/RightDisplay0.1Beta) and [0.2](https://github.com/RedoRosetta/RightDisplay/releases/tag/RightDisplay0.2Beta) pages provide matching notices, helper rebuild materials and corresponding-source assets. These document LGPL zeroconf, MPL certifi and other dependencies independently of the application source.
 
-Download them from the [Right Display 0.1 Beta release](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.1).
+0.1／0.2 发行页提供各自匹配的 notices、辅助组件重建材料和对应源码，涉及 LGPL zeroconf、MPL certifi 等，与自有源码独立。
 
-Right Display's proprietary Swift display-control source is independent of these components and is not published.
+For 0.3 Beta, matching notices, licenses, exact corresponding sources and replacement instructions are supplied inside `Right Display.app/Contents/Resources/ThirdParty`:
 
+- `THIRD_PARTY_NOTICES.md`: audited runtime versions, including pyatv 0.16.1, CPython 3.12.14 and PyInstaller 6.22.2.
+- `LICENSES/`: original license texts, including Python and the Apache-licensed cryptography runtime hook.
+- `SOURCES/`: exact zeroconf 0.150.0 (LGPL-2.1-or-later) and certifi 2026.7.22 (MPL-2.0) corresponding source archives.
+- `REPLACEMENT.md`: replacing the complete external pure-Python zeroconf package and locally re-signing the App. This is an externally replaceable library mechanism, not an offer to publish private helper source.
+- `SBOMS/`: upstream cryptography component information; permissive options are selected for dual-licensed dependencies.
+
+Native DNS-SD uses Apple's system library; no separate DNS-SD implementation is bundled. HomePodAudioHelper is a proprietary subprocess containing the audited runtime and dependencies. No mandatory GPL-only runtime dependency was identified. This is an engineering assessment, not legal advice.
+
+0.3 Beta 的匹配许可证、notices、zeroconf／certifi 精确对应源码及替换说明随 App 提供。zeroconf 是完整外置纯 Python 包，已验证可替换并加载；允许为个人使用修改该库及为调试修改进行逆向工程，不要求公开独立自有源码。原生 DNS-SD 使用 macOS 系统库，不额外捆绑实现。旧发行附件仅对应各自版本。
