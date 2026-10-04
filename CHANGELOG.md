@@ -1,22 +1,17 @@
-# Public version history / 公开版本历史
+# 版本历史 / Version history
 
 ## 0.4 Beta RC
 
-- Virtual Audio software volume for HDMI/DP outputs; saved target, conditional auto-start and explicit recovery after an abnormal stop.
-  新增 HDMI／DP 虚拟音频软件音量、保存目标、条件满足时自动启动与异常停止后的显式恢复。
-- A dedicated ICC page for current association, external-file inspection, profile selection, gamut and stored calibration curves.
-  新增 ICC 独立页面，检查当前关联及外部文件、选择描述文件、查看色域与文件内校准曲线。
-- Refined Overview, Display, Audio, ICC, EDID and General pages, with shared controls and evidence labels.
-  整理六个页面的卡片、控件和状态提示，保留系统报告、推断和能力来源。
-- Refined EDID, link-test evidence, local diagnostics and interaction updates. No universal performance or physical-output verification claim.
-  完善 EDID、链路测试证据、本地诊断及交互更新；不宣称通用性能或物理输出验证。
-- Repackaged from the existing 0.4 Beta code without audio logic changes. All supplied code is ad-hoc signed and not notarized. Virtual Audio requires macOS 27.0 or later.
-  基于现有 0.4 Beta 重新签名打包，未更改音频逻辑。所供代码均为 ad-hoc 签名、未公证；虚拟音频要求 macOS 27.0 或更新版本。
+- 重新整理六页界面与菜单栏快捷控制；新增独立 ICC 检查与描述文件应用。
+  Reorganized six-page interface and menu-bar controls; added dedicated ICC inspection and profile application.
+- 固定刷新率、VRR 与完整颜色组合分开说明，设置后重新读取系统状态。
+  Clearer fixed-rate, VRR and complete color combinations, with system readback after changes.
+- 加入可选 Virtual Audio 软件音量，但当前公开包存在签名兼容问题，可能无法启动转发；要求 macOS 27+，实际播放与跨机器安装仍未验证完成。
+  Added optional Virtual Audio software volume, but signature compatibility may prevent forwarding in this public package. It requires macOS 27+; actual playback and cross-machine installation have not yet been fully verified.
 
-- Known issue: ad-hoc signing may prevent Virtual Audio forwarding from starting. This version retains some Apple-signature requirements between the App, broker and driver; those checks are incompatible with ad-hoc components. Real forwarding has not been accepted for this RC.
-  已知问题：本 RC 使用 ad-hoc 签名，虚拟音频可能因签名校验导致转发无法启用。所用版本仍保留部分 App／broker／driver 之间的 Apple 签名要求，这些校验与 ad-hoc 组件不兼容；虚拟音频尚未通过本 RC 的实际转发验收。
+**这是公开测试候选，不是最终 0.4 Beta。 / This is a public test candidate, not the final 0.4 Beta.**
 
-[Download / 下载](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc) · [RC notes / RC 说明](releases/0.4-beta-rc.md)
+[完整说明 / Full notes](releases/0.4-beta-rc.md) · [下载 / Download](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc)
 
 ## 0.3 Beta — Build 60
 

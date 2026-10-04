@@ -1,100 +1,128 @@
-# RightDisplay
+<p align="center"><img src="right-display-app-icon.png" width="88" alt="Right Display app icon"></p>
 
-See the current state, understand the evidence, adjust safely, and recover when possible.
+<h1 align="center">Right Display</h1>
 
-[Download 0.4 Beta RC](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc) · [中文首页](README.md) · [0.4 Beta RC notes](releases/0.4-beta-rc.md) · [Version history](CHANGELOG.md)
+<p align="center"><strong>Display status and everyday controls for your Mac’s external displays.</strong><br>See resolution, refresh rate, HDR and color output, with common controls in the menu bar.</p>
 
-<p align="center"><img src="docs/assets/right-display-app-icon.png" width="240" alt="RightDisplay app icon"></p>
+<p align="center"><a href="https://github.com/RedoRosetta/RightDisplay/releases/download/v0.4-beta-rc/RightDisplay-0.4-Beta-RC-arm64.zip"><strong>Download 0.4 Beta RC</strong></a> · <a href="INSTALLATION.md#english">Install</a> · <a href="releases/0.4-beta-rc.md#english">Release notes</a> · <a href="https://github.com/RedoRosetta/RightDisplay/issues/new/choose">Feedback</a> · <a href="README.md">简体中文</a></p>
 
-**0.4 Beta RC · Apple silicon arm64 · ad-hoc signed.**
+<p align="center">macOS 14+ · Apple silicon Macs (no Intel build) · Public release candidate</p>
 
-RightDisplay is a menu-bar utility for external displays. Version 0.4 organizes the full window into Overview, Display, Audio, ICC, EDID and General, adds ICC inspection and Virtual Audio software volume, and refines the cards, controls and status hints shared with Quick Control.
+> **Before downloading:** This RC is not Apple notarized and may need confirmation at first launch. **Virtual Audio software volume has a known distribution issue, may not start, and requires macOS 27+. If HDMI / DP software volume is your main need, we recommend waiting for a fix.** [Known issues and installation](INSTALLATION.md#english)
 
-<p align="center"><img src="assets/screenshots/0.4-beta/overview.png" width="960" alt="Overview: connection, pixel format, depth, HDR, refresh rate and DSC with evidence labels"></p>
+<p align="center"><img src="assets/screenshots/0.4-beta/overview.png" width="960" alt="Overview: resolution, refresh rate, HDR, color format and information sources in one page"></p>
 
-Screenshots are user-supplied 0.4 interface captures, not verified captures of this 0.4 Beta RC. The LG TV, 120 Hz and 12-bit values show that capture's setup; they are not receiver-side measurements or promises for every connection.
+*0.4 interface preview. The device, 120 Hz and 12-bit values reflect the setup at capture time, not support for every connection or verified behavior of this RC. The interface supports Simplified Chinese and English; most preview images show Chinese.*
 
-## Understand your display
+## Understand the state before changing it
 
-Overview brings output timing, HiDPI resolution, refresh rate, connection, pixel format, depth, HDR and DSC into one page, with evidence sources on the cards. System reports, advertised capabilities and inference stay distinct. SLS-reported current color state supports control readback; it is not physical truth at the receiver. Independent receiver-side physical state is generally unavailable. DSC and some transport information remain inferred. Missing evidence stays unknown.
+When you wonder why 120 Hz is missing, whether HDR is active, or why an advertised mode is not in use, Right Display brings the relevant information together:
 
-## Display & Output
+- **See the state:** resolution, HiDPI, refresh rate, HDR, RGB / YCbCr, color depth and output range.
+- **Make adjustments:** choose modes available on the current connection and access common display, brightness and volume controls from the menu bar.
+- **Investigate:** inspect EDID capabilities and ICC color profiles, and export diagnostics locally when needed.
 
-Choose supported resolution, HiDPI, refresh rate, color format, depth and HDR. Display resolution selects a mode; HiDPI sets interface scaling.
+**Display capabilities, current macOS reports and inferred information are identified separately.** An EDID claim of HDR support does not mean HDR is active; DSC remains labeled as inferred. A system report is not a physical measurement at the display receiver.
 
-<p align="center"><img src="assets/screenshots/0.4-beta/display-output.png" width="960" alt="Display: brightness, resolution, HiDPI, refresh rate and color output"></p>
+## Everyday controls in the menu bar
 
-Fixed refresh rates and VRR are separate, retaining differences such as 120/119.88 Hz and 60/59.94 Hz. Modes and VRR ranges come from the current connection; advertised VRR support does not mean it is enabled.
+Click the Right Display menu-bar icon to open Quick Control. Choose which brightness, volume, color format, depth, HDR and VRR controls appear in General; availability depends on the device and connection.
 
-RGB, YCbCr 4:4:4/4:2:2/4:2:0 and 8/10/12-bit availability depends on the Mac, display, cable and connection. Controls preserve the complete format/depth/range/HDR combination and check system readback after supported changes.
+<p align="center"><img src="assets/screenshots/0.4-beta/quick-control.png" width="380" alt="Menu-bar panel: brightness, volume, color format, depth, HDR and VRR"></p>
 
-Configuration Protection locks manual display controls in the full window and Quick Control while keeping brightness and volume available. Mode changes requiring confirmation offer a countdown and attempt recovery if unconfirmed. Display Link Test requires explicit confirmation and checks color/depth/HDR/SDR combinations. Switching/testing can blank the screen. Recovery is attempted, not guaranteed; a successful test covers that connection and observation period, not universal physical-link certification.
+Quick Control shares state with the full window. Brightness requires a control exposed by macOS; volume requires support from the selected device or audio path. A slider in the preview does not mean every HDMI device has directly adjustable volume.
 
-## Virtual Audio software volume
+## Adjust display output
 
-Some HDMI/DisplayPort outputs have no writable volume control in macOS. Virtual Audio forwards audio to a selected real device and adjusts volume in software.
+Use Display to select resolution, HiDPI, fixed refresh rates or VRR, and the color-output combinations provided by the system.
 
-<p align="center"><img src="assets/screenshots/0.4-beta/virtual-audio.png" width="960" alt="Audio: Virtual Audio software volume, real HDMI target and forwarding status"></p>
+<p align="center"><img src="assets/screenshots/0.4-beta/display-output.png" width="960" alt="Display: brightness, resolution, HiDPI, refresh rate and color-output combinations"></p>
 
-This is **software volume for HDMI/DP**, not TV hardware volume. Install the optional component, choose a real target and send the desired audio to the virtual output. Selecting its volume control in RightDisplay does not automatically change macOS's default output.
+Right Display uses modes macOS provides for the current connection, preserves timing differences such as `120 Hz / 119.88 Hz`, and handles color format, depth, range and HDR as a complete combination. It reads the system state again after changes.
 
-Saved targets, conditional auto-start and explicit recovery after abnormal stops are supported. A manual stop is retained. Runtime details show status/reasons; green forwarding status does not prove audible or uninterrupted playback.
+Once configured, Configuration Protection helps prevent accidental display changes while leaving brightness and volume available. Changes requiring confirmation offer a countdown and attempt to restore the previous configuration if unconfirmed. **Switching may temporarily blank the screen; recovery is not guaranteed.** Display Link Test is an optional troubleshooting tool, not a first-use requirement.
 
-Virtual Audio needs a newer macOS; the current component requires macOS 27.0 or later.
+## ICC and EDID: color and device capabilities
 
-Known issue: ad-hoc signing may prevent Virtual Audio forwarding from starting. This version retains some Apple-signature requirements between the App, broker and driver; those checks are incompatible with ad-hoc components. Real forwarding has not been accepted for this RC.
+**ICC color profiles:** inspect the current profile or an external ICC file, apply an available profile after confirmation, and view white point, primaries, tone curves, gamut relationships and VCGT calibration data.
 
-This RC supplies ad-hoc-signed App/helper/Virtual Audio code, unsigned package containers and no Apple notarization. Cross-machine install and real forwarding still need acceptance. See [installation](INSTALLATION.md).
+<p align="center"><img src="assets/screenshots/0.4-beta/color-profiles.png" width="720" alt="ICC: profile information, color characteristics, gamut and calibration curves"></p>
 
-## ICC / Color Profiles
+ICC plots describe the file’s model, not a measured screen gamut or proof of the calibration currently loaded by the GPU. Opening a file for inspection does not automatically apply it.
 
-Inspect the profile currently associated by macOS, open external ICC files, view metadata, white point, primaries, RGB matrix and tone curves, and inspect or apply available profiles with confirmation/system-association readback.
+<details>
+<summary>View the EDID page</summary>
 
-<p align="center"><img src="assets/screenshots/0.4-beta/color-profiles.png" width="800" alt="ICC dark interface: metadata, color characteristics, CIE 1931 xy gamut and VCGT calibration curves"></p>
+<p align="center"><img src="assets/screenshots/0.4-beta/edid.png" width="720" alt="EDID: device-advertised capabilities, macOS interpretation and basic information"></p>
 
-Gamut plots describe the profile model and reference gamut, not display measurements. VCGT curves describe stored calibration data, not a proven currently loaded GPU LUT. Opening a profile for inspection does not install or apply it.
+EDID organizes advertised resolution, HDR, refresh-rate and VRR capabilities, with raw-data export. **Advertised capabilities are not current output state.** Exports may include serial numbers; review before sharing.
 
-## EDID & capabilities
+</details>
 
-The EDID page separates receiver-advertised capabilities, macOS-parsed capabilities and basic fields, with inspection and export. HDR, PQ/HLG, BT.2020 and refresh/VRR ranges retain their sources.
+## Audio: Apple TV and optional Virtual Audio
 
-<p align="center"><img src="assets/screenshots/0.4-beta/edid.png" width="800" alt="EDID dark interface: receiver-advertised capabilities, macOS interpretation and basic fields"></p>
+Audio supports outputs whose volume macOS allows you to adjust, plus compatible Apple TV output volume and supported keyboard controls. Apple TV may require local-network access and pairing. HomePod can follow that path when used as Apple TV’s current or default audio output; this is not direct control of every HomePod or AirPlay speaker.
 
-**EDID advertises capabilities; it is not current output.** Raw EDID can contain serial numbers. Review exports before sharing.
+**Virtual Audio is a separate, optional path:** forward system audio to a selected HDMI / DisplayPort output and adjust software volume, without changing the TV or monitor’s hardware volume.
 
-## Quick Control
+> **Do not rely on Virtual Audio in this RC.** Component signature checks conflict with this ad-hoc distribution and may prevent forwarding. Cross-machine installation and actual playback of this public package have not yet been fully verified. This issue concerns the virtual-audio path; display, ICC, EDID and Apple TV features do not require installing it. The component requires macOS 27+. See the [installation guide](INSTALLATION.md#english).
 
-Use frequent color-output, HDR, VRR, brightness and volume controls from the menu bar. Quick Control and the full window share state and the selected volume-control device; configure visible controls in General.
+<details>
+<summary>View the Virtual Audio preview and audio path</summary>
 
-<p align="center"><img src="assets/screenshots/0.4-beta/quick-control.png" width="380" alt="Quick Control: brightness, volume, color format, depth, HDR and VRR"></p>
+**System audio → Right Display Virtual Audio → software volume → selected HDMI / DP output**
 
-## Brightness, Apple TV & HomePod
+<p align="center"><img src="assets/screenshots/0.4-beta/virtual-audio.png" width="960" alt="Virtual Audio interface preview; forwarding status does not establish availability in the public RC"></p>
 
-Display includes brightness control where macOS supports it. Audio includes writable system-output volume, Virtual Audio and compatible Apple TV output volume, with keyboard volume keys on supported paths. Apple TV requires compatible hardware, network access and pairing where needed. HomePod volume follows Apple TV's selected/default audio output; direct control of every HomePod/AirPlay speaker is not promised.
+*This is a 0.4 interface preview. Its active-forwarding indicator does not establish that this RC works.*
 
-## Diagnostics & General
+The feature is designed to save a real output target, start when conditions allow, preserve manual stops and offer explicit recovery after abnormal stops. Selecting its volume control does not change macOS’s default output; an unavailable target does not automatically fall back to Mac speakers. A ready status still needs confirmation through actual playback.
 
-Save reports locally on request with display state, modes, EDID, evidence, audio state and recent operations. Reports are not automatically uploaded. Review names, identifiers, paths, errors and raw EDID before sharing. See [privacy](PRIVACY.md).
+</details>
 
-General includes Follow System/Simplified Chinese/English, login behavior, Quick Control management, Safe Mode and optional display correction. Safe Mode suppresses automatic display correction at launch, connection and wake; it is not a lock on all manual operations.
+## Download, install and get started
 
-<p align="center"><img src="assets/screenshots/0.4-beta/general.png" width="960" alt="General English dark interface: language, Quick Control, login, Safe Mode and automatic correction"></p>
+1. Download [RightDisplay-0.4-Beta-RC-arm64.zip](https://github.com/RedoRosetta/RightDisplay/releases/download/v0.4-beta-rc/RightDisplay-0.4-Beta-RC-arm64.zip). This is the app package; GitHub’s automatically generated **Source code** archives are not installable apps.
+2. Extract it, drag `Right Display.app` to Applications, and open it there. Before upgrading, quit the old copy normally and keep a backup.
+3. This RC is ad-hoc signed and not Apple notarized. If macOS cannot verify the developer or check the app, confirm that it came from this repository, then follow **System Settings → Privacy & Security → Open Anyway** where offered.
+4. Click the menu-bar icon and inspect your current display before making changes. **Neither Virtual Audio installation nor Display Link Test is required.**
 
-## RC & installation
+There is no need to disable Gatekeeper or SIP. [Full installation, permissions, troubleshooting and removal guide](INSTALLATION.md#english) · [Release page and checksum](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc)
 
-This is a public test candidate. Download it from the [GitHub Release](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc). Assets are `RightDisplay-0.4-Beta-RC-arm64.zip` and `SHA256SUMS.txt`.
+## General settings and diagnostics
 
-Verify the matching digest, quit the old copy, extract and clean-copy `Right Display.app` to Applications. Try opening normally. If blocked, use **System Settings → Privacy & Security → Open Anyway**, or Finder **Open** where offered. Do not disable Gatekeeper or SIP. See [installation](INSTALLATION.md) for optional component update/removal and rollback.
+The full window has Overview, Display, Audio, ICC, EDID and General pages. General controls language, login behavior, Quick Control items and automatic-correction options.
 
-Base requirements are macOS 14+ and Apple silicon arm64. Virtual Audio separately requires macOS 27.0 or later; feature availability depends on the system and hardware. Hardware/network controls, Release runtime, login/wake recovery, other-Mac installation and long playback remain acceptance items. Build/signature checks do not replace them.
+<details>
+<summary>View General settings in English</summary>
 
-Read the [RC notes](releases/0.4-beta-rc.md) and [history](CHANGELOG.md). Use [Issues](https://github.com/RedoRosetta/RightDisplay/issues) for reproducible feedback after reviewing attachments. This repository contains distribution materials, not proprietary source; see [NOTICE](NOTICE.md) and [third-party information](THIRD_PARTY_LICENSES.md).
+<p align="center"><img src="assets/screenshots/0.4-beta/general.png" width="960" alt="General: language, Quick Control, login behavior, Safe Mode and automatic correction"></p>
+
+Safe Mode suppresses automatic display correction at launch, connection changes and wake. Configuration Protection restricts manual display adjustments.
+
+</details>
+
+Diagnostic reports are saved locally only when you request them and are not automatically uploaded. Review device names, serial numbers, network information and paths before sharing. [Privacy](PRIVACY.md)
+
+## Beta and feedback
+
+0.4 Beta RC is a public test candidate, **not the final 0.4 Beta**. This phase focuses on real-world feedback, clear blockers and the Virtual Audio distribution issue.
+
+[Report a problem or ask a question](https://github.com/RedoRosetta/RightDisplay/issues/new/choose) with the app version, Mac and macOS version, what happened and what you expected. Intermittent issues are welcome; you do not need to know every display parameter. A GitHub account is required to submit, and attachments should be reviewed for private information.
+
+[0.4 release notes](releases/0.4-beta-rc.md#english) · [Version history](CHANGELOG.md) · [Security](SECURITY.md)
+
+<a id="support"></a>
 
 ## Support development
 
-If RightDisplay helps you, you're welcome to support its development. Thank you for using it and sharing feedback.
+If Right Display helps you, you are welcome to support its development voluntarily. Using it, testing it and sharing feedback are equally welcome.
 
-<table align="center"><tr>
-<td align="center"><img src="assets/sponsor/alipay.png" width="260" alt="Support RightDisplay with Alipay"></td>
-<td align="center"><img src="assets/sponsor/wechat-pay.png" width="260" alt="Support RightDisplay with WeChat Pay"></td>
-</tr></table>
+<table align="center">
+<tr><th>Alipay</th><th>WeChat Pay</th></tr>
+<tr><td align="center"><img src="assets/sponsor/alipay.png" width="220" alt="Support Right Display with Alipay"></td><td align="center"><img src="assets/sponsor/wechat-pay.png" width="220" alt="Support Right Display with WeChat Pay"></td></tr>
+</table>
+
+If these payment methods are unavailable to you, feedback is another way to help.
+
+This repository provides downloads, documentation and public distribution materials; the app’s proprietary source is not published here. [NOTICE](NOTICE.md) · [Third-party licenses](THIRD_PARTY_LICENSES.md)

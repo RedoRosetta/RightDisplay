@@ -1,0 +1,25 @@
+name: 使用问题 / Usage question
+description: 不确定如何操作，或想确认某个状态的含义 / Ask how to use the App or understand a status
+title: "[Question] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        可以使用中文或 English。请先查看安装指南与当前 RC 已知问题。
+        Chinese and English are welcome. Please check the installation guide and current RC limitations first.
+        不要公开账号、配对凭据、序列号或未经检查的诊断文件。
+        Do not post account details, pairing credentials, serial numbers or unreviewed diagnostics.
+  - type: textarea
+    id: question
+    attributes:
+      label: 你想了解什么？ / What would you like to know?
+      description: 说明你想完成的操作，以及哪里不清楚。 / Describe what you want to do and what is unclear.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 应用与 macOS 版本（如已安装）/ App and macOS version (if installed)
+      placeholder: 0.4 Beta RC / macOS 27.0
+    validations:
+      required: false

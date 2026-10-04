@@ -1,5 +1,5 @@
-name: Bug report
-description: Report a reproducible problem in RightDisplay
+name: 问题反馈 / Bug report
+description: 安装、显示、音频或 ICC 问题，偶发问题也欢迎 / Installation, display, audio or ICC issues, including intermittent ones
 title: "[Bug] "
 labels:
   - bug
@@ -7,89 +7,80 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for testing Right Display.
+        感谢反馈！可以使用中文或 English，不清楚的设备信息可填“不知道 / Unknown”。
+        Thanks for testing. Use Chinese or English; enter Unknown for details you cannot find.
 
-        Do not post passwords, tokens, Apple IDs, pairing credentials, private keys, display serial numbers, or other personal information. Review and redact diagnostic files before uploading them.
+        **0.4 Beta RC 已知问题 / Known issue:** Virtual Audio 可能因签名兼容问题无法转发，且要求 macOS 27+。若遇到新的报错、崩溃或不同表现，欢迎记录。
+        Virtual Audio may fail to forward because of signature compatibility and requires macOS 27+. New errors, crashes or different behavior are useful to report.
+
+        不要公开密码、Token、Apple ID、配对凭据或序列号；上传前检查诊断和截图。
+        Do not post passwords, tokens, Apple IDs, pairing credentials or serial numbers. Review diagnostics and screenshots before uploading.
+  - type: input
+    id: app_version
+    attributes:
+      label: 应用版本 / App version
+      description: 写明 Release 名称或下载文件名；若无法启动也可填写。 / Include the Release name or ZIP filename, even if the App cannot open.
+      placeholder: 0.4 Beta RC — RightDisplay-0.4-Beta-RC-arm64.zip
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类型 / Area
+      options:
+        - 安装或首次启动 / Installation or launch
+        - 显示或快捷控制 / Display or Quick Control
+        - ICC 色彩描述文件 / ICC profiles
+        - EDID 或诊断 / EDID or diagnostics
+        - Virtual Audio
+        - Apple TV 或其他音频 / Apple TV or other audio
+        - 其他或不确定 / Other or unsure
+    validations:
+      required: true
   - type: input
     id: mac_model
     attributes:
-      label: Mac model
-      placeholder: Mac mini (M2 Pro)
+      label: Mac 型号 / Mac model
+      placeholder: Mac mini (M4)
     validations:
       required: true
   - type: input
     id: macos_version
     attributes:
-      label: macOS version
-      placeholder: macOS 15.6
-    validations:
-      required: true
-  - type: input
-    id: display_model
-    attributes:
-      label: Display model
-      placeholder: Manufacturer and model
-    validations:
-      required: true
-  - type: dropdown
-    id: connection_type
-    attributes:
-      label: Connection type
-      options:
-        - HDMI
-        - DisplayPort
-        - USB-C / Thunderbolt
-        - Dock or adapter
-        - Built-in display
-        - Other
-    validations:
-      required: true
-  - type: input
-    id: resolution
-    attributes:
-      label: Resolution
-      placeholder: Physical output and HiDPI logical resolution, if known
-    validations:
-      required: true
-  - type: input
-    id: refresh_rate
-    attributes:
-      label: Refresh rate
-      placeholder: 60 Hz, 120 Hz, VRR range, etc.
-    validations:
-      required: true
-  - type: dropdown
-    id: hdr_state
-    attributes:
-      label: HDR state
-      options:
-        - HDR enabled
-        - HDR disabled
-        - HDR unavailable
-        - Unknown
+      label: macOS 版本 / macOS version
+      description: 可在苹果菜单 → 关于本机查看。 / Find it in Apple menu → About This Mac.
+      placeholder: macOS 27.0
     validations:
       required: true
   - type: textarea
     id: problem
     attributes:
-      label: Problem description
-      description: Describe what happened and what you expected.
+      label: 实际情况与预期 / What happened and what you expected
+      description: 请保留完整错误提示，但先删除个人信息。 / Include the exact error after removing private information.
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
+      label: 发生经过 / Steps or circumstances
+      description: 偶发问题不要求稳定复现；说明发生频率或当时在做什么。 / For intermittent issues, describe frequency or what you were doing.
       placeholder: |
-        1. Open Right Display
-        2. Select...
-        3. Observe...
+        1. 打开 / Open…
+        2. 选择 / Select…
+        3. 发生 / Observe…
     validations:
       required: true
   - type: textarea
+    id: setup
+    attributes:
+      label: 相关设备与连接（选填）/ Relevant setup (optional)
+      description: 显示问题可填显示器、线材/扩展坞、分辨率、刷新率和 HDR；音频问题可填输出设备。安装问题无需填写显示参数。 / For display issues, include monitor, cable/dock, resolution, refresh rate and HDR if known. For audio, include the output device. Installation issues do not need display parameters.
+    validations:
+      required: false
+  - type: textarea
     id: diagnostics
     attributes:
-      label: Right Display diagnostic information
-      description: Paste only reviewed and redacted information. Do not include private or identifying data.
+      label: 截图或诊断（选填）/ Screenshots or diagnostics (optional)
+      description: 只附上已检查并去除隐私信息的内容；不要求先执行链路测试。 / Attach only reviewed, redacted information. Running Display Link Test is not required.
     validations:
       required: false
