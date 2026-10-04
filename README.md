@@ -5,7 +5,7 @@
 <h1 align="center">RightDisplay · 正确显示</h1>
 
 <p align="center">
-  看清当前状态，理解证据，安全调整；切换异常时尝试恢复。
+  看清 Mac 正在输出什么，也把常用的显示与音频控制放在手边。
 </p>
 
 <p align="center">
@@ -15,117 +15,261 @@
   · <a href="CHANGELOG.md">版本历史</a>
 </p>
 
-<p align="center">0.4 Beta RC · Apple silicon · arm64 · ad-hoc 签名</p>
+<p align="center">macOS · Apple silicon · arm64</p>
 
 ## RightDisplay 是什么？
 
-RightDisplay 是一款面向 Mac 外接显示器的状态栏工具。它把显示状态、可用控制和判断依据放到一起，让分辨率、刷新率、颜色输出和音频设置更容易查看和调整。
+RightDisplay 是一款面向 Mac 外接显示器的状态栏工具。
 
-0.4 把完整窗口整理为六个页面：概览、显示、音频、ICC、EDID、通用。新增 ICC 描述文件检查和虚拟音频软件音量，也统一了快捷面板与各页的卡片、控件和状态提示。
+macOS 能告诉你显示器“亮了”，但当你开始关心 4K 120 Hz、HiDPI、HDR、RGB / YCbCr、10 / 12-bit、VRR、ICC，或者 HDMI 音频为什么没有音量控制时，很多信息和设置会散落在系统的不同位置。
 
-<p align="center"><img src="assets/screenshots/0.4-beta/overview.png" width="960" alt="0.4 概览：连接、像素格式、色深、HDR、刷新率与 DSC 的系统报告及推断标签"></p>
+RightDisplay 把这些东西整理到了一起：
 
-本文截图由用户提供，展示 0.4 界面；未核定为本次 0.4 Beta RC 的截图。图中的 LG TV、120 Hz、12 bit 等读数只代表该截图场景，不是所有连接的承诺，也不构成接收端实测。
+- 查看当前分辨率、HiDPI、刷新率、HDR 和颜色输出
+- 在系统实际提供的模式之间进行切换
+- 区分固定刷新率与 VRR
+- 查看 RGB / YCbCr、色深和输出范围
+- 读取 EDID，并区分设备能力与当前状态
+- 查看和切换 ICC Color Profile
+- 为部分 HDMI / DisplayPort 音频提供软件音量
+- 控制支持的 Apple TV 音量
+- 在快捷面板里访问常用设置
+- 在显示切换异常时尝试恢复原来的配置
 
-## 看清当前输出
+0.4 重新整理了完整窗口和快捷控制，也加入了 ICC 与 Virtual Audio。
 
-概览集中展示输出时序、HiDPI 界面分辨率、刷新率、连接、像素格式、色深、HDR 与 DSC，并在卡片里保留证据来源。
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/overview.png" width="960" alt="RightDisplay 0.4 概览">
+</p>
 
-系统报告、设备声明能力和推断各有含义。SLS 报告的当前颜色组合可以用来检查控制结果，但不等于显示器接收端的物理输出；独立的接收端物理状态通常无法直接获取。DSC 和部分传输信息仍是推断；缺少可靠证据时保留未知。
+## 当前到底在输出什么？
 
-## 控制显示输出
+概览页把一条显示连接最常用的信息放在一起：
 
-在「显示」页选择分辨率、HiDPI、刷新率，以及当前连接支持的颜色格式、色深与 HDR。显示器分辨率用于模式选择，HiDPI 决定界面的缩放大小。
+**分辨率 · HiDPI · 刷新率 · 连接 · 颜色格式 · 色深 · HDR · VRR · DSC**
 
-<p align="center"><img src="assets/screenshots/0.4-beta/display-output.png" width="960" alt="0.4 显示页：屏幕亮度、分辨率、HiDPI、刷新率和颜色输出组合"></p>
+这里有一个 RightDisplay 很在意的区别：
 
-### 刷新率与 VRR
+**显示器支持什么，macOS 报告什么，以及当前能够确认什么，并不是一回事。**
 
-固定刷新率与可变刷新率分开呈现，保留 120 Hz／119.88 Hz、60 Hz／59.94 Hz 等不同系统时序。可用模式和 VRR 范围来自当前连接提供的数据；显示器宣称支持 VRR，不代表它当前已经启用。
+例如 EDID 可以声明显示器支持 HDR 或 VRR，但这不意味着当前连接正在使用它；macOS 返回的颜色组合适合用于设置和回读，也不应该被包装成接收端的物理测量结果。
 
-### 颜色格式与色深
+RightDisplay 会尽量把这些信息的来源保留下来。能确认的就显示，只有推断依据的就标成推断，没有足够证据时保持未知。
 
-RGB、YCbCr 4:4:4／4:2:2／4:2:0，以及 8／10／12 bit 是否可用，取决于 Mac、显示器、线材和连接。RightDisplay 保留颜色格式、色深、范围与 HDR 的完整组合关系，操作后检查系统回读，不把一次请求直接当作生效。
+## 调整显示输出
+
+「显示」页集中管理当前显示器的主要输出设置：
+
+- 分辨率
+- HiDPI
+- 固定刷新率与 VRR
+- RGB / YCbCr
+- 8 / 10 / 12-bit
+- HDR
+
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/display-output.png" width="960" alt="RightDisplay 0.4 显示设置">
+</p>
+
+RightDisplay 使用 macOS 为当前连接实际提供的模式，不根据 EDID 凭空生成一个“理论上应该能用”的输出。
+
+像 `120 Hz` 和 `119.88 Hz`、`60 Hz` 和 `59.94 Hz` 这样的系统时序也会分别保留；VRR 则作为独立模式显示。
+
+颜色输出同样按照完整组合处理。例如：
+
+`RGB · 12-bit · Full · HDR`
+
+和
+
+`YCbCr 4:4:4 · 10-bit · Limited · HDR`
+
+是两种不同的连接状态，而不是几个互不相关的开关。
+
+调整之后，RightDisplay 会重新读取系统状态，而不是仅仅因为一次设置请求成功返回，就认为屏幕一定已经切换到了目标状态。
 
 ### 配置保护与恢复
 
-「配置保护」锁定完整窗口和快捷面板中的手动显示调整，同时保留亮度与音量控制。它用于减少误操作，是界面保护。
+如果一套显示配置已经调好，可以开启「配置保护」，避免在完整窗口或快捷面板里误改显示输出。
 
-需要确认的模式切换提供倒计时，未确认时尝试恢复原设置。显示链路测试需显式确认，会切换颜色格式、色深和 HDR／SDR 组合，可能短暂黑屏或重新握手。回读与测试结果覆盖当次连接及观察窗口；恢复不保证每次成功，也不等于物理链路认证。
+对于需要确认的模式切换，RightDisplay 会提供倒计时。没有确认时，会尝试恢复切换前的设置。
 
-## 虚拟音频：给 HDMI／DP 加上软件音量
+「显示链路测试」则可以主动尝试当前连接实际提供的颜色格式、色深和 HDR / SDR 组合，用来排查某个输出为什么无法使用。
 
-有些 HDMI／DisplayPort 音频输出在 macOS 中没有可用的音量滑条。0.4 新增虚拟音频输出，把音频转发到所选真实设备，并在软件中调节音量。
+这些操作可能触发短暂黑屏或 HDMI / DisplayPort 重新握手，因此都需要由用户主动开始。
 
-<p align="center"><img src="assets/screenshots/0.4-beta/virtual-audio.png" width="960" alt="0.4 音频页：虚拟音频软件音量、HDMI 目标与转发状态"></p>
+## HDMI / DP 也可以有软件音量
 
-这是 **HDMI／DP 软件音量**，不会改变电视的硬件音量。使用前需单独安装虚拟音频组件、选择真实输出目标，并将需要转发的声音送到虚拟输出；在应用中选择控制设备，不会自动更改 macOS 默认输出。
+不少显示器和电视通过 HDMI / DisplayPort 连接 Mac 后，macOS 不提供音量滑块。
 
-支持保存目标设备、在条件满足时自动启动，以及异常停止后的显式恢复。转发状态和原因可以在运行详情中查看。手动停止会被保留；绿色「转发已启用」表示转发已启用，不证明当前有声或长期连续播放通过。
+0.4 加入了 Virtual Audio：
 
-虚拟音频需要较新的 macOS，当前组件要求 macOS 27.0 或更新版本。
+**系统声音 → RightDisplay Virtual Audio → 软件音量 → 指定的 HDMI / DP 输出**
 
-已知问题：本 RC 使用 ad-hoc 签名，虚拟音频可能因签名校验导致转发无法启用。所用版本仍保留部分 App／broker／driver 之间的 Apple 签名要求，这些校验与 ad-hoc 组件不兼容；虚拟音频尚未通过本 RC 的实际转发验收。
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/virtual-audio.png" width="960" alt="RightDisplay Virtual Audio 软件音量">
+</p>
 
-本 RC 的 App、辅助程序与虚拟音频组件使用 ad-hoc 签名，安装包容器未签名，尚未经过 Apple 公证。其他机器的安装和实际转发仍待验收。详见[安装说明](INSTALLATION.md)。
+它调节的是转发过程中的软件增益，不会改变电视或显示器本身的硬件音量。
 
-## ICC 与 Color Profiles
+可以保存真实输出设备，在条件满足时重新启动转发，也可以使用静音和键盘音量控制。RightDisplay 不会为了让声音“有地方去”而偷偷回退到 Mac 扬声器。
 
-独立的 ICC 页面显示 macOS 当前关联的描述文件，也可以打开外部 ICC 进行检查，查看来源、版本、色彩空间、白点、原色、RGB 矩阵与色调曲线。可用描述文件支持检查及确认后套用，以系统关联回读确认结果。
+### 0.4 Beta RC 已知限制
 
-<p align="center"><img src="assets/screenshots/0.4-beta/color-profiles.png" width="800" alt="0.4 ICC 深色界面：描述文件信息、色彩特性、CIE 1931 xy 色域和 VCGT 校准曲线"></p>
+当前公开 RC 使用 ad-hoc 签名。
 
-色域图展示描述文件模型与参考色域的关系，不是屏幕实测。VCGT 展示文件存储的校准曲线，不证明 GPU 当前已加载同一校准 LUT。打开一个文件进行检查，也不等于安装或套用它。
+Virtual Audio 仍有部分组件签名检查与这种分发方式不兼容，因此**公开 RC 中软件音量可能无法启用**。这不影响其他显示、ICC、EDID、Apple TV 和诊断功能。
+
+Virtual Audio 当前还要求 macOS 27.0 或更新版本。
+
+这一部分仍在处理，详细状态见 [0.4 Beta RC 更新说明](releases/0.4-beta-rc.md)。
+
+## ICC Color Profiles
+
+0.4 把 ICC 从显示器信息里独立出来，成为一个完整页面。
+
+你可以查看当前显示器关联的 Color Profile，也可以检查其他 ICC 文件：
+
+- Profile 类型与版本
+- Color Space 与 PCS
+- 白点
+- RGB 原色
+- RGB Matrix
+- Tone Response Curve
+- VCGT
+- CIE 1931 xy 色域关系
+
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/color-profiles.png" width="800" alt="RightDisplay ICC Color Profiles">
+</p>
+
+可用的描述文件可以在确认后应用，并通过系统重新读取关联结果。
+
+这里展示的是 **ICC 文件描述的色彩模型**。
+
+色域图不是色度计测出来的屏幕色域，VCGT 曲线也只表示描述文件中保存的数据，并不能证明 GPU 此刻正在使用同一组校准 LUT。
 
 ## EDID 与显示器能力
 
-EDID 页面分别整理接收端声明能力、macOS 解析能力和基础字段，可读取、解读与导出 EDID。HDR、PQ／HLG、BT.2020、刷新率与 VRR 范围都保留各自来源。
+EDID 页面用来回答另一类问题：
 
-<p align="center"><img src="assets/screenshots/0.4-beta/edid.png" width="800" alt="0.4 EDID 深色界面：接收端声明能力、macOS 解析能力与基础字段"></p>
+**这台显示设备说自己支持什么？**
 
-**EDID 描述的是设备声明的能力，不等于当前输出状态。** 原始 EDID 可能含序列号，分享前请检查。
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/edid.png" width="800" alt="RightDisplay EDID 与显示器能力">
+</p>
 
-## 快捷控制
+RightDisplay 可以读取和整理：
 
-状态栏快捷面板提供常用颜色输出、HDR、VRR、亮度和音量控制，与完整窗口共享显示状态与控制设备。常用项目可以在通用页管理。
+- 厂商、型号与基础信息
+- 原生分辨率
+- HDR / PQ / HLG
+- BT.2020
+- 刷新率与 VRR 范围
+- 色度信息
+- macOS 已解析的部分显示能力
+- 原始 EDID
 
-<p align="center"><img src="assets/screenshots/0.4-beta/quick-control.png" width="380" alt="0.4 Quick Control：亮度、音量、颜色格式、色深、HDR 与 VRR"></p>
+EDID 是设备的能力声明，不是当前输出状态。
 
-## 亮度、Apple TV 与 HomePod
+这也是为什么 RightDisplay 不会因为 EDID 里出现 `12-bit`、`HDR` 或 `VRR`，就在概览页直接宣布它们已经启用。
 
-「显示」页提供 macOS 支持的屏幕亮度控制，「音频」页管理可写系统音频音量、虚拟音频和兼容 Apple TV 的输出音量。支持的路径可使用键盘音量键。
+## Quick Control
 
-Apple TV 控制取决于兼容设备、本地网络、必要配对和音量可写性。HomePod 音量跟随 Apple TV 当前选择或默认音频输出，不承诺直接控制所有 HomePod／AirPlay 音箱。
+很多时候并不需要打开完整窗口。
 
-## 诊断与通用设置
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/quick-control.png" width="380" alt="RightDisplay Quick Control">
+</p>
 
-诊断报告整合显示状态、模式、EDID、链路证据、音频状态及近期操作，由用户主动保存到本地，不会自动上传。分享前检查设备名称、标识、错误信息、路径与原始 EDID，详见[隐私说明](PRIVACY.md)。
+状态栏快捷面板可以快速访问：
 
-通用页提供跟随系统／简体中文／English、登录启动、快捷控件管理、安全模式和可选自动校正。安全模式抑制启动、连接与唤醒时的显示自动校正，不应当作所有手动操作的锁定。
+**亮度 · 音量 · 颜色格式 · 色深 · HDR · VRR**
 
-<p align="center"><img src="assets/screenshots/0.4-beta/general.png" width="960" alt="0.4 General 英文深色界面：语言、快捷控件、登录行为、安全模式及自动校正"></p>
+显示哪些项目可以在通用设置中管理。
 
-## RC 与安装
+Quick Control 与完整窗口使用同一份显示状态和控制逻辑，因此它不是另一套独立的“快捷版设置”。
 
-0.4 Beta RC 为公开测试候选，请从[GitHub Release](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc)下载。安装包名为 `RightDisplay-0.4-Beta-RC-arm64.zip`，随附 `SHA256SUMS.txt`。
+## Apple TV、HomePod 与声音
 
-退出旧版、核对校验值，解压后将 `Right Display.app` 放入「应用程序」，先正常打开。若 macOS 阻止运行，前往 **系统设置 → 隐私与安全性 → 仍要打开**并确认；在系统提供此操作时，也可从 Finder 手动选择**打开**。
+除了 Virtual Audio，RightDisplay 还可以控制 macOS 本身允许写入音量的音频设备，以及兼容 Apple TV 的输出音量。
 
-**不需要关闭 Gatekeeper 或 SIP。** 完整步骤及虚拟音频组件安装、更新与回退见[安装说明](INSTALLATION.md)。
+Apple TV 需要本地网络访问，并可能需要首次配对。
 
-## 系统要求与 Beta 范围
+当 HomePod 被 Apple TV 作为当前或默认音频输出使用时，可以跟随 Apple TV 的音频控制路径；这并不意味着 RightDisplay 能直接控制任意 HomePod 或 AirPlay 音箱。
 
-- 基础系统要求为 macOS 14+、Apple silicon arm64。虚拟音频另需 macOS 27.0 或更新版本；各项功能的可用性取决于系统和硬件。
-- 功能取决于 Mac、macOS、显示器、转接器／扩展坞和线材；不保证每个颜色、色深、HDR 或 VRR 请求都生效。
-- 真实 Release 运行、跨机器安装、登录／唤醒恢复与长时间音频转发仍需验收；编译及签名验证不替代这些测试。
+## 诊断
 
-查看[0.4 Beta RC 更新说明](releases/0.4-beta-rc.md)与[版本历史](CHANGELOG.md)。欢迎通过 [Issues](https://github.com/RedoRosetta/RightDisplay/issues) 提交可复现问题，上传附件前请先检查隐私。
+遇到“明明支持但选不到”“切换以后状态不对”或者某种连接组合异常时，可以主动导出诊断报告。
 
-本仓库提供安装包、文档和公开发行材料，不公开应用自有源码。第三方组件遵循各自许可，详见 [NOTICE](NOTICE.md) 与[第三方说明](THIRD_PARTY_LICENSES.md)。
+报告会整理当前显示状态、模式、EDID、链路证据、音频状态和近期操作，方便复现和提交问题。
+
+诊断报告只在你主动操作时保存到本地，不会自动上传。
+
+分享前仍建议检查设备名称、EDID、路径和其他设备标识。详见 [隐私说明](PRIVACY.md)。
+
+## 0.4 的界面
+
+0.4 将完整窗口整理为六个页面：
+
+**概览 · 显示 · 音频 · ICC · EDID · 通用**
+
+通用设置包含语言、登录启动、快捷控制管理、安全模式和自动校正等项目。
+
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/general.png" width="960" alt="RightDisplay 0.4 通用设置">
+</p>
+
+这一版的重点不是继续增加更多开关，而是让状态、控制和证据之间的关系更容易理解。
+
+## 下载与安装
+
+当前公开版本：
+
+**RightDisplay 0.4 Beta RC**
+
+从 [GitHub Releases](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc) 下载：
+
+- `RightDisplay-0.4-Beta-RC-arm64.zip`
+- `SHA256SUMS.txt`
+
+解压后，将 `Right Display.app` 放入「应用程序」。
+
+当前 RC 使用 **ad-hoc 签名，尚未经过 Apple 公证**。
+
+首次打开如果被 macOS 阻止，请前往：
+
+**系统设置 → 隐私与安全性 → 仍要打开**
+
+也可以在系统提供该选项时，从 Finder 手动选择 **打开**。
+
+**不需要关闭 Gatekeeper，也不需要关闭 SIP。**
+
+完整步骤以及 Virtual Audio 的安装、更新和移除方法见 [安装说明](INSTALLATION.md)。
+
+## 系统要求
+
+- Apple silicon
+- arm64
+- RightDisplay 基础功能：macOS 14 或更新版本
+- Virtual Audio：当前要求 macOS 27.0 或更新版本
+
+实际可用的显示模式取决于 Mac、macOS、显示器、线材以及中间使用的转接器或扩展坞。
+
+## Beta 与反馈
+
+0.4 Beta RC 是公开测试候选，不是最终的 0.4 Beta。
+
+如果遇到显示状态识别错误、模式切换异常、HDR / VRR / 颜色输出与预期不符，或者其他可复现问题，欢迎通过 [Issues](https://github.com/RedoRosetta/RightDisplay/issues) 提交。
+
+查看 [0.4 Beta RC 更新说明](releases/0.4-beta-rc.md) · [版本历史](CHANGELOG.md)
+
+本仓库用于提供 RightDisplay 安装包、文档和公开发行材料，不公开应用自有源码。第三方组件遵循各自许可，详见 [NOTICE](NOTICE.md) 与 [第三方说明](THIRD_PARTY_LICENSES.md)。
 
 ## 支持开发
 
-如果 RightDisplay 对你有帮助，欢迎自愿支持开发。你的使用、测试和反馈同样是在帮助 RightDisplay 变得更好。
+如果 RightDisplay 对你有帮助，欢迎自愿支持开发。
+
+你的使用、测试和反馈同样是在帮助 RightDisplay 继续完善。
 
 <table align="center">
   <tr>
