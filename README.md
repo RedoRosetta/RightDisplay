@@ -1,138 +1,355 @@
-> **RightDisplay 1.0 · Build45** — RNSL 1.0 非商业 Source Available。[下载1.0](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [发布说明](releases/1.0.0.md)。Ad-hoc签名，未经Apple公证；原Build45三项本机验收通过，重打包后未做完整实机回归。
+<div align="center">
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/right-display-app-icon.png" width="88" alt="Right Display 应用图标"></p>
+<img src="assets/screenshots/0.4-beta/../..//right-display-app-icon.png" width="96" alt="RightDisplay App Icon">
 
-## 0.4 Beta RC 历史介绍 / Historical RC overview
+# RightDisplay｜正确显示
 
-<h1 align="center">Right Display · 正确显示</h1>
+**让 Mac 的显示输出，一目了然。**
 
-<p align="center"><strong>Mac 外接显示器的状态查看与快捷控制工具。</strong><br>看清分辨率、刷新率、HDR 与颜色输出，把常用设置放进菜单栏。</p>
+一款专为 macOS 设计的显示器管理工具。  
+查看显示状态、调整输出参数、管理色彩配置，并通过菜单栏快速控制常用功能。
 
-<p align="center"><a href="https://github.com/RedoRosetta/RightDisplay/releases/download/v0.4-beta-rc/RightDisplay-0.4-Beta-RC-arm64.zip"><strong>下载 0.4 Beta RC</strong></a> · <a href="INSTALLATION.md">安装指南</a> · <a href="https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc">更新说明</a> · <a href="https://github.com/RedoRosetta/RightDisplay/issues/new/choose">反馈</a> · <a href="README.en.md">English</a></p>
+**RightDisplay 1.0 · Build45**
 
-<p align="center">macOS 14+ · Apple 芯片 Mac（不支持 Intel）· 公开测试候选版</p>
+[**下载 RightDisplay 1.0**](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [安装指南](INSTALLATION.md) · [反馈问题](https://github.com/RedoRosetta/RightDisplay/issues/new/choose) · [English](README.en.md)
 
-> **下载前请了解：** 本 RC 尚未经过 Apple 公证，首次打开可能需要系统确认。**Virtual Audio 软件音量存在已知分发问题，可能无法启用，且要求 macOS 27+；如果你主要需要 HDMI / DP 软件音量，建议等待后续修复。** [查看已知问题与安装步骤](INSTALLATION.md)
+macOS 14+ · Apple Silicon
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/assets/screenshots/0.4-beta/overview.png" width="960" alt="概览：在同一页查看分辨率、刷新率、HDR、颜色格式与信息来源"></p>
+</div>
 
-*0.4 界面预览。截图中的设备、120 Hz 和 12-bit 是拍摄时的配置，不代表所有连接的可用能力，也不是当前 RC 的运行验证。界面支持简体中文与 English。*
+---
 
-## 看清状态，再决定怎么调
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/overview.png" width="960" alt="RightDisplay 主界面">
+</p>
 
-当你想知道“为什么选不到 120 Hz”“现在是否开启 HDR”“显示器支持的模式为什么没有生效”，Right Display 把相关信息集中到一起：
+<p align="center">
+  <sub>界面截图来自 0.4 Beta 阶段，实际界面可能随版本更新而有所变化。</sub>
+</p>
 
-- **看状态：** 分辨率、HiDPI、刷新率、HDR、RGB / YCbCr、色深与输出范围。
-- **做调整：** 切换当前连接提供的模式，在菜单栏使用常用显示、亮度与音量控制。
-- **查原因：** 查看 EDID 能力、ICC 色彩描述文件，并按需导出本地诊断报告。
+## 认识你的显示器
 
-**显示器支持什么、macOS 当前报告什么、哪些信息只是推断，会分别说明。** 例如，EDID 声明支持 HDR 不等于当前已开启 HDR；DSC 保持标注为推断。系统报告也不等于显示器接收端的物理测量。
+RightDisplay 将 macOS 的显示信息集中在一个界面中，让你更容易了解当前连接的实际状态。
 
-## 常用控制，就在菜单栏
+无需在多个系统设置页面之间切换，即可查看：
 
-点击菜单栏中的 Right Display 图标，打开 Quick Control 快捷面板。亮度、音量、颜色格式、色深、HDR 和 VRR 等项目可以在「通用」设置中管理；实际可用项目取决于设备和连接。
+- **分辨率与 HiDPI** — 了解当前显示模式及缩放状态。
+- **刷新率与 VRR** — 查看当前刷新率和可用的可变刷新率模式。
+- **HDR** — 区分显示器声明的 HDR 能力与当前 HDR 状态。
+- **颜色输出** — 查看 RGB / YCbCr、色深及输出范围。
+- **设备信息** — 了解显示器识别信息、连接状态及系统提供的能力。
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/assets/screenshots/0.4-beta/quick-control.png" width="380" alt="菜单栏快捷面板：亮度、音量、颜色格式、色深、HDR 和 VRR"></p>
+RightDisplay 会尽可能区分设备声明、macOS 报告和软件推断的信息。
 
-快捷面板与完整窗口共享状态。亮度控制需要 macOS 提供相应接口，音量控制需要所选设备或音频路径支持；截图中出现滑块不代表所有 HDMI 设备都能直接调节音量。
+需要注意，系统报告的输出状态不等于对显示器接收端进行的物理测量。
 
-## 调整显示输出
+## 快捷控制，触手可及
 
-在「显示」页选择分辨率、HiDPI、固定刷新率或 VRR，以及系统提供的颜色输出组合。
+不必每次都打开完整应用。
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/assets/screenshots/0.4-beta/display-output.png" width="960" alt="显示页：亮度、分辨率、HiDPI、刷新率与颜色输出组合"></p>
+通过菜单栏中的 RightDisplay 图标，可以快速访问常用显示与音频控制。
 
-Right Display 使用 macOS 为当前连接提供的模式，保留 `120 Hz / 119.88 Hz` 等时序差异，并按颜色格式、色深、范围和 HDR 的完整组合处理输出。设置后会重新读取系统状态。
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/quick-control.png" width="380" alt="RightDisplay 菜单栏快捷控制">
+</p>
 
-调好后可以开启「配置保护」，避免误改显示设置，同时保留亮度和音量控制。需要确认的模式切换会提供倒计时，未确认时尝试恢复原配置；**切换可能短暂黑屏，恢复并非保证成功。** 显示链路测试用于主动排查连接，不是首次使用的必经步骤。
+快捷面板支持按需配置，能够集中提供：
 
-## ICC 与 EDID：了解色彩和设备能力
+- 亮度控制
+- 音量调节
+- HDR 与 VRR
+- 颜色格式与色深
+- 常用显示设置
 
-**ICC 色彩描述文件：** 查看当前描述文件、检查外部 ICC 文件、在确认后应用可用描述文件；查看白点、原色、色调曲线、色域关系与 VCGT 校准数据。
+快捷面板与主窗口共享状态。
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/assets/screenshots/0.4-beta/color-profiles.png" width="720" alt="ICC 页面：描述文件信息、色彩特性、色域与校准曲线"></p>
+实际可用的控制项目取决于显示器、连接方式和 macOS 提供的接口。例如，部分 HDMI / DisplayPort 音频设备不支持系统直接调节硬件音量。
 
-ICC 图表描述文件中的模型，不是色度计实测的屏幕色域，也不能证明 GPU 此刻加载了同一组校准数据。只打开文件检查不会自动应用它。
+## 显示输出，由你掌控
+
+在「显示」页面中，查看和调整当前连接可用的显示模式。
+
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/display-output.png" width="960" alt="RightDisplay 显示输出设置">
+</p>
+
+RightDisplay 支持管理：
+
+- 分辨率与 HiDPI 模式
+- 固定刷新率及可用的 VRR 模式
+- RGB / YCbCr 颜色格式
+- 色深与输出范围
+- HDR 输出
+- 显示配置保护
+
+显示模式以 macOS 为当前连接提供的能力为基础，不会将未经确认的模式冒充为硬件支持。
+
+对于 `120 Hz` 和 `119.88 Hz` 等不同刷新时序，RightDisplay 会保留必要的区别。
+
+部分显示设置可能导致短暂黑屏。需要确认的模式切换提供倒计时与恢复机制，但无法保证所有异常情况下都能成功恢复。
+
+## ICC 色彩管理
+
+查看、分析并管理显示器的 ICC 色彩描述文件。
+
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/color-profiles.png" width="760" alt="RightDisplay ICC 色彩管理">
+</p>
+
+你可以查看：
+
+- 当前使用的 ICC 描述文件
+- 色彩原色与白点
+- 色调响应曲线
+- 色域关系
+- VCGT 校准数据
+
+也可以检查外部 ICC 文件，并在确认后应用可用的色彩描述文件。
+
+**ICC 描述的是色彩配置模型，不等于显示器的实际测量结果。**
+
+软件显示的色域图表不能替代色度计测量，也不代表 GPU 当前一定加载了对应的校准数据。
+
+## EDID 设备信息
+
+通过 EDID 查看显示器向系统声明的能力。
 
 <details>
-<summary>查看 EDID 页面</summary>
+<summary>查看 EDID 界面</summary>
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/assets/screenshots/0.4-beta/edid.png" width="720" alt="EDID 页面：设备声明能力、macOS 解析能力和基础信息"></p>
+<br>
 
-EDID 整理显示器声明的分辨率、HDR、刷新率与 VRR 等能力，并支持原始数据导出。**设备声明的能力不等于当前输出状态。** 导出文件可能包含序列号，分享前请检查。
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/edid.png" width="760" alt="RightDisplay EDID 信息">
+</p>
 
 </details>
 
-## 音频：Apple TV 与可选的 Virtual Audio
+包括：
 
-「音频」页支持 macOS 允许调节音量的输出，以及兼容 Apple TV 的输出音量与部分键盘控制。Apple TV 可能需要本地网络权限和配对；HomePod 作为 Apple TV 当前或默认音频输出时，可沿用这条控制路径，不代表可以直接控制任意 HomePod 或 AirPlay 音箱。
+- 显示器识别信息
+- 支持的显示模式
+- 刷新率相关能力
+- HDR 能力声明
+- VRR 相关信息
+- 原始 EDID 数据导出
 
-**Virtual Audio 是另一条可选路径：** 把系统声音转发到指定的 HDMI / DisplayPort 输出，并调节软件音量，不改变电视或显示器的硬件音量。
+**EDID 声明支持某项功能，并不意味着当前连接已经启用了该功能。**
 
-> **当前 RC 不建议依赖 Virtual Audio。** 组件签名检查与本次 ad-hoc 分发方式存在兼容问题，可能阻止转发；当前公开包的跨机器安装和实际播放仍未验证完成。该问题针对虚拟音频路径，使用显示、ICC、EDID 或 Apple TV 功能无需安装虚拟音频组件。组件要求 macOS 27+，详见[安装指南](INSTALLATION.md)。
+部分能力还取决于 Mac、连接接口、线材和 macOS 的实际支持情况。
+
+导出的 EDID 数据可能包含设备序列号，分享前请检查。
+
+## 音频控制与 Virtual Audio
+
+RightDisplay 不仅关注画面，也提供与显示设备相关的音频控制能力。
+
+### 常规音频控制
+
+对于 macOS 允许调节音量的输出设备，可以直接使用应用或菜单栏进行控制。
+
+RightDisplay 还提供兼容 Apple TV 的音量控制功能。
+
+在相应连接和权限条件满足时，可以通过 Apple TV 控制路径管理音量及部分键盘操作。
+
+这不代表应用能够直接控制所有 HomePod 或 AirPlay 音箱。
+
+### Virtual Audio
+
+**让不支持系统音量调节的 HDMI / DisplayPort 音频输出，也能通过软件控制音量。**
+
+Virtual Audio 通过独立的虚拟音频路径，将系统声音转发至指定输出设备，并在转发过程中应用软件音量。
+
+```text
+系统音频
+   ↓
+RightDisplay Virtual Audio
+   ↓
+软件音量处理
+   ↓
+HDMI / DisplayPort 输出设备
+```
+
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/virtual-audio.png" width="960" alt="RightDisplay Virtual Audio">
+</p>
+
+Virtual Audio 提供：
+
+- 指定真实音频输出设备
+- 软件音量调节
+- 条件满足时自动启动
+- 设备与运行状态管理
+- 唤醒后的恢复处理
+- 保留用户手动停止状态
+
+在 **RightDisplay 1.0 · Build45** 的本机验收中，以下三项测试已经通过：
+
+| 测试项目 | 结果 |
+|---|---|
+| 持续音频播放 | PASS |
+| 系统唤醒后恢复 | PASS |
+| 手动停止后不自动恢复 | PASS |
+
+正式分发包还通过了 Ad-hoc 签名、组件绑定、XPC 安全校验和 DMG 挂载等自动化检查。
+
+需要说明的是，最终重打包后的版本未进行完整实机回归，因此上述结果不代表所有 Mac、macOS 版本及音频设备组合均已验证。
+
+Virtual Audio 是可选功能。使用显示管理、ICC、EDID 等功能不需要安装虚拟音频组件。
+
+## 下载与安装
+
+### 下载 RightDisplay 1.0
+
+**[前往 GitHub Releases 下载正式版](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0)**
+
+当前版本：
+
+| 项目 | 信息 |
+|---|---|
+| 版本 | 1.0 |
+| Build | 45 |
+| 平台 | macOS |
+| 处理器 | Apple Silicon |
+| 安装包 | DMG |
+| 签名 | Ad-hoc |
+| Apple 公证 | 未公证 |
+
+安装步骤：
+
+1. 从 GitHub Releases 下载 RightDisplay 1.0 的 DMG。
+2. 打开 DMG，将 `Right Display.app` 拖入「应用程序」文件夹。
+3. 从「应用程序」启动 RightDisplay。
+4. 根据需要授予相关权限，并配置显示或音频功能。
+
+### 关于 macOS 安全提示
+
+RightDisplay 1.0 使用 Ad-hoc 签名，**尚未经过 Apple 公证**。
+
+因此，macOS 可能阻止应用首次打开，并显示无法验证开发者或无法检查应用安全性的提示。
+
+请确认安装包来自本项目官方 GitHub Release。
+
+如果 macOS 阻止打开，可以尝试启动应用，然后前往：
+
+**系统设置 → 隐私与安全性 → 仍要打开**
+
+按照系统提示完成确认。
+
+不需要全局关闭 Gatekeeper，也不需要关闭 SIP。
+
+部分系统级音频功能可能受到 macOS 版本、权限和组件加载策略的限制。
+
+更多信息请参阅 [安装指南](INSTALLATION.md)。
+
+### 文件完整性
+
+RightDisplay 1.0 · Build45 官方 DMG：
+
+**SHA-256**
+
+```text
+ae1964e06ed83b54ab5ec60cd20ef8820f4c68c6e5eecc14fc1a87f51c1c7f3e
+```
+
+可以在终端中使用以下命令验证下载文件：
+
+```bash
+shasum -a 256 RightDisplay-1.0-Build45.dmg
+```
+
+计算结果应与上方 SHA-256 一致。
+
+## 设置与诊断
+
+RightDisplay 提供中文和英文界面。
+
+应用包含六个主要页面：
+
+**概览 · 显示 · 音频 · ICC · EDID · 通用**
+
+在「通用」页面中，可以管理语言、登录启动行为、快捷控制项目及部分自动校正设置。
 
 <details>
-<summary>查看 Virtual Audio 界面预览与工作方式</summary>
+<summary>查看通用设置界面</summary>
 
-**系统声音 → Right Display Virtual Audio → 软件音量 → 指定的 HDMI / DP 输出**
+<br>
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/assets/screenshots/0.4-beta/virtual-audio.png" width="960" alt="Virtual Audio 界面预览；图中转发状态不代表当前公开 RC 已可用"></p>
-
-*这是 0.4 界面预览，图中的“转发已启用”不代表当前 RC 已验证可用。*
-
-功能设计包括保存真实输出目标、条件满足时自动启动、保留手动停止状态和异常后的显式恢复。选择应用内音量控制设备不会自动切换 macOS 默认输出；目标不可用时不会自动改用 Mac 扬声器。即使显示就绪，也需要实际播放确认声音。
+<p align="center">
+  <img src="assets/screenshots/0.4-beta/general.png" width="960" alt="RightDisplay 通用设置">
+</p>
 
 </details>
 
-## 下载、安装与第一次使用
+当遇到显示模式异常、设备识别问题或功能不可用时，可以按需导出诊断报告。
 
-1. 下载 [RightDisplay-0.4-Beta-RC-arm64.zip](https://github.com/RedoRosetta/RightDisplay/releases/download/v0.4-beta-rc/RightDisplay-0.4-Beta-RC-arm64.zip)。这是应用安装包；GitHub 自动生成的 **Source code** 不是可安装应用。
-2. 解压，将 `Right Display.app` 拖到「应用程序」，再从那里打开。升级前先正常退出旧版并保留副本。
-3. 本 RC 使用 ad-hoc 签名，未经过 Apple 公证。若提示开发者无法验证或 Apple 无法检查，确认来自本仓库后，可按系统提示前往「系统设置 → 隐私与安全性 → 仍要打开」。
-4. 打开后点击菜单栏图标，先查看当前显示器状态，再按需要调整。**不必安装 Virtual Audio，也不必先运行链路测试。**
+诊断报告由用户主动保存到本地，不会因为使用该功能而自动上传。
 
-不需要关闭 Gatekeeper 或 SIP。[完整安装、权限、故障处理与卸载指南](INSTALLATION.md) · [Release 页面与校验文件](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc)
+分享报告前，请检查其中可能包含的设备名称、序列号、网络信息和本地路径。
 
-## 通用设置与诊断
+[查看隐私说明](PRIVACY.md)
 
-完整窗口包含「概览、显示、音频、ICC、EDID、通用」六页。通用设置可以选择语言、登录启动行为、快捷控制项目与自动校正选项。
+## 源码与许可证
 
-<details>
-<summary>查看通用设置（English 界面）</summary>
+RightDisplay 的首方源码以 **RightDisplay Noncommercial Source License（RNSL）1.0** 提供。
 
-<p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/assets/screenshots/0.4-beta/general.png" width="960" alt="英文通用设置：语言、快捷控制、登录行为、安全模式与自动校正"></p>
+这是一个 **Source Available（源码可见）** 项目。
 
-安全模式抑制启动、连接变化和唤醒时的自动显示校正；配置保护用于限制手动显示调整。
+你可以按照 RNSL 1.0 的具体条款查看、使用、研究和修改首方源码。
 
-</details>
+商业使用需要取得相应授权。
 
-诊断报告只在你主动操作时保存到本地，不会自动上传。分享前检查设备名称、序列号、网络信息和文件路径。[隐私说明](PRIVACY.md)
+RNSL 1.0 包含非商业限制，因此不属于 OSI 定义的开源许可证。
 
-## Beta 与反馈
+Apple 原始材料及其他第三方组件继续遵循各自的许可证，RNSL 不会取代这些既有授权。
 
-0.4 Beta RC 是公开测试候选，**不是最终 0.4 Beta**。当前阶段重点是收集真实反馈、修复明确阻碍使用的问题，并解决 Virtual Audio 分发问题。
+相关文档：
 
-[报告问题 / 提问](https://github.com/RedoRosetta/RightDisplay/issues/new/choose)时，请提供应用版本、Mac 与 macOS 版本、发生了什么以及预期结果；偶发问题也欢迎说明，不必先掌握所有显示参数。提交需要 GitHub 账户，附件请先检查隐私。
+- [RNSL 1.0 许可证](LICENSE)
+- [第三方许可证](THIRD_PARTY_LICENSES.md)
+- [版权及第三方声明](NOTICE.md)
+- [从源码构建](BUILDING.md)
+- [项目架构](ARCHITECTURE.md)
+- [参与贡献](CONTRIBUTING.md)
 
-[0.4 更新说明](https://github.com/RedoRosetta/RightDisplay/blob/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/releases/0.4-beta-rc.md) · [历史版本](CHANGELOG.md) · [安全说明](SECURITY.md)
+## 反馈与支持
 
-<a id="support"></a>
+RightDisplay 仍会持续维护和改进。
 
-## 支持开发
+如果遇到问题，欢迎通过 GitHub Issues 反馈：
 
-如果 Right Display 对你有帮助，欢迎自愿支持开发；使用、测试和反馈同样有价值。
+**[报告问题或提出建议](https://github.com/RedoRosetta/RightDisplay/issues/new/choose)**
 
-Source builds use non-payment placeholders. No personal payment QR image is supplied.
+反馈时，建议提供：
 
-欢迎通过测试和反馈帮助改进。
+- RightDisplay 版本
+- Mac 型号及 macOS 版本
+- 显示器或音频设备型号
+- 实际发生的问题
+- 预期行为
 
-首方源码采用 RNSL 1.0，第三方及品牌资源范围见 [NOTICE](NOTICE.md)。源码审核分支不包含新的二进制发行。[NOTICE](NOTICE.md) · [第三方许可证](THIRD_PARTY_LICENSES.md)
+如需附上诊断文件，请先检查个人信息。
 
+如果 RightDisplay 对你有帮助，也欢迎自愿支持项目开发。
 
-## 源码与贡献
+使用、测试和反馈同样是对项目的支持。
 
-本次源码对应1.0/Build45；下述旧RC说明保留作历史参考。公开下载仍为上面的 0.4 Beta RC；候选源码包含后续有限目标返回恢复，尚未完成真实设备验收，不能视为稳定版。overrun 的根因仍未确认，不能视为已修复。
+## 历史版本
 
-[从源码构建](BUILDING.md) · [架构](ARCHITECTURE.md) · [参与贡献](CONTRIBUTING.md) · [RNSL 1.0](LICENSE)
+RightDisplay 1.0 是当前正式发布版本。
+
+此前的 0.4 Beta RC 已作为历史版本保留：
+
+[查看历史 Release](https://github.com/RedoRosetta/RightDisplay/releases) · [更新记录](CHANGELOG.md)
+
+---
+
+<div align="center">
+
+**RightDisplay｜正确显示**
+
+让显示状态更清晰，让常用控制更简单。
 
 Copyright © 2026 RedoRosetta
+
+</div>
