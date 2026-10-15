@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/screenshots/0.4-beta/../..//right-display-app-icon.png" width="96" alt="RightDisplay App Icon">
+<img src="assets/icons/right-display-app-icon.png" width="96" alt="RightDisplay App Icon">
 
 # RightDisplay｜正确显示
 
@@ -11,7 +11,7 @@
 
 **RightDisplay 1.0 · Build45**
 
-[**下载 RightDisplay 1.0**](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [安装指南](INSTALLATION.md) · [反馈问题](https://github.com/RedoRosetta/RightDisplay/issues/new/choose) · [English](README.en.md)
+[**下载 RightDisplay 1.0**](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [安装指南](docs/installation/INSTALLATION.md) · [反馈问题](https://github.com/RedoRosetta/RightDisplay/issues/new/choose) · [English](README.en.md)
 
 macOS 14+ · Apple Silicon
 
@@ -20,7 +20,7 @@ macOS 14+ · Apple Silicon
 ---
 
 <p align="center">
-  <img src="assets/screenshots/0.4-beta/overview.png" width="960" alt="RightDisplay 主界面">
+  <img src="archive/versions/0.4-beta/screenshots/overview.png" width="960" alt="RightDisplay 主界面">
 </p>
 
 <p align="center">
@@ -50,7 +50,7 @@ RightDisplay 会尽可能区分设备声明、macOS 报告和软件推断的信�
 通过菜单栏中的 RightDisplay 图标，可以快速访问常用显示与音频控制。
 
 <p align="center">
-  <img src="assets/screenshots/0.4-beta/quick-control.png" width="380" alt="RightDisplay 菜单栏快捷控制">
+  <img src="archive/versions/0.4-beta/screenshots/quick-control.png" width="380" alt="RightDisplay 菜单栏快捷控制">
 </p>
 
 快捷面板支持按需配置，能够集中提供：
@@ -70,7 +70,7 @@ RightDisplay 会尽可能区分设备声明、macOS 报告和软件推断的信�
 在「显示」页面中，查看和调整当前连接可用的显示模式。
 
 <p align="center">
-  <img src="assets/screenshots/0.4-beta/display-output.png" width="960" alt="RightDisplay 显示输出设置">
+  <img src="archive/versions/0.4-beta/screenshots/display-output.png" width="960" alt="RightDisplay 显示输出设置">
 </p>
 
 RightDisplay 支持管理：
@@ -93,7 +93,7 @@ RightDisplay 支持管理：
 查看、分析并管理显示器的 ICC 色彩描述文件。
 
 <p align="center">
-  <img src="assets/screenshots/0.4-beta/color-profiles.png" width="760" alt="RightDisplay ICC 色彩管理">
+  <img src="archive/versions/0.4-beta/screenshots/color-profiles.png" width="760" alt="RightDisplay ICC 色彩管理">
 </p>
 
 你可以查看：
@@ -120,7 +120,7 @@ RightDisplay 支持管理：
 <br>
 
 <p align="center">
-  <img src="assets/screenshots/0.4-beta/edid.png" width="760" alt="RightDisplay EDID 信息">
+  <img src="archive/versions/0.4-beta/screenshots/edid.png" width="760" alt="RightDisplay EDID 信息">
 </p>
 
 </details>
@@ -171,7 +171,7 @@ HDMI / DisplayPort 输出设备
 ```
 
 <p align="center">
-  <img src="assets/screenshots/0.4-beta/virtual-audio.png" width="960" alt="RightDisplay Virtual Audio">
+  <img src="archive/versions/0.4-beta/screenshots/virtual-audio.png" width="960" alt="RightDisplay Virtual Audio">
 </p>
 
 Virtual Audio 提供：
@@ -240,7 +240,7 @@ RightDisplay 1.0 使用 Ad-hoc 签名，**尚未经过 Apple 公证**。
 
 部分系统级音频功能可能受到 macOS 版本、权限和组件加载策略的限制。
 
-更多信息请参阅 [安装指南](INSTALLATION.md)。
+更多信息请参阅 [安装指南](docs/installation/INSTALLATION.md)。
 
 ### 文件完整性
 
@@ -276,7 +276,7 @@ RightDisplay 提供中文和英文界面。
 <br>
 
 <p align="center">
-  <img src="assets/screenshots/0.4-beta/general.png" width="960" alt="RightDisplay 通用设置">
+  <img src="archive/versions/0.4-beta/screenshots/general.png" width="960" alt="RightDisplay 通用设置">
 </p>
 
 </details>
@@ -287,7 +287,7 @@ RightDisplay 提供中文和英文界面。
 
 分享报告前，请检查其中可能包含的设备名称、序列号、网络信息和本地路径。
 
-[查看隐私说明](PRIVACY.md)
+[查看隐私说明](docs/installation/PRIVACY.md)
 
 ## 源码与许可证
 
@@ -306,10 +306,10 @@ Apple 原始材料及其他第三方组件继续遵循各自的许可证，RNSL 
 相关文档：
 
 - [RNSL 1.0 许可证](LICENSE)
-- [第三方许可证](THIRD_PARTY_LICENSES.md)
+- [第三方许可证](docs/licensing/THIRD_PARTY_LICENSES.md)
 - [版权及第三方声明](NOTICE.md)
-- [从源码构建](BUILDING.md)
-- [项目架构](ARCHITECTURE.md)
+- [从源码构建](docs/development/BUILDING.md)
+- [项目架构](docs/development/ARCHITECTURE.md)
 - [参与贡献](CONTRIBUTING.md)
 
 ## 反馈与支持
@@ -329,6 +329,8 @@ RightDisplay 仍会持续维护和改进。
 - 预期行为
 
 如需附上诊断文件，请先检查个人信息。
+
+<a id="support"></a>
 
 如果 RightDisplay 对你有帮助，也欢迎自愿支持项目开发。
 
@@ -353,3 +355,5 @@ RightDisplay 1.0 是当前正式发布版本。
 Copyright © 2026 RedoRosetta
 
 </div>
+
+[源码构建](docs/development/BUILDING.md) · [仓库结构](docs/REPOSITORY_STRUCTURE.md) · [许可证与依赖](docs/licensing/THIRD_PARTY_LICENSES.md)

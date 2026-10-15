@@ -10,8 +10,8 @@ body:
         感谢反馈！可以使用中文或 English，不清楚的设备信息可填“不知道 / Unknown”。
         Thanks for testing. Use Chinese or English; enter Unknown for details you cannot find.
 
-        **0.4 Beta RC 已知问题 / Known issue:** Virtual Audio 可能因签名兼容问题无法转发，且要求 macOS 27+。若遇到新的报错、崩溃或不同表现，欢迎记录。
-        Virtual Audio may fail to forward because of signature compatibility and requires macOS 27+. New errors, crashes or different behavior are useful to report.
+        **当前版本 / Current:** RightDisplay 1.0 · Build45；Ad-hoc签名、未公证；Virtual Audio另需macOS27+。请记录实际报错，勿把历史RC限制当作当前运行结论。
+        Report the actual error and version; Ad-hoc signatures do not imply notarization or universal compatibility.
 
         不要公开密码、Token、Apple ID、配对凭据或序列号；上传前检查诊断和截图。
         Do not post passwords, tokens, Apple IDs, pairing credentials or serial numbers. Review diagnostics and screenshots before uploading.

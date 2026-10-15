@@ -1,5 +1,7 @@
 # Helper replacement / LGPL替换 — engineering evidence
 
+未链接的源码/脚本/数据路径均以仓库根目录为基准；命令也从仓库根目录执行。 Unlinked source paths and commands are relative to the repository root.
+
 已验证技术替换路径；正式 LICENSE §7.3A 保留 LGPL 必要组合权利，原 LGPL 权利不受 RNSL 限制。实际打包可执行文件在网络/用户Library写入均禁止时，`--help`成功加载了修改后的外置zeroconf；不是只在独立Python里测试import。没有启动App、发现、配对或控制设备。
 
 ## 源码重建

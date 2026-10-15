@@ -1,5 +1,7 @@
 # Signing / 签名
 
+未链接的源码/脚本/数据路径均以仓库根目录为基准；命令也从仓库根目录执行。 Unlinked source paths and commands are relative to the repository root.
+
 Copyright © 2026 RedoRosetta
 
 ## Ad-hoc 1.0 distribution

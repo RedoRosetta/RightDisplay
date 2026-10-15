@@ -1,14 +1,16 @@
+> **HISTORICAL / 历史资料。** 不作为RightDisplay1.0安装、功能或兼容性指导；[版本归档说明](../README.md)。
+
 # Install RightDisplay 1.0
 
 将 DMG 内的 Right Display.app 拖到 Applications。先正常打开；如被阻止，在系统设置 → 隐私与安全性核对来源后使用系统提供的“仍要打开”并确认。此版本Ad-hoc签名、未公证，不保证系统一定提供允许选项；不要求关闭Gatekeeper/SIP。Virtual Audio安装由应用打开macOS Installer，由用户自行授权；不会自动安装、改系统默认输出或重启服务。版本升级限制见SIGNING.md。
 
 Drag the app from the DMG to Applications. If blocked, verify the source and use macOS Privacy & Security → Open Anyway where available. Do not disable Gatekeeper/SIP. Audio components require the normal user-authorized Installer flow.
 
-> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](releases/1.0.0.md) and [signature boundaries](SIGNING.md). Prior RC/build notes below retain their historical scope.
+> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](../../../../docs/releases/1.0.0.md) and [signature boundaries](../../../../docs/development/SIGNING.md). Prior RC/build notes below retain their historical scope.
 
 # 安装与首次使用 / Installation
 
-[简体中文](#简体中文) · [English](#english) · [返回首页 / Home](README.md)
+[简体中文](#简体中文) · [English](#english) · [返回首页 / Home](../../../../README.md)
 
 ## 简体中文
 
@@ -64,7 +66,7 @@ shasum -a 256 "$HOME/Downloads/RightDisplay-0.4-Beta-RC-arm64.zip"
 
 **如果你主要需要 HDMI / DP 软件音量，建议等待修复。** 当前公开包的组件签名检查与 ad-hoc 分发方式存在兼容问题，可能导致转发无法启动；跨机器安装和实际播放尚未验证完成。
 
-这个组件提供软件音量，不改变电视硬件音量。Apple TV 音量是独立功能。虚拟音频驱动与后台组件使用 ad-hoc 签名，安装包未签名、未公证；具体限制见[安全说明](SECURITY.md)。
+这个组件提供软件音量，不改变电视硬件音量。Apple TV 音量是独立功能。虚拟音频驱动与后台组件使用 ad-hoc 签名，安装包未签名、未公证；具体限制见[安全说明](../../../../SECURITY.md)。
 
 <details>
 <summary>可选：在 macOS 27+ 上测试虚拟音频</summary>
@@ -146,7 +148,7 @@ Neither Virtual Audio installation nor Display Link Test is required. The interf
 
 **If HDMI / DP software volume is your main need, we recommend waiting for a fix.** Component signature checks conflict with this ad-hoc distribution and may prevent forwarding. Cross-machine installation and actual playback of the public package have not yet been fully verified.
 
-This component adjusts software volume, not TV hardware volume. Apple TV volume is separate. Virtual-audio driver and background components are ad-hoc signed; their installer is unsigned and not notarized. See [security information](SECURITY.md) for the limitations.
+This component adjusts software volume, not TV hardware volume. Apple TV volume is separate. Virtual-audio driver and background components are ad-hoc signed; their installer is unsigned and not notarized. See [security information](../../../../SECURITY.md) for the limitations.
 
 <details>
 <summary>Optional: test Virtual Audio on macOS 27+</summary>

@@ -1,25 +1,9 @@
-> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](releases/1.0.0.md) and [signature boundaries](SIGNING.md). Prior RC/build notes below retain their historical scope.
+# Security / 安全
 
-# Security
+不要在公开Issue提交密码、Token、Apple ID、配对凭据、私钥或不愿公开的设备/网络/个人信息。发布诊断或EDID前逐项检查。普通不含敏感信息的缺陷可使用[问题表单](https://github.com/RedoRosetta/RightDisplay/issues/new/choose)；敏感问题不要附到公开Issue，使用仓库提供的私密报告渠道（若可用）。
 
-Please do not open a public Issue containing passwords, access tokens, Apple IDs, pairing credentials, private keys, serial numbers, or other sensitive information.
+RightDisplay1.0/Build45为Ad-hoc签名、未公证；精确组件内容绑定不是发布者身份认证。Driver/Broker绑定、Installer检查和默认Apple/Team构建策略见[签名说明](docs/development/SIGNING.md)。Broker继续验证Apple系统音频producer，保留角色、console UID、协议、边界、生命周期与fail-silent检查；当前不以App签名认证consumer，其他同控制台用户进程可能尝试消耗或拒绝服务。没有因整理而改变此边界。
 
-Before attaching a Right Display diagnostic report or EDID export, review it and remove any device identifiers, network details, paths, usernames, or personal information you do not want to publish.
-
-For an ordinary software defect that does not contain sensitive information, use the public bug report template.
-
-
-## Current Beta audio policy
-
-The 0.4 Beta RC broker does not authenticate the App consumer's cryptographic identity. Other own-component Apple/Team-signature checks remain unchanged and may prevent forwarding with the ad-hoc package. Current console-user, role/protocol, format/bounds, lifecycle and fail-silent guards remain, as does authentication of Apple OS audio producer hosts. Another same-console-user process may try to impersonate a consumer or deny availability.
-
-本 RC 的 broker 不验证 App 客户端的签名身份；其他自身组件之间的 Apple／Team 签名校验仍保留，可能阻止 ad-hoc 包启用转发。当前控制台用户、角色／协议、格式／边界、生命周期、安全停止和 Apple 系统音频进程验证继续保留。同一控制台用户的其他进程可能尝试冒充客户端或占用连接。
-
-
-## Source candidate / 源码候选
-
-Source Available, not OSI Open Source. First-party material is licensed under RNSL 1.0 (Noncommercial). Copyright © 2026 RedoRosetta is the public attribution, not a separate legal entity. This Build44-based source preparation differs from the Build41 public RC and is not fully hardware-accepted. No official signing credentials are supplied.
-
-Own-component Team is build-time configurable, official default preserved. Actual certificates/HAL/XPC runtime remain unverified. A private reporting contact is not invented; confirm a working private channel before final publication. Preserve producer/UID/ownership/bounds/epoch/fail-silent checks; no device or installation action in CI.
+No passwords, tokens, pairing credentials, private keys or personal diagnostics in public Issues. Review attachments before sharing. The 1.0 Ad-hoc component pins protect exact content, not publisher identity. The Broker's console-user consumer policy is not cryptographic App authentication; same-user availability attacks remain possible. See [privacy](docs/installation/PRIVACY.md) and [signing](docs/development/SIGNING.md). No notarization, universal compatibility or complete hardware regression is claimed.
 
 Copyright © 2026 RedoRosetta

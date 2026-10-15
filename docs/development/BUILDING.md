@@ -1,5 +1,7 @@
 # 构建 / Building
 
+未链接的源码/脚本/数据路径均以仓库根目录为基准；命令也从仓库根目录执行。 Unlinked source paths and commands are relative to the repository root.
+
 **已验证：Xcode 27.0 / macOS SDK27.0 / Apple silicon arm64，1.0 Build45编译与完整资源装配。** 不等于签名可安装版本、HAL加载、真实播放或恢复验收。App target为macOS14；Virtual Audio产品要求macOS27+；Swift语言模式5、C11、C++20。
 
 ## 明确输入
@@ -29,7 +31,7 @@ Xcode嵌入阶段和build wrapper均要求preflight：缺Helper、runtime、zero
 
 本轮显式导入冻结合同的独立CPython和45份摘要校验wheel（不导入旧venv/Helper/pkg），从零新建Helper。随后在无DerivedData的新源码副本中使用**本轮生成的**Helper/pkg装配编译，外层沙箱拒绝访问私有开发目录、旧聊天目录及原候选目录；这些拒读规则通过实际拒读检查。
 
-macOS拒绝Swift宏的嵌套sandbox时，独立验证runner使用 `--inherit-outer-sandbox`。该选项仅让宏继承已有外层拒读规则；普通构建无需启用。外层规则、产品代码和认证校验不因此移除。首次失败日志保留。具体PASS/FAIL结果见compliance/engineering-result.json；未把“提供了全部本地输入”写成“另一台Mac从公开网络冷启动已通过”。
+macOS拒绝Swift宏的嵌套sandbox时，独立验证runner使用 `--inherit-outer-sandbox`。该选项仅让宏继承已有外层拒读规则；普通构建无需启用。外层规则、产品代码和认证校验不因此移除。首次失败日志保留。历史隔离构建记录见[Build44归档](../../archive/versions/build44/README.md)；当前发行核验见[Build45记录](../../compliance/build45-release-checks.json)；未把“提供了全部本地输入”写成“另一台Mac从公开网络冷启动已通过”。
 
 ## 离线回归
 

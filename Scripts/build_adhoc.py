@@ -60,7 +60,7 @@ def main():
  run(args+['build'],out/'xcodebuild.log')
  app=out/'DerivedData/Build/Products/Release/Right Display.app';pl=plistlib.loads((app/'Contents/Info.plist').read_bytes());assert (pl['CFBundleShortVersionString'],pl['CFBundleVersion'])==('1.0','45')
  legal=app/'Contents/Resources/Legal';legal.mkdir(exist_ok=True)
- for name in ['LICENSE','LICENSE_SCOPE.md','NOTICE.md','THIRD_PARTY_LICENSES.md','BRAND_ASSETS.md']:shutil.copy2(ROOT/name,legal/name)
+ for name in ['LICENSE','LICENSE_SCOPE.md','NOTICE.md','THIRD_PARTY_LICENSES.md','BRAND_ASSETS.md']:shutil.copy2(ROOT/({'THIRD_PARTY_LICENSES.md':'docs/licensing/THIRD_PARTY_LICENSES.md','BRAND_ASSETS.md':'docs/licensing/BRAND_ASSETS.md'}.get(name,name)),legal/name)
  sign(app,'com.rightdisplay.gui');run(['codesign','--verify','--deep','--strict',app])
  (out/'result.json').write_text(json.dumps({'version':'1.0','build':45,'signing':'ad-hoc','notarized':False,'pins':pins,'app':str(app.relative_to(ROOT)),'installed':False,'hardware_testing':'not performed on repackaged artifact'},indent=2)+'\n')
  print('Ad-hoc build complete; run verify_adhoc.py before distribution.',flush=True)

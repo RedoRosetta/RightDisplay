@@ -1,3 +1,5 @@
+> **HISTORICAL / 历史资料。** 不作为RightDisplay1.0安装、功能或兼容性指导；[版本归档说明](README.md)。
+
 # RightDisplay 0.3 Beta
 
 **Public Beta · Build 60 · macOS 14+ · Apple silicon arm64.**
