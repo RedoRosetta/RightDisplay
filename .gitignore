@@ -2,3 +2,35 @@
 ._*
 __MACOSX/
 
+# Source candidate local/generated exclusions
+# Generated files and local identity
+Build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.p12
+*.pfx
+*.key
+*.mobileprovision
+*.cer
+*.log
+.env
+*.app/
+*.dSYM/
+# Credentials and local evidence
+*credentials*.json
+*pairing*.json
+VirtualAudio-Evidence*.jsonl
+# Candidate local signing and generated inputs
+*.pkg
+*.dmg
+*.whl
+*.p8
+*.pem
+*.keystore
+*.keychain*
+*.xcuserdatad/

@@ -1,0 +1,11 @@
+{
+  "CPython": "official20260825 install_only_stripped archive verified against GitHub digest",
+  "wheels": "explicit byte-verified PyPI artifact inputs, copied locally; not all downloaded again",
+  "private_history_and_previous_candidate_reads": "denied by outer sandbox",
+  "helper_fresh_venv_and_23_mock_tests": "PASS",
+  "default_official_team_policy": "45F25M3DS7 unchanged",
+  "Release_arm64_compile_and_assembly": "PASS",
+  "official_private_key_or_identity_used": false,
+  "signed_or_device_runtime": "UNVERIFIED",
+  "installed": false
+}

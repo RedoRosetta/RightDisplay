@@ -1,0 +1,32 @@
+{
+  "status": "COMPILE_AND_ASSEMBLY_PASS",
+  "version": "0.4",
+  "build": "44",
+  "component": "21",
+  "protocol": "21",
+  "app": "Build/Product/DerivedData/Build/Products/Release/Right Display.app",
+  "app_signing": "disabled; not an installable release claim",
+  "component_signing": "local ad-hoc compile artifacts; existing authentication is not satisfied",
+  "installed": false,
+  "runtime": "UNVERIFIED",
+  "public_RC_correspondence": "different: RC uses Build41",
+  "release": "SOURCE_ONLY: RNSL adopted; no binary release or hardware acceptance claimed",
+  "clean_path_validation": {
+    "source_copied_without_build_cache": true,
+    "helper_and_pkg_inputs": "copied explicitly from this round fresh builds; not rebuilt inside this source compile step",
+    "legacy_and_original_candidate_reads": "denied by outer sandbox; deny proof passed",
+    "initial_failure": "macOS rejected nested Swift macro sandbox; logs preserved",
+    "macro_subprocesses": "inherit same outer read-denial sandbox using compiler option; no application security checks altered",
+    "app_compile_and_assembly": "PASS",
+    "offline_suites": 9,
+    "hardware_or_installation": false,
+    "cold_public_bootstrap": "NOT_VERIFIED"
+  },
+  "helper_tests": 23,
+  "helper_runtime_distributions_observed": 34,
+  "wheel_artifacts_upstream_verified": 45,
+  "CPython_license": "exact v3.12.14 official text equals interpreter LICENSE.txt",
+  "upload_ready": false,
+  "historical_snapshot": true,
+  "superseded_by": "finalization-result.json"
+}

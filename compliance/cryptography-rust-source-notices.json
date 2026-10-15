@@ -1,0 +1,544 @@
+[
+  {
+    "name": "asn1",
+    "version": "0.24.1",
+    "url": "https://static.crates.io/crates/asn1/asn1-0.24.1.crate",
+    "sha256": "c9795210620c0cb3f9a7ce4f882808c38e1ef7b347c90591dceae0886e031fb1",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "BSD-3-Clause"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/asn1-0.24.1/LICENSE"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "asn1_derive",
+    "version": "0.24.1",
+    "url": "https://static.crates.io/crates/asn1_derive/asn1_derive-0.24.1.crate",
+    "sha256": "909e307f1cc32bb8bccbd98f446e6d1bf03fa30f7b53a4337da7181ad30fa11a",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "BSD-3-Clause"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/asn1_derive-0.24.1/LICENSE"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "base64",
+    "version": "0.23.0",
+    "url": "https://static.crates.io/crates/base64/base64-0.23.0.crate",
+    "sha256": "b25655df2c3cdd83c5e5b293b88acd880332b2ddadd7c30ac43144fdc0033da9",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/base64-0.23.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/base64-0.23.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "bitflags",
+    "version": "2.13.1",
+    "url": "https://static.crates.io/crates/bitflags/bitflags-2.13.1.crate",
+    "sha256": "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/bitflags-2.13.1/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/bitflags-2.13.1/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "cc",
+    "version": "1.4.0",
+    "url": "https://static.crates.io/crates/cc/cc-1.4.0.crate",
+    "sha256": "5add81bb678e6cb321aff7fa0dc7689ad82b112dbc032cea19f91d6b8e3582b9",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/cc-1.4.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/cc-1.4.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "cfg-if",
+    "version": "1.0.4",
+    "url": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.4.crate",
+    "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/cfg-if-1.0.4/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/cfg-if-1.0.4/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "find-msvc-tools",
+    "version": "0.1.9",
+    "url": "https://static.crates.io/crates/find-msvc-tools/find-msvc-tools-0.1.9.crate",
+    "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/find-msvc-tools-0.1.9/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/find-msvc-tools-0.1.9/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "foreign-types-shared",
+    "version": "0.1.1",
+    "url": "https://static.crates.io/crates/foreign-types-shared/foreign-types-shared-0.1.1.crate",
+    "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/foreign-types-shared-0.1.1/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/foreign-types-shared-0.1.1/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "foreign-types",
+    "version": "0.3.2",
+    "url": "https://static.crates.io/crates/foreign-types/foreign-types-0.3.2.crate",
+    "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/foreign-types-0.3.2/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/foreign-types-0.3.2/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "heck",
+    "version": "0.5.0",
+    "url": "https://static.crates.io/crates/heck/heck-0.5.0.crate",
+    "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/heck-0.5.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/heck-0.5.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "itoa",
+    "version": "1.0.18",
+    "url": "https://static.crates.io/crates/itoa/itoa-1.0.18.crate",
+    "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/itoa-1.0.18/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/itoa-1.0.18/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "libc",
+    "version": "0.2.189",
+    "url": "https://static.crates.io/crates/libc/libc-0.2.189.crate",
+    "sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/libc-0.2.189/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/libc-0.2.189/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "once_cell",
+    "version": "1.21.4",
+    "url": "https://static.crates.io/crates/once_cell/once_cell-1.21.4.crate",
+    "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/once_cell-1.21.4/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/once_cell-1.21.4/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "openssl-macros",
+    "version": "0.1.1",
+    "url": "https://static.crates.io/crates/openssl-macros/openssl-macros-0.1.1.crate",
+    "sha256": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/openssl-macros-0.1.1/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/openssl-macros-0.1.1/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "openssl-sys",
+    "version": "0.9.117",
+    "url": "https://static.crates.io/crates/openssl-sys/openssl-sys-0.9.117.crate",
+    "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/openssl-sys-0.9.117/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "openssl",
+    "version": "0.10.81",
+    "url": "https://static.crates.io/crates/openssl/openssl-0.10.81.crate",
+    "sha256": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/openssl-0.10.81/LICENSE",
+      "third_party/cryptography-rust-notices/openssl-0.10.81/LICENSE-APACHE"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "pem",
+    "version": "4.0.0",
+    "url": "https://static.crates.io/crates/pem/pem-4.0.0.crate",
+    "sha256": "d354a98a3d1251555de99e8fdd8afda05573c31b82f59063a7b0a29b5527f120",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/pem-4.0.0/LICENSE.md"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "pkg-config",
+    "version": "0.3.33",
+    "url": "https://static.crates.io/crates/pkg-config/pkg-config-0.3.33.crate",
+    "sha256": "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/pkg-config-0.3.33/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/pkg-config-0.3.33/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "portable-atomic",
+    "version": "1.14.0",
+    "url": "https://static.crates.io/crates/portable-atomic/portable-atomic-1.14.0.crate",
+    "sha256": "3d20d5497ef88037a52ff98267d066e7f11fcc5e99bbfbd58a42336193aacec3",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "Apache-2.0 OR MIT"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/portable-atomic-1.14.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/portable-atomic-1.14.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "proc-macro2",
+    "version": "1.0.107",
+    "url": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.107.crate",
+    "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/proc-macro2-1.0.107/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/proc-macro2-1.0.107/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "pyo3-build-config",
+    "version": "0.29.0",
+    "url": "https://static.crates.io/crates/pyo3-build-config/pyo3-build-config-0.29.0.crate",
+    "sha256": "c5e2a7d2f0d013342f295c048ad19237add5154a55b1c5a254c0ec93d4109078",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/pyo3-build-config-0.29.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/pyo3-build-config-0.29.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "pyo3-ffi",
+    "version": "0.29.0",
+    "url": "https://static.crates.io/crates/pyo3-ffi/pyo3-ffi-0.29.0.crate",
+    "sha256": "ca85c467da1bbc8d866eea5deff9cf29ea5f7785054a17da36e65bda9c05845b",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/pyo3-ffi-0.29.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/pyo3-ffi-0.29.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "pyo3-macros-backend",
+    "version": "0.29.0",
+    "url": "https://static.crates.io/crates/pyo3-macros-backend/pyo3-macros-backend-0.29.0.crate",
+    "sha256": "4ca3a1557399783172dc5bf39cfca835157732532cba56b71d2292161e53b362",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/pyo3-macros-backend-0.29.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/pyo3-macros-backend-0.29.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "pyo3-macros",
+    "version": "0.29.0",
+    "url": "https://static.crates.io/crates/pyo3-macros/pyo3-macros-0.29.0.crate",
+    "sha256": "9ac53762fd065daa3194dd09337a38bd793a188100fd1a9304c4ab312d901771",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/pyo3-macros-0.29.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/pyo3-macros-0.29.0/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "pyo3",
+    "version": "0.29.0",
+    "url": "https://static.crates.io/crates/pyo3/pyo3-0.29.0.crate",
+    "sha256": "cd274650b21d4bfc26a0a47587962c1edb425f69287324355cd040c3ea66071c",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/pyo3-0.29.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/pyo3-0.29.0/LICENSE-MIT",
+      "third_party/cryptography-rust-notices/pyo3-0.29.0/pyo3-runtime/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/pyo3-0.29.0/pyo3-runtime/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "quote",
+    "version": "1.0.47",
+    "url": "https://static.crates.io/crates/quote/quote-1.0.47.crate",
+    "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/quote-1.0.47/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/quote-1.0.47/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "self_cell",
+    "version": "1.3.0",
+    "url": "https://static.crates.io/crates/self_cell/self_cell-1.3.0.crate",
+    "sha256": "2ab42ca02749e120097e328d91d415325bdf43b1c72c4c8badf37375fe40a813",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "Apache-2.0 OR GPL-2.0-only"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/self_cell-1.3.0/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/self_cell-1.3.0/LICENSE-GPLv2"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "shlex",
+    "version": "2.0.1",
+    "url": "https://static.crates.io/crates/shlex/shlex-2.0.1.crate",
+    "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/shlex-2.0.1/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/shlex-2.0.1/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "syn",
+    "version": "2.0.119",
+    "url": "https://static.crates.io/crates/syn/syn-2.0.119.crate",
+    "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/syn-2.0.119/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/syn-2.0.119/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "target-lexicon",
+    "version": "0.13.5",
+    "url": "https://static.crates.io/crates/target-lexicon/target-lexicon-0.13.5.crate",
+    "sha256": "adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "Apache-2.0 WITH LLVM-exception"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/target-lexicon-0.13.5/LICENSE"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "unicode-ident",
+    "version": "1.0.24",
+    "url": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.24.crate",
+    "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "(MIT OR Apache-2.0) AND Unicode-3.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/unicode-ident-1.0.24/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/unicode-ident-1.0.24/LICENSE-MIT",
+      "third_party/cryptography-rust-notices/unicode-ident-1.0.24/LICENSE-UNICODE"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  },
+  {
+    "name": "vcpkg",
+    "version": "0.2.15",
+    "url": "https://static.crates.io/crates/vcpkg/vcpkg-0.2.15.crate",
+    "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+    "scope": "publisher-declared Rust build graph; target/runtime inclusion not newly asserted",
+    "original_license_expression": [
+      {
+        "expression": "MIT OR Apache-2.0"
+      }
+    ],
+    "materials": [
+      "third_party/cryptography-rust-notices/vcpkg-0.2.15/LICENSE-APACHE",
+      "third_party/cryptography-rust-notices/vcpkg-0.2.15/LICENSE-MIT"
+    ],
+    "status": "VERIFIED_SOURCE_AND_NOTICES"
+  }
+]

@@ -1,0 +1,988 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "RightDisplayAppleTVHelper",
+      "version": "candidate-from-Build44-source"
+    },
+    "properties": [
+      {
+        "name": "rightdisplay:scope",
+        "value": "actual newly rebuilt helper; CPython static closure mapped, cryptography OpenSSL confirmed; no public package released"
+      },
+      {
+        "name": "rightdisplay:nested-completeness",
+        "value": "not-final: upstream Rust graph is retained separately; per-target native closures for other wheels not independently reproduced"
+      },
+      {
+        "name": "rightdisplay:rust-publisher-bom",
+        "value": "third_party/wheel-materials/cryptography-50.0.0/cryptography-50.0.0.dist-info/sboms/cryptography-rust.cyclonedx.json"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/aiohappyeyeballs@2.7.1",
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "purl": "pkg:pypi/aiohappyeyeballs@2.7.1",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/aiohttp@3.14.3",
+      "name": "aiohttp",
+      "version": "3.14.3",
+      "purl": "pkg:pypi/aiohttp@3.14.3",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/aiosignal@1.4.0",
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "purl": "pkg:pypi/aiosignal@1.4.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-types@0.8.0",
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/async-timeout@5.0.1",
+      "name": "async-timeout",
+      "version": "5.0.1",
+      "purl": "pkg:pypi/async-timeout@5.0.1",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/attrs@26.1.0",
+      "name": "attrs",
+      "version": "26.1.0",
+      "purl": "pkg:pypi/attrs@26.1.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/certifi@2026.7.22",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "purl": "pkg:pypi/certifi@2026.7.22",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/cffi@2.1.1",
+      "name": "cffi",
+      "version": "2.1.1",
+      "purl": "pkg:pypi/cffi@2.1.1",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT-0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/chacha20poly1305-reuseable@0.13.2",
+      "name": "chacha20poly1305-reuseable",
+      "version": "0.13.2",
+      "purl": "pkg:pypi/chacha20poly1305-reuseable@0.13.2",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/charset-normalizer@3.5.1",
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "purl": "pkg:pypi/charset-normalizer@3.5.1",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/cryptography@50.0.0",
+      "name": "cryptography",
+      "version": "50.0.0",
+      "purl": "pkg:pypi/cryptography@50.0.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/frozenlist@1.8.0",
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "purl": "pkg:pypi/frozenlist@1.8.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/idna@3.19",
+      "name": "idna",
+      "version": "3.19",
+      "purl": "pkg:pypi/idna@3.19",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/ifaddr@0.2.0",
+      "name": "ifaddr",
+      "version": "0.2.0",
+      "purl": "pkg:pypi/ifaddr@0.2.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/miniaudio@1.71",
+      "name": "miniaudio",
+      "version": "1.71",
+      "purl": "pkg:pypi/miniaudio@1.71",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/multidict@6.7.1",
+      "name": "multidict",
+      "version": "6.7.1",
+      "purl": "pkg:pypi/multidict@6.7.1",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/packaging@26.3",
+      "name": "packaging",
+      "version": "26.3",
+      "purl": "pkg:pypi/packaging@26.3",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/propcache@0.5.2",
+      "name": "propcache",
+      "version": "0.5.2",
+      "purl": "pkg:pypi/propcache@0.5.2",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/protobuf@7.36.0",
+      "name": "protobuf",
+      "version": "7.36.0",
+      "purl": "pkg:pypi/protobuf@7.36.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyatv@0.16.1",
+      "name": "pyatv",
+      "version": "0.16.1",
+      "purl": "pkg:pypi/pyatv@0.16.1",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic@2.13.4",
+      "name": "pydantic",
+      "version": "2.13.4",
+      "purl": "pkg:pypi/pydantic@2.13.4",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic-core@2.46.4",
+      "name": "pydantic_core",
+      "version": "2.46.4",
+      "purl": "pkg:pypi/pydantic-core@2.46.4",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyinstaller@6.22.2",
+      "name": "pyinstaller",
+      "version": "6.22.2",
+      "purl": "pkg:pypi/pyinstaller@6.22.2",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyinstaller-hooks-contrib@2026.6",
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.6",
+      "purl": "pkg:pypi/pyinstaller-hooks-contrib@2026.6",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/requests@2.34.2",
+      "name": "requests",
+      "version": "2.34.2",
+      "purl": "pkg:pypi/requests@2.34.2",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0",
+      "name": "setuptools",
+      "version": "84.0.0",
+      "purl": "pkg:pypi/setuptools@84.0.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/six@1.17.0",
+      "name": "six",
+      "version": "1.17.0",
+      "purl": "pkg:pypi/six@1.17.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/srptools@1.0.1",
+      "name": "srptools",
+      "version": "1.0.1",
+      "purl": "pkg:pypi/srptools@1.0.1",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/tinytag@2.3.0",
+      "name": "tinytag",
+      "version": "2.3.0",
+      "purl": "pkg:pypi/tinytag@2.3.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-inspection@0.4.4",
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-extensions@4.16.0",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/urllib3@2.7.0",
+      "name": "urllib3",
+      "version": "2.7.0",
+      "purl": "pkg:pypi/urllib3@2.7.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/yarl@1.24.5",
+      "name": "yarl",
+      "version": "1.24.5",
+      "purl": "pkg:pypi/yarl@1.24.5",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/zeroconf@0.150.0",
+      "name": "zeroconf",
+      "version": "0.150.0",
+      "purl": "pkg:pypi/zeroconf@0.150.0",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "matched collected TOC source files to installed distribution RECORD"
+        },
+        {
+          "name": "rightdisplay:license-review",
+          "value": "not-final; see THIRD_PARTY_LICENSES.md"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "LGPL-2.1-or-later"
+        }
+      ]
+    },
+    {
+      "type": "platform",
+      "bom-ref": "cpython-3.12.14",
+      "name": "CPython",
+      "version": "3.12.14",
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "build interpreter verified and libpython collected; bundled native subcomponents require separate inventory"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-bzip2@1.0.8",
+      "name": "bzip2",
+      "version": "1.0.8",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://astral-sh.github.io/mirror/files/bzip2-1.0.8.tar.gz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "bzip2-1.0.6"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-libffi@3.4.8",
+      "name": "libffi",
+      "version": "3.4.8",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/libffi/libffi/releases/download/v3.4.8/libffi-3.4.8.tar.gz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bc9842a18898bfacb0ed1252c4febcc7e78fa139fd27fdc7a3e30d9d9356119b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-mpdecimal@4.0.0",
+      "name": "mpdecimal",
+      "version": "4.0.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://astral-sh.github.io/mirror/files/mpdecimal-4.0.0.tar.gz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "942445c3245b22730fd41a67a7c5c231d11cb1b9936b9c0f76334fb7d0b4468c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-expat@2.8.3",
+      "name": "expat",
+      "version": "2.8.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/libexpat/libexpat/releases/download/R_2_8_3/expat-2.8.3.tar.xz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f6256df90c906773d344da084402b7d3e4f22ed41b1a59c989098a83d3ea0c85"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-openssl-3.5@3.5.8",
+      "name": "openssl-3.5",
+      "version": "3.5.8",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.8/openssl-3.5.8.tar.gz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a8f84a39918ec6415ce765d9b429d313ba97b8143169c172e734b9514464f5b2"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-sqlite@3.53.1.0",
+      "name": "sqlite",
+      "version": "3.53.1.0",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://www.sqlite.org/2026/sqlite-autoconf-3530100.tar.gz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "83e6b2020a034e9a7ad4a72feea59e1ad52f162e09cbd26735a3ffb98359fc4f"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        },
+        {
+          "name": "rightdisplay:license",
+          "value": "public-domain assertion in original SQLite notice; no fabricated SPDX license"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-xz@5.8.3",
+      "name": "xz",
+      "version": "5.8.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "0BSD"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "standalone-uuid@1.0.3",
+      "name": "uuid",
+      "version": "1.0.3",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "46af3275291091009ad7f1b899de3d0cea0252737550e7919d17237997db5644"
+        }
+      ],
+      "properties": [
+        {
+          "name": "rightdisplay:evidence",
+          "value": "official standalone build manifest plus actual builtin/static links and content correspondence"
+        },
+        {
+          "name": "rightdisplay:hash-scope",
+          "value": "upstream source archive, not binary"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "version": "4.0.1",
+      "purl": "pkg:generic/openssl@4.0.1?download_url=https://github.com/openssl/openssl/releases/download/openssl-4.0.1/openssl-4.0.1.tar.gz",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2db3f3a0d6ea4b59e1f094ace2c8cd536dffb87cdc39084c5afa1e6f7f37dd09"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/openssl/openssl/releases/download/openssl-4.0.1/openssl-4.0.1.tar.gz"
+        }
+      ],
+      "properties": [
+        {
+          "name": "build:operating-system",
+          "value": "macos"
+        },
+        {
+          "name": "build:architecture",
+          "value": "arm64"
+        },
+        {
+          "name": "build:flags",
+          "value": "no-zlib no-shared no-module no-comp no-apps no-docs no-sm2-precomp no-atexit enable-ec_nistp_64_gcc_128"
+        },
+        {
+          "name": "rightdisplay:runtime-query",
+          "value": "cryptography OpenSSL4.0.1 verified; separate from CPython OpenSSL3.5.8"
+        }
+      ],
+      "bom-ref": "cryptography-openssl-4.0.1",
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ]
+    }
+  ]
+}

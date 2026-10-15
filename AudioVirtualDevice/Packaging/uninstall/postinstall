@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+driver=/Library/Audio/Plug-Ins/HAL/RightDisplayVirtualVolume.driver
+helper=/Library/PrivilegedHelperTools/com.rightdisplay.audio.Transport
+plist=/Library/LaunchDaemons/com.rightdisplay.audio.Transport.plist
+# Validate every target before any removal; never follow replacement symlinks.
+for path in /Library /Library/Audio /Library/Audio/Plug-Ins /Library/Audio/Plug-Ins/HAL "$driver" /Library/PrivilegedHelperTools /Library/LaunchDaemons "$helper" "$plist"; do
+ [ ! -L "$path" ] || exit 1
+done
+if [ -e "$driver" ]; then
+ [ -d "$driver" ] || exit 1
+ /usr/bin/codesign --verify --deep --strict "$driver" || exit 1
+ /usr/bin/codesign --verify -R '=anchor apple generic and identifier "com.rightdisplay.audio.VirtualVolume" and certificate leaf[subject.OU] = "45F25M3DS7"' "$driver" || exit 1
+ "$(dirname "$0")/CheckRemoval" || exit 1
+fi
+if [ -e "$helper" ]; then
+ [ -f "$helper" ] || exit 1
+ /usr/bin/codesign --verify --strict -R '=anchor apple generic and identifier "com.rightdisplay.audio.Transport" and certificate leaf[subject.OU] = "45F25M3DS7"' "$helper" || exit 1
+fi
+if [ -e "$driver" ]; then /bin/rm -rf "$driver"; fi
+if [ -e "$helper" ]; then /bin/rm -f "$helper" "$plist"; fi
+# Already-loaded service/device stays loaded until reboot; never restart audio.
+exit 0

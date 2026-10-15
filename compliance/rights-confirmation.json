@@ -1,0 +1,44 @@
+{
+  "record_date": "2026-10-15",
+  "evidence": "direct user confirmation in current task; not independent legal certification",
+  "rightsholder_type": "user personally",
+  "legal_identity": null,
+  "copyright_years": "2026",
+  "confirmed_first_party_rights": [
+    "Swift",
+    "C++",
+    "Python",
+    "user-designed RightDisplay logo/icons/brand assets"
+  ],
+  "confirmed_publication_scope": [
+    "first-party source under RNSL1.0",
+    "first-party build scripts",
+    "necessary documentation",
+    "Apple upstream original terms",
+    "first-party increments distinguished from upstream",
+    "third-party components original terms"
+  ],
+  "brand_grant": "reserved; agreed intact official package free noncommercial redistribution only",
+  "excluded_from_claim": [
+    "Apple ownership",
+    "third-party ownership",
+    "unknown contributor ownership",
+    "payment platform marks or account disclosure inferred from original-logo confirmation"
+  ],
+  "draft_license_adopted": false,
+  "push_authorized": "CONDITIONAL_PREAPPROVAL: only after all current user legal/adoption gates are satisfied; no repeat upload question",
+  "public_attribution": "Copyright \u00a9 2026 RedoRosetta",
+  "attribution_name": "RedoRosetta",
+  "separate_legal_person_assumed": false,
+  "sponsor_source_resources": "generated non-payment placeholders; account originals excluded",
+  "sponsor_scope": "original account images excluded; neutral placeholders",
+  "explicit_target_files": {
+    "record_date": "2026-10-15",
+    "evidence": "direct current user confirmation",
+    "declaration": "VirtualVolume.c and Producer.h were developed by the user personally or generated using AI coding tools for RightDisplay",
+    "acceptance": "recorded as rights-holder source-process attestation, not independent proof of originality or absence of third-party similarity",
+    "original_Apple_notice": "retained unchanged",
+    "historical_Git_official_sample_diffs": "retained unchanged",
+    "source_rewritten": false
+  }
+}

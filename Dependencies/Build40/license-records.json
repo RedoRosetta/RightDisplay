@@ -1,0 +1,403 @@
+{
+  "six": {
+    "version": "1.17.0",
+    "license_expression": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "six-1.17.0.dist-info/LICENSE"
+    ]
+  },
+  "poetry-core": {
+    "version": "2.4.1",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "poetry/core/_vendor/fastjsonschema/LICENSE",
+      "poetry/core/_vendor/lark/LICENSE",
+      "poetry/core/_vendor/packaging/LICENSE",
+      "poetry/core/_vendor/packaging/licenses/__init__.py",
+      "poetry/core/_vendor/packaging/licenses/_spdx.py",
+      "poetry/core/_vendor/tomli/LICENSE",
+      "poetry_core-2.4.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  "urllib3": {
+    "version": "2.7.0",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "urllib3-2.7.0.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  "yarl": {
+    "version": "1.24.5",
+    "license_expression": "Apache-2.0",
+    "license_classifiers": [],
+    "license_files": [
+      "yarl-1.24.5.dist-info/licenses/",
+      "yarl-1.24.5.dist-info/licenses/LICENSE",
+      "yarl-1.24.5.dist-info/licenses/NOTICE"
+    ]
+  },
+  "setuptools": {
+    "version": "84.0.0",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/packaging/licenses/__init__.py",
+      "setuptools/_vendor/packaging/licenses/_spdx.py",
+      "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+      "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+      "setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+      "setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+      "setuptools/config/NOTICE",
+      "setuptools/config/_validate_pyproject/NOTICE",
+      "setuptools-84.0.0.dist-info/licenses/LICENSE",
+      "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+      "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+      "setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE"
+    ]
+  },
+  "zeroconf": {
+    "version": "0.150.0",
+    "license_expression": "LGPL-2.1-or-later",
+    "license_classifiers": [],
+    "license_files": [
+      "zeroconf-0.150.0.dist-info/licenses/",
+      "zeroconf-0.150.0.dist-info/licenses/COPYING"
+    ]
+  },
+  "pyatv": {
+    "version": "0.16.1",
+    "license_expression": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "pyatv-0.16.1.dist-info/licenses/LICENSE.md"
+    ]
+  },
+  "miniaudio": {
+    "version": "1.71",
+    "license_expression": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "miniaudio-1.71.dist-info/licenses/",
+      "miniaudio-1.71.dist-info/licenses/LICENSE"
+    ]
+  },
+  "aiohttp": {
+    "version": "3.14.3",
+    "license_expression": "Apache-2.0 AND MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "aiohttp-3.14.3.dist-info/licenses/",
+      "aiohttp-3.14.3.dist-info/licenses/vendor/",
+      "aiohttp-3.14.3.dist-info/licenses/LICENSE.txt",
+      "aiohttp-3.14.3.dist-info/licenses/vendor/llhttp/",
+      "aiohttp-3.14.3.dist-info/licenses/vendor/llhttp/LICENSE"
+    ]
+  },
+  "propcache": {
+    "version": "0.5.2",
+    "license_expression": "Apache-2.0",
+    "license_classifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ],
+    "license_files": [
+      "propcache-0.5.2.dist-info/licenses/",
+      "propcache-0.5.2.dist-info/licenses/LICENSE",
+      "propcache-0.5.2.dist-info/licenses/NOTICE"
+    ]
+  },
+  "idna": {
+    "version": "3.19",
+    "license_expression": "BSD-3-Clause",
+    "license_classifiers": [],
+    "license_files": [
+      "idna-3.19.dist-info/licenses/LICENSE.md"
+    ]
+  },
+  "protobuf": {
+    "version": "7.36.0",
+    "license_expression": "3-Clause BSD License",
+    "license_classifiers": [],
+    "license_files": [
+      "protobuf-7.36.0.dist-info/LICENSE"
+    ]
+  },
+  "aiosignal": {
+    "version": "1.4.0",
+    "license_expression": "Apache 2.0",
+    "license_classifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ],
+    "license_files": [
+      "aiosignal-1.4.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "multidict": {
+    "version": "6.7.1",
+    "license_expression": "Apache License 2.0",
+    "license_classifiers": [],
+    "license_files": [
+      "multidict-6.7.1.dist-info/licenses/",
+      "multidict-6.7.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  "pyinstaller": {
+    "version": "6.22.2",
+    "license_expression": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)",
+    "license_classifiers": [
+      "License :: OSI Approved :: GNU General Public License v2 (GPLv2)"
+    ],
+    "license_files": [
+      "pyinstaller-6.22.2.dist-info/licenses/COPYING.txt"
+    ]
+  },
+  "aiohappyeyeballs": {
+    "version": "2.7.1",
+    "license_expression": "PSF-2.0",
+    "license_classifiers": [
+      "License :: OSI Approved :: Python Software Foundation License"
+    ],
+    "license_files": [
+      "aiohappyeyeballs-2.7.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  "cffi": {
+    "version": "2.1.1",
+    "license_expression": "MIT-0",
+    "license_classifiers": [],
+    "license_files": [
+      "cffi-2.1.1.dist-info/licenses/",
+      "cffi-2.1.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  "async-timeout": {
+    "version": "5.0.1",
+    "license_expression": "Apache 2",
+    "license_classifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ],
+    "license_files": [
+      "async_timeout-5.0.1.dist-info/LICENSE"
+    ]
+  },
+  "typing-inspection": {
+    "version": "0.4.4",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "typing_inspection-0.4.4.dist-info/licenses/LICENSE"
+    ]
+  },
+  "attrs": {
+    "version": "26.1.0",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "attrs-26.1.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "pycparser": {
+    "version": "3.0",
+    "license_expression": "BSD-3-Clause",
+    "license_classifiers": [],
+    "license_files": [
+      "pycparser-3.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "ifaddr": {
+    "version": "0.2.0",
+    "license_expression": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "ifaddr-0.2.0.dist-info/LICENSE.txt"
+    ]
+  },
+  "chacha20poly1305-reuseable": {
+    "version": "0.13.2",
+    "license_expression": "Apache-2.0 OR BSD-3-Clause",
+    "license_classifiers": [
+      "License :: Other/Proprietary License"
+    ],
+    "license_files": [
+      "chacha20poly1305_reuseable-0.13.2.dist-info/LICENSE"
+    ]
+  },
+  "cryptography": {
+    "version": "50.0.0",
+    "license_expression": "Apache-2.0 OR BSD-3-Clause",
+    "license_classifiers": [],
+    "license_files": [
+      "cryptography-50.0.0.dist-info/licenses/LICENSE",
+      "cryptography-50.0.0.dist-info/licenses/LICENSE.APACHE",
+      "cryptography-50.0.0.dist-info/licenses/LICENSE.BSD"
+    ]
+  },
+  "pydantic-core": {
+    "version": "2.46.4",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "pydantic_core-2.46.4.dist-info/licenses/LICENSE"
+    ]
+  },
+  "packaging": {
+    "version": "26.3",
+    "license_expression": "Apache-2.0 OR BSD-2-Clause",
+    "license_classifiers": [],
+    "license_files": [
+      "packaging/licenses/__init__.py",
+      "packaging/licenses/_spdx.py",
+      "packaging-26.3.dist-info/licenses/LICENSE",
+      "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+      "packaging-26.3.dist-info/licenses/LICENSE.BSD"
+    ]
+  },
+  "pyinstaller-hooks-contrib": {
+    "version": "2026.6",
+    "license_expression": "Unspecified; see wheel license files",
+    "license_classifiers": [
+      "License :: OSI Approved :: Apache Software License",
+      "License :: OSI Approved :: GNU General Public License v2 (GPLv2)"
+    ],
+    "license_files": [
+      "pyinstaller_hooks_contrib-2026.6.dist-info/licenses/LICENSE"
+    ]
+  },
+  "requests": {
+    "version": "2.34.2",
+    "license_expression": "Apache-2.0",
+    "license_classifiers": [
+      "License :: OSI Approved :: Apache Software License"
+    ],
+    "license_files": [
+      "requests-2.34.2.dist-info/licenses/LICENSE",
+      "requests-2.34.2.dist-info/licenses/NOTICE"
+    ]
+  },
+  "pydantic": {
+    "version": "2.13.4",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "pydantic-2.13.4.dist-info/licenses/LICENSE"
+    ]
+  },
+  "cython": {
+    "version": "3.3.0",
+    "license_expression": "Apache-2.0",
+    "license_classifiers": [],
+    "license_files": []
+  },
+  "srptools": {
+    "version": "1.0.1",
+    "license_expression": "BSD 3-Clause License",
+    "license_classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "license_files": [
+      "srptools-1.0.1.dist-info/LICENSE"
+    ]
+  },
+  "frozenlist": {
+    "version": "1.8.0",
+    "license_expression": "Apache-2.0",
+    "license_classifiers": [],
+    "license_files": [
+      "frozenlist-1.8.0.dist-info/licenses/",
+      "frozenlist-1.8.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "macholib": {
+    "version": "1.16.4",
+    "license_expression": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "macholib-1.16.4.dist-info/LICENSE"
+    ]
+  },
+  "tabulate": {
+    "version": "0.10.0",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "tabulate-0.10.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "tinytag": {
+    "version": "2.3.0",
+    "license_expression": "Unspecified; see wheel license files",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "tinytag-2.3.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "altgraph": {
+    "version": "0.17.5",
+    "license_expression": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "altgraph-0.17.5.dist-info/LICENSE"
+    ]
+  },
+  "annotated-types": {
+    "version": "0.8.0",
+    "license_expression": "MIT",
+    "license_classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "license_files": [
+      "annotated_types-0.8.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "typing-extensions": {
+    "version": "4.16.0",
+    "license_expression": "PSF-2.0",
+    "license_classifiers": [],
+    "license_files": [
+      "typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  "certifi": {
+    "version": "2026.7.22",
+    "license_expression": "MPL-2.0",
+    "license_classifiers": [
+      "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+    ],
+    "license_files": [
+      "certifi-2026.7.22.dist-info/licenses/LICENSE"
+    ]
+  },
+  "charset-normalizer": {
+    "version": "3.5.1",
+    "license_expression": "MIT",
+    "license_classifiers": [],
+    "license_files": [
+      "charset_normalizer-3.5.1.dist-info/licenses/",
+      "charset_normalizer-3.5.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  "_historical_record_note": "Historical Build40 evidence only. Current extracted materials and upstream URLs: ../wheel-inventory.json; actual collection: compliance/helper-collected-distributions.json."
+}

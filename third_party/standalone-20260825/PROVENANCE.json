@@ -1,0 +1,123 @@
+{
+  "release": "20260825",
+  "archive_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260825/cpython-3.12.14%2B20260825-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+  "archive_sha256": "bce7da43c65a574be0185c9cf8ae8305c44afb53f746a05e8c51415c8c621bf7",
+  "native_inputs": [
+    {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "source_url": "https://astral-sh.github.io/mirror/files/bzip2-1.0.8.tar.gz",
+      "source_sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+      "licenses": [
+        "bzip2-1.0.6"
+      ],
+      "public_domain": false,
+      "license_file": "third_party/standalone-20260825/LICENSE.bzip2.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    },
+    {
+      "name": "libffi",
+      "version": "3.4.8",
+      "source_url": "https://github.com/libffi/libffi/releases/download/v3.4.8/libffi-3.4.8.tar.gz",
+      "source_sha256": "bc9842a18898bfacb0ed1252c4febcc7e78fa139fd27fdc7a3e30d9d9356119b",
+      "licenses": [
+        "MIT"
+      ],
+      "public_domain": false,
+      "license_file": "third_party/standalone-20260825/LICENSE.libffi.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    },
+    {
+      "name": "mpdecimal",
+      "version": "4.0.0",
+      "source_url": "https://astral-sh.github.io/mirror/files/mpdecimal-4.0.0.tar.gz",
+      "source_sha256": "942445c3245b22730fd41a67a7c5c231d11cb1b9936b9c0f76334fb7d0b4468c",
+      "licenses": [
+        "BSD-2-Clause"
+      ],
+      "public_domain": false,
+      "license_file": "third_party/standalone-20260825/LICENSE.mpdecimal.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    },
+    {
+      "name": "expat",
+      "version": "2.8.3",
+      "source_url": "https://github.com/libexpat/libexpat/releases/download/R_2_8_3/expat-2.8.3.tar.xz",
+      "source_sha256": "f6256df90c906773d344da084402b7d3e4f22ed41b1a59c989098a83d3ea0c85",
+      "licenses": [
+        "MIT"
+      ],
+      "public_domain": false,
+      "license_file": "third_party/standalone-20260825/LICENSE.expat.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    },
+    {
+      "name": "openssl-3.5",
+      "version": "3.5.8",
+      "source_url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.8/openssl-3.5.8.tar.gz",
+      "source_sha256": "a8f84a39918ec6415ce765d9b429d313ba97b8143169c172e734b9514464f5b2",
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "public_domain": false,
+      "license_file": "third_party/standalone-20260825/LICENSE.openssl-3.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    },
+    {
+      "name": "sqlite",
+      "version": "3.53.1.0",
+      "source_url": "https://www.sqlite.org/2026/sqlite-autoconf-3530100.tar.gz",
+      "source_sha256": "83e6b2020a034e9a7ad4a72feea59e1ad52f162e09cbd26735a3ffb98359fc4f",
+      "licenses": [],
+      "public_domain": true,
+      "license_file": "third_party/standalone-20260825/LICENSE.sqlite.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    },
+    {
+      "name": "xz",
+      "version": "5.8.3",
+      "source_url": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+      "source_sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+      "licenses": [
+        "0BSD"
+      ],
+      "public_domain": false,
+      "license_file": "third_party/standalone-20260825/LICENSE.liblzma.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    },
+    {
+      "name": "uuid",
+      "version": "1.0.3",
+      "source_url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz",
+      "source_sha256": "46af3275291091009ad7f1b899de3d0cea0252737550e7919d17237997db5644",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "public_domain": false,
+      "license_file": "third_party/standalone-20260825/LICENSE.libuuid.txt",
+      "linkage": "static in libpython per upstream PYTHON.json + actual builtin module inventory",
+      "source_manifest": "https://github.com/astral-sh/python-build-standalone/blob/20260825/pythonbuild/downloads.py"
+    }
+  ],
+  "binary_correspondence": {
+    "raw_file_sha256_equal": false,
+    "comparison": {
+      "sections": true,
+      "symbols": true,
+      "dyld_tables": true,
+      "dylibs": true,
+      "uuid": true
+    },
+    "content_sections": 15,
+    "exported_symbols": 2532,
+    "scope": "matching code/data sections, UUID, dylib dependencies, dyld tables and exported symbols; raw signature/local-symbol layout differs, not byte-reproducibility"
+  },
+  "not_redistributed": "Tk/Tcl/BDB/X11/toolchain build tools are not added; system dylibs separate"
+}

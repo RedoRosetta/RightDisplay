@@ -165,3 +165,12 @@ Rolling back the App does not roll back installed virtual-audio components. To r
 ### Get help
 
 [Report a problem](https://github.com/RedoRosetta/RightDisplay/issues/new/choose) with the version, Mac and macOS, exact error, and whether it occurred during download, launch or optional component installation. Intermittent issues are welcome. Review diagnostics and screenshots for identifiers, paths and private information before attaching them.
+
+
+## Source candidate / 源码候选
+
+Source Available, not OSI Open Source. First-party material is licensed under RNSL 1.0. Copyright © 2026 RedoRosetta is the public attribution, not a separate legal entity. This Build44-based source preparation differs from the Build41 public RC and is not fully hardware-accepted. No official signing credentials are supplied.
+
+Source build/install constraints are in BUILDING.md and SIGNING.md; Sponsor images in source builds are non-payment placeholders. Do not treat successful compile-only assembly as a signed, installable release.
+
+Copyright © 2026 RedoRosetta

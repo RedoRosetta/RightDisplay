@@ -22,3 +22,12 @@ Structured display identifiers omit the serial portion; selected display-log ide
 **Review every attachment before sharing.** User-defined device names and raw EDID can identify devices or people; raw EDID may contain serial numbers. Remove personal names, addresses, paths and secrets. Do not publish credentials, PINs, tokens or private keys.
 
 **分享前逐项检查附件。** 自定义名称、原始 EDID 可能识别设备或个人；原始 EDID 可能带序列号。删除个人名称、地址、路径和秘密，不公开凭据、PIN、token 或私钥。
+
+
+## Source candidate / 源码候选
+
+Source Available, not OSI Open Source. First-party material is licensed under RNSL 1.0. Copyright © 2026 RedoRosetta is the public attribution, not a separate legal entity. This Build44-based source preparation differs from the Build41 public RC and is not fully hardware-accepted. No official signing credentials are supplied.
+
+Source candidate payment originals are excluded. Build43/44 sparse audio journals may contain raw CoreAudio UID, timestamps and failures under the user Library/Logs; inspect before sharing. They are not source fixtures or automatic uploads.
+
+Copyright © 2026 RedoRosetta

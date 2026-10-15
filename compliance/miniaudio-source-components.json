@@ -1,0 +1,14 @@
+{
+  "python_binding_version": "1.71",
+  "source_declared_components": {
+    "miniaudio-core": "0.11.25",
+    "dr_wav": "0.14.5",
+    "dr_flac": "0.13.3",
+    "dr_mp3": "0.7.3",
+    "stb_vorbis": "version not reliably parsed; retained binding-level attribution"
+  },
+  "evidence": "pinned PyPI sdist header; wheel separately matched to official hash; not independent binary-version introspection",
+  "binding_license": "MIT including miniaudio/stb_vorbis attribution",
+  "core_header_license_options": "Unlicense OR MIT-0; original text retained",
+  "runtime_inclusion": "same library may compile optional decoders; no unrelated package added"
+}

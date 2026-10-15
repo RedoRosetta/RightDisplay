@@ -1,0 +1,37 @@
+[
+  {
+    "name": "miniaudio",
+    "version": "1.71",
+    "url": "https://files.pythonhosted.org/packages/d8/d5/e5439dc08561f73656bfeb3340fc64ab63163e101426593d8fb9a025ff1e/miniaudio-1.71.tar.gz",
+    "sha256": "ff51e2887bb673e2e757752b586b3dc924d59aa5fbcae9bbc45f4a111bd3262b",
+    "legal_files": [
+      "third_party/native-wheel-sources/miniaudio-1.71/LICENSE"
+    ],
+    "reviewed_source_locations": [
+      {
+        "path": "miniaudio-1.71/miniaudio/miniaudio.h",
+        "sha256": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+      },
+      {
+        "path": "miniaudio-1.71/miniaudio.c",
+        "sha256": "7655c3bf49c22827430e2eff14ced05f4fbc3df466f3fa40bac940454ca56dad"
+      }
+    ],
+    "scope": "exact upstream version source; wheel is independently hash-verified; not a binary reproducibility claim",
+    "status": "VERIFIED_SOURCE"
+  },
+  {
+    "name": "cryptography",
+    "version": "50.0.0",
+    "url": "https://files.pythonhosted.org/packages/de/41/6cbdcf9142d00fe82836fbb51e503e58088575cf7a0fe1dbff6695bf0840/cryptography-50.0.0.tar.gz",
+    "sha256": "eeac2acb5a20ed25e0ad6d1df9891a520b78b404266b6d11778f25d5d691a6c9",
+    "legal_files": [
+      "third_party/native-wheel-sources/cryptography-50.0.0/LICENSE",
+      "third_party/native-wheel-sources/cryptography-50.0.0/LICENSE.APACHE",
+      "third_party/native-wheel-sources/cryptography-50.0.0/LICENSE.BSD"
+    ],
+    "reviewed_source_locations": [],
+    "scope": "exact upstream version source; wheel is independently hash-verified; not a binary reproducibility claim",
+    "status": "VERIFIED_SOURCE"
+  }
+]

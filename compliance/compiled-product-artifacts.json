@@ -1,0 +1,25 @@
+{
+  "scope": "this round default-official-policy unsigned compile-only assembly from public CPython input; not Build41 RC",
+  "artifacts": [
+    {
+      "path": "Contents/MacOS/Right Display",
+      "sha256": "85970651fbd6c467f7160a085ea559583786d6f4b7f265bf8597e0efec8f2f8e",
+      "bytes": 4443072
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/RightDisplayAppleTVHelper",
+      "sha256": "44250f47c9efbe02c8e7b8e326cbfb353a8832b8253218331912775f6d60f982",
+      "bytes": 6873760
+    },
+    {
+      "path": "Contents/Resources/VirtualAudioPackages/InstallVirtualAudio.pkg",
+      "sha256": "0651e6a9b77dedd5f6d44bde3194c4ff6b52b7cbc28ca38a61c343845145c832",
+      "bytes": 20596
+    },
+    {
+      "path": "Contents/Resources/VirtualAudioPackages/UninstallVirtualAudio.pkg",
+      "sha256": "ecd7509e2b28c5f22bf8c806c6d5c585c0bb40a7c1f0d7ba0cd5e09f1086a1e0",
+      "bytes": 3759
+    }
+  ]
+}

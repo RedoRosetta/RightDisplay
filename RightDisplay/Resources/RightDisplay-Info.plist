@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_airplay._tcp</string>
+		<string>_airport._tcp</string>
+		<string>_appletv-v2._tcp</string>
+		<string>_companion-link._tcp</string>
+		<string>_hscp._tcp</string>
+		<string>_mediaremotetv._tcp</string>
+		<string>_raop._tcp</string>
+		<string>_touch-able._tcp</string>
+	</array>
+</dict>
+</plist>

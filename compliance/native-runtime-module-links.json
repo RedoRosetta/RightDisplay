@@ -1,0 +1,358 @@
+[
+  {
+    "module": "_bz2",
+    "in_core": false,
+    "init_fn": "PyInit__bz2",
+    "license_paths": [
+      "licenses/LICENSE.bzip2.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "bzip2-1.0.6"
+    ],
+    "links": [
+      {
+        "name": "bz2",
+        "path_static": "build/lib/libbz2.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_bz2module.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_ctypes",
+    "in_core": false,
+    "init_fn": "PyInit__ctypes",
+    "license_paths": [
+      "licenses/LICENSE.libffi.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "MIT"
+    ],
+    "links": [
+      {
+        "name": "dl",
+        "system": true
+      },
+      {
+        "name": "ffi",
+        "path_static": "build/lib/libffi.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_ctypes/_ctypes.o",
+      "build/Modules/_ctypes/callbacks.o",
+      "build/Modules/_ctypes/callproc.o",
+      "build/Modules/_ctypes/cfield.o",
+      "build/Modules/_ctypes/malloc_closure.o",
+      "build/Modules/_ctypes/stgdict.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_curses",
+    "in_core": false,
+    "init_fn": "PyInit__curses",
+    "license_paths": [
+      "licenses/LICENSE.ncurses.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "X11"
+    ],
+    "links": [
+      {
+        "name": "ncurses",
+        "system": true
+      }
+    ],
+    "objs": [
+      "build/Modules/_cursesmodule.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_curses_panel",
+    "in_core": false,
+    "init_fn": "PyInit__curses_panel",
+    "license_paths": [
+      "licenses/LICENSE.ncurses.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "X11"
+    ],
+    "links": [
+      {
+        "name": "ncurses",
+        "system": true
+      },
+      {
+        "name": "panel",
+        "system": true
+      }
+    ],
+    "objs": [
+      "build/Modules/_curses_panel.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_decimal",
+    "in_core": false,
+    "init_fn": "PyInit__decimal",
+    "license_paths": [
+      "licenses/LICENSE.mpdecimal.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "BSD-2-Clause"
+    ],
+    "links": [
+      {
+        "name": "mpdec",
+        "path_static": "build/lib/libmpdec.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_decimal/_decimal.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_elementtree",
+    "in_core": false,
+    "init_fn": "PyInit__elementtree",
+    "license_paths": [
+      "licenses/LICENSE.expat.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "MIT"
+    ],
+    "links": [
+      {
+        "name": "expat",
+        "path_static": "build/lib/libexpat.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_elementtree.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_hashlib",
+    "in_core": false,
+    "init_fn": "PyInit__hashlib",
+    "license_paths": [
+      "licenses/LICENSE.openssl-1.1.txt",
+      "licenses/LICENSE.openssl-3.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "Apache-2.0",
+      "OpenSSL"
+    ],
+    "links": [
+      {
+        "name": "crypto",
+        "path_static": "build/lib/libcrypto.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_hashopenssl.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_lzma",
+    "in_core": false,
+    "init_fn": "PyInit__lzma",
+    "license_paths": [
+      "licenses/LICENSE.liblzma.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "0BSD"
+    ],
+    "links": [
+      {
+        "name": "lzma",
+        "path_static": "build/lib/liblzma.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_lzmamodule.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_sqlite3",
+    "in_core": false,
+    "init_fn": "PyInit__sqlite3",
+    "license_paths": [
+      "licenses/LICENSE.sqlite.txt"
+    ],
+    "license_public_domain": true,
+    "licenses": [],
+    "links": [
+      {
+        "name": "sqlite3",
+        "path_static": "build/lib/libsqlite3.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_sqlite/blob.o",
+      "build/Modules/_sqlite/connection.o",
+      "build/Modules/_sqlite/cursor.o",
+      "build/Modules/_sqlite/microprotocols.o",
+      "build/Modules/_sqlite/module.o",
+      "build/Modules/_sqlite/prepare_protocol.o",
+      "build/Modules/_sqlite/row.o",
+      "build/Modules/_sqlite/statement.o",
+      "build/Modules/_sqlite/util.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_ssl",
+    "in_core": false,
+    "init_fn": "PyInit__ssl",
+    "license_paths": [
+      "licenses/LICENSE.openssl-1.1.txt",
+      "licenses/LICENSE.openssl-3.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "Apache-2.0",
+      "OpenSSL"
+    ],
+    "links": [
+      {
+        "name": "crypto",
+        "path_static": "build/lib/libcrypto.a"
+      },
+      {
+        "name": "ssl",
+        "path_static": "build/lib/libssl.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_ssl.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "_uuid",
+    "in_core": false,
+    "init_fn": "PyInit__uuid",
+    "license_paths": [
+      "licenses/LICENSE.libuuid.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "BSD-3-Clause"
+    ],
+    "links": [
+      {
+        "name": "uuid",
+        "path_static": "build/lib/libuuid.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/_uuidmodule.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "pyexpat",
+    "in_core": false,
+    "init_fn": "PyInit_pyexpat",
+    "license_paths": [
+      "licenses/LICENSE.expat.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "MIT"
+    ],
+    "links": [
+      {
+        "name": "expat",
+        "path_static": "build/lib/libexpat.a"
+      }
+    ],
+    "objs": [
+      "build/Modules/pyexpat.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "readline",
+    "in_core": false,
+    "init_fn": "PyInit_readline",
+    "license_paths": [
+      "licenses/LICENSE.libedit.txt",
+      "licenses/LICENSE.ncurses.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "BSD-3-Clause",
+      "X11"
+    ],
+    "links": [
+      {
+        "name": "edit",
+        "system": true
+      },
+      {
+        "name": "ncurses",
+        "system": true
+      }
+    ],
+    "objs": [
+      "build/Modules/readline.o"
+    ],
+    "required": false,
+    "variant": "default"
+  },
+  {
+    "module": "zlib",
+    "in_core": false,
+    "init_fn": "PyInit_zlib",
+    "license_paths": [
+      "licenses/LICENSE.zlib-ng.txt",
+      "licenses/LICENSE.zlib.txt"
+    ],
+    "license_public_domain": false,
+    "licenses": [
+      "Zlib"
+    ],
+    "links": [
+      {
+        "name": "z",
+        "system": true
+      }
+    ],
+    "objs": [
+      "build/Modules/zlibmodule.o"
+    ],
+    "required": false,
+    "variant": "default"
+  }
+]

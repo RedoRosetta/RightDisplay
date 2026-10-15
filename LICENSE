@@ -1,0 +1,150 @@
+# RightDisplay Noncommercial Source License (RNSL) 1.0
+
+Project: RightDisplay｜正确显示
+Adopted: 2026-10-15. Independent Source Available / Noncommercial license; not GPL, PolyForm, or an OSI-approved open-source license.
+
+Copyright © 2026 RedoRosetta. RedoRosetta is the individual rights holder's chosen public attribution, not a representation of a separate legal entity. Each other Licensor retains its own rights. No lawyer review or legal certification is represented.
+
+## 1. Definitions and scope
+
+1.1 **Licensor** means each identified person or entity that owns or controls the relevant rights and expressly offers identified material under an adopted version of this License. A project name, account name or repository owner alone does not establish ownership or authority.
+
+1.2 **Covered Software** means only the first-party source code, associated build and installation scripts, and corresponding executable portions expressly designated by an authorized Licensor as covered by this License. It does not include Third-Party Components, trademarks, logos, payment codes, screenshots or other brand assets. Section 7.4 separately grants the limited embedded-brand permission for Official Original Packages; it does not bring those assets into the general code license. Documentation is included only if expressly designated. Mere presence in a repository or package does not make an item Covered Software. A file/component scope schedule must identify mixed-license boundaries before release.
+
+1.3 **You** means the individual or legal entity exercising rights. **Use** includes inspecting, copying, executing, modifying, integrating, deploying and distributing Covered Software to the extent such acts require permission under applicable law. An individual's acts on behalf of an organization are assessed according to the activity being carried out.
+
+1.4 **Commercial Use** means Use that forms part of, supports, or is undertaken for a commercial business operation, a commercial product or service, or an activity intended to obtain revenue, compensation, business advantage or customer benefit in a commercial engagement, directly or indirectly. Actual profit, an external sale or payment for the software is not required. Section 4 gives included activities and specific exceptions to avoid treating every incidental benefit as commercial.
+
+1.5 **Noncommercial Use** means Use for personal study, research, experimentation, private enjoyment or other genuinely noncommercial activity, including noncommercial teaching, research and activities by organizations, that is not Commercial Use. A commercial entity can carry out a genuinely noncommercial activity; a school, hospital, government body, charity or other nonprofit can carry out a commercial activity. Status, label, public funding or nonprofit registration alone does not decide the matter. Research for a planned commercial application is not Noncommercial Use.
+
+1.6 **Distribution** means providing copies of Covered Software, in source or executable form, to another person or entity, including through downloads, repositories, forks or bundles. Mere remote interaction without transfer of a copy is not Distribution, but remains subject to the Use restrictions.
+
+1.7 **Corresponding Source** means the preferred form for making changes to the exact Covered Software version distributed, including all of Your distributed modifications to that software, and the scripts, configuration, dependency version information and instructions reasonably necessary to build, install and modify it. It excludes personal credentials, private signing keys, user data, and general-purpose system tools or operating system components not distributed with the software. Third-party source and installation information are supplied as required by their own licenses, not relicensed under this License.
+
+1.8 **Third-Party Components** means material governed by a separate third-party license, including upstream material in mixed files. **Written Commercial Authorization** means a separate express written agreement issued by all necessary rights holders or an authorized representative, identifying the rights granted. A donation, issue comment, source publication or unaccepted request is not such authorization.
+
+1.9 **Official Original Package** means a complete DMG or ZIP installer archive actually published by the authorized RightDisplay publisher and expressly designated as redistributable under the adopted RNSL version, copied byte-for-byte without any alteration. A rebuild, re-signed app, extracted app, repacked archive, partial package or package with added or removed content is not an Official Original Package, even if its source is unchanged. This designation does not retroactively change the terms of an earlier release. Separate accompanying license/notices and source materials required by Sections 5–7 do not alter the archive if they are delivered alongside it without changing its bytes or adding a launcher, installer wrapper or unrelated bundle.
+
+## 2. Copyright and limited patent permission
+
+2.1 Subject to compliance, each Licensor grants You a worldwide, royalty-free, nonexclusive copyright license in its Covered Software to inspect, reproduce, execute, modify and make derivative works solely for Noncommercial Use, and to distribute them solely under Sections 3–7. Distribution is subject to the same noncommercial purpose limitation; it is not an independent unrestricted grant.
+
+2.2 Each Licensor also grants a nonexclusive, royalty-free patent license, solely for the activities permitted here, under patent claims it can license that are necessarily infringed by its Covered Software as supplied. No patent rights in Your additions, other combinations, third-party material or Commercial Use are granted by this clause.
+
+2.3 No commercial, trademark or other rights are implied. You cannot offer the Licensor's Covered Software under a different license or sublicense its rights. Recipients obtain the same conditional permission directly from the applicable Licensors. Your own distributed additions must be offered under this exact License as required by Section 5; You retain ownership of those additions.
+
+2.4 Fair use, mandatory statutory exceptions and rights You already hold under separate licenses are not restricted. This License applies only to rights the Licensor can lawfully license; it does not control independently created ideas, information or Third-Party Components.
+
+## 3. Permitted noncommercial activities
+
+3.1 You may study, research, inspect, run and modify Covered Software for Noncommercial Use, and share copies for Noncommercial Use if Sections 4–7 are satisfied. Private modifications need not be published merely because they are made or used privately.
+
+3.2 Noncommercial organizational teaching, research or community activity can qualify. An organization must evaluate the particular activity; it receives no institution-wide exemption. Commercially commissioned research and commercial R&D remain excluded even when conducted by a university, public body or nonprofit.
+
+3.3 A commercial entity's genuinely noncommercial, non-client-directed study or public-interest activity may qualify if it neither supports its commercial operations nor develops or evaluates a planned commercial product, service or application. Paying an ordinary salary, using an organization-owned computer, or employing a researcher does not alone decide the issue; the purpose and relationship to business operations do. Ordinary business productivity use is Commercial Use.
+
+## 4. Commercial restrictions, charges and monetization
+
+4.1 Without Written Commercial Authorization, You may not Use Covered Software for:
+
+(a) internal commercial business operations, including employees' tools used to perform or support commercial work;
+(b) integration into, development, testing, evaluation or operation of commercial products, commercial software or commercial services;
+(c) paid deployment, hosting, installation, configuration, maintenance, support or other services involving the software;
+(d) sale, paid licensing, subscriptions, paid downloads, charged bundles or fee-based Distribution of original or modified copies;
+(e) work for or on behalf of a client as part of a commercial engagement, whether charged separately or included in another fee;
+(f) commercial R&D or R&D commissioned by a commercial institution, including unpaid or subsidized work undertaken for that commercial purpose; or
+(g) other business-directed exploitation within Section 1.4.
+
+4.2 Calling a charge a service fee, packaging fee, installation fee, membership, donation, cost reimbursement or compensation for media, bandwidth or labor does not make it permitted. Mandatory or tied payments and indirect arrangements through affiliates or intermediaries are covered. Giving copies away does not permit using them as a commercial promotion, customer acquisition tool, commercial service input or part of a paid offering.
+
+4.3 You may accept genuinely voluntary donations for a permitted noncommercial project if payment is not a condition of obtaining the software, updates, Corresponding Source or rights, and provides no additional software access, functionality, service, priority support, customization or other consideration. Thanking a donor by a neutral name listing without promotional content or a purchased placement is allowed. A donation does not authorize an otherwise prohibited activity.
+
+4.4 Advertising or sponsorship that monetizes access, downloads, a software service or Distribution, or promises promotional placement, endorsements, leads or deliverables in return, requires Written Commercial Authorization. Paid support and crowdfunding with software/service rewards also require it. Unconditional support with no such consideration may qualify only under 4.3; the label “sponsorship” does not decide the result.
+
+4.5 Use of an ordinary general-purpose repository, hosting or communications platform does not, by itself, make Your otherwise noncommercial activity commercial merely because the platform charges general infrastructure fees or independently displays its own advertising. This exception does not authorize operating a commercial service using Covered Software, selling its access, or receiving compensation for its promotion or Distribution. Independently granted hosting/platform rights are unaffected.
+
+4.6 Mixed activities are assessed separately. A commercial part is not excused by a noncommercial part, free price, nonprofit intermediary or a donor-funded structure. If an activity is Commercial Use under these terms, prior Written Commercial Authorization is required.
+
+## 5. Modifications and free redistribution
+
+5.1 You may distribute original or modified Covered Software only for a Noncommercial Use, without any charge or payment condition, and subject to all of the following:
+
+(a) retain original copyright, attribution, license and required notices; include this complete License and applicable Third-Party Component licenses and notices;
+(b) identify changes, their dates and the responsible modifier in a reasonably clear change record, without suggesting original authors made those changes;
+(c) offer Your distributed changes to Covered Software under this exact License; do not remove its noncommercial conditions, add restrictions on its permitted activities, or purport to relicense others' contributions;
+(d) satisfy the applicable source-delivery route in Section 6; and
+(e) comply with the branding and third-party boundaries in Section 7.
+
+5.2 Identify a modified distribution prominently as an unofficial modified version, with a distinct distribution name and modifier identification. Use a factual attribution such as “based on RightDisplay” only as allowed by Section 7. Do not describe it as an official release or use an official version identity to imply endorsement.
+
+5.3 You cannot distribute a combination under these terms if doing so would violate another applicable license. An exclusion of third-party material from RNSL does not by itself cure a conflicting combined-work obligation. Obtain permission, change the boundary, replace the component or do not distribute the combination.
+
+5.4 Subject to Sections 4, 5.1, 5.3, 6 and 7, You may freely redistribute a complete, unmodified Official Original Package for a Noncommercial Use, without charge or any payment condition. You may retain its existing RightDisplay name, logos, icons and necessary embedded brand resources under Section 7.4. Identify the official package version and its official release origin, and identify Yourself as an independent redistributor, not the official publisher. Do not imply official endorsement, partnership or authorization beyond this limited permission. Put Your redistribution and compliance information alongside the unchanged package, rather than modifying it. An intact official package needs no modification record because You made no modifications. This permission neither authorizes extraction/reuse of brand assets nor relaxes third-party obligations.
+
+## 6. Source delivery
+
+6.1 **Official Original Package route.** For a redistribution that satisfies Section 5.4, the RNSL obligation to deliver first-party Corresponding Source is satisfied either by providing that source with the package or by giving recipients, alongside the package, a direct, free, publicly accessible source-download link supplied by the official publisher for that exact package version. A moving branch, generic project homepage or mismatched source version is insufficient. At the time You distribute, the source must actually be available without payment or an individual access approval. If the exact source is unavailable, provide a lawfully distributable matching source archive alongside the unchanged package, or suspend further redistribution until the source route works. This rule imposes no indefinite monitoring duty after completed deliveries. Section 6.5 independently applies to every Third-Party Component.
+
+6.1A **Other distributions, including modified versions.** Each such Distribution must include the exact Corresponding Source as part of the same delivery, at no charge. A source-only fork or archive containing the complete required material satisfies this requirement. An executable release must include source in its package or in a paired archive delivered together with it. The official-package link alternative in Section 6.1 does not apply to modified or rebuilt versions. An on-request offer or an external source link alone is insufficient for this route.
+
+6.2 Source must be readable and editable, with build/install instructions, dependency identifiers and acquisition information, and a clear description of differences from the original. Do not intentionally withhold distributed changes or necessary first-party scripts. No promise of byte-identical signatures, access to official signing credentials, or hardware acceptance is required. Explain signing and reproducibility limitations honestly.
+
+6.3 Do not disclose secrets or personal data to satisfy source delivery. Replace them with documented parameters or synthetic examples. If a necessary part cannot lawfully be delivered or a required build/installation right cannot lawfully be granted, do not distribute that combination until the conflict is resolved. Third-party obligations, including LGPL replacement/relinking requirements, remain independently applicable.
+
+6.4 This License does not require publishing private changes, an independent unrelated work or a remote service's source merely because it is used. Commercial services remain prohibited without separate authorization.
+
+6.5 **Third-party obligations are independent.** Neither the unchanged-package permission nor the first-party source-link alternative changes any applicable third-party source, notice, written-offer, replacement, relinking or installation-information requirement. You remain responsible for the obligations applicable to Your own redistribution. Follow the applicable license and its permitted delivery method; if it requires You to supply source or other materials, supply them alongside the unchanged package where lawful. Do not assume an official link, official packaging or a source offer made by someone else automatically satisfies Your obligations. If compliance is not possible, do not redistribute the affected combination.
+
+## 7. Third-party components and brand identity
+
+7.1 RNSL restrictions apply only to Covered Software. Third-party licenses govern their own material and prevail for it. Preserve all third-party rights and notices, including permission to use or redistribute a third-party component commercially when its own license permits. Neither packaging nor a RNSL label removes those independent rights.
+
+7.2 This includes Apple sample/derived upstream code, CPython, pyatv, zeroconf, LGPL components and all other separately licensed dependencies. A mixed file needs an accurate notice distinguishing upstream portions from first-party additions; if that distinction or authority cannot be established, its RNSL designation must wait.
+
+7.3 Nothing prohibits reverse engineering, modification, replacement or relinking of a Third-Party Component to the extent required by its license or mandatory law. RNSL does not excuse compliance with source, notice, patent, installation-information or other third-party obligations. A separately distributed or separate-process component is not automatically legally independent.
+
+7.3A **Required LGPL combination rights take precedence.** Notwithstanding any conflicting condition in this License, including Sections 2, 4, 5, 11 and 12, each Licensor permits the recipient of the RightDisplay Apple TV Helper/zeroconf combination to modify the combined work for the recipient's own use, replace or relink the LGPL-covered component, reproduce the combined work as necessary for those activities, and reverse engineer it for debugging such modifications, to the extent required by Section 6 of LGPL version 2.1. These necessary permissions are not conditioned on a noncommercial purpose and prevail over conflicting RNSL conditions; termination of RNSL permissions does not extinguish independently granted LGPL rights. The LGPL-covered component itself, its modifications and its independent use or redistribution remain governed by its original license, including its commercial permissions, without additional RNSL restrictions. This limited permission does not otherwise authorize commercial operation, distribution or services involving first-party Helper code, or grant brand rights. Distributors must independently satisfy the applicable LGPL notice, source and relinking requirements through a method permitted by that license; merely labeling a component replaceable is insufficient. This is a limited compatibility permission, not relicensing the whole Helper under the LGPL or a permissive license.
+
+7.4 **Limited embedded-brand permission for Official Original Packages.** Each Licensor, only to the extent it controls the necessary copyright and trademark rights, expressly permits You to retain and reproduce the existing RightDisplay name, logos, icons and necessary brand resources embedded in an Official Original Package, solely as an inseparable part of the complete, unmodified package redistributed in compliance with Section 5.4. No separate brand permission from that Licensor is required for this narrow activity. This permission covers delivering the intact package with its existing branding; it is not a license to extract brand assets, use them independently, include them in another product or a modified version, or use them in commercial advertising or promotion. It does not authorize presenting Yourself as the official publisher or implying official endorsement. Rights not controlled by a Licensor are not granted and must be separately cleared before the official package is designated for redistribution.
+
+7.5 **All other brand uses and modified versions.** Except for Section 7.4 or separate express permission, no logo, icon, trademark, payment QR code, screenshot or other protected brand asset is licensed. Modified packages must remove or replace unauthorized official brand resources, use a different distribution name and prominently identify themselves as unofficial under Section 5.2, while preserving required copyright and attribution notices. Lawful factual references such as “based on RightDisplay” do not authorize a confusing product identity, logo reuse or official endorsement. Free Distribution does not excuse these conditions, the noncommercial restrictions or the source requirements.
+
+## 8. Separate commercial authorization and contributions
+
+8.1 For a person relying on this License, Commercial Use requires a separate Written Commercial Authorization; the narrow official-package permission does not grant commercial rights. This does not limit the rights holders’ retained rights in Section 8.3. Scope, authorized versions, parties, duration, fees and other terms are set by that agreement. Source availability is not commercial authorization. Commercial permission from one rights holder does not automatically cover others' contributions, third-party components or brand assets.
+
+8.2 This License gives a project maintainer no automatic ownership, assignment or commercial relicensing right over a contribution. A contributor may separately grant such rights in writing. Until the necessary rights are secured, a commercial offering must exclude that contribution or obtain the required permission. Publication of this License alone does not create a contribution agreement or require acceptance of a contribution.
+
+8.3 **Rights holders retain their own rights.** Nothing in this License prevents an original or other rights holder from commercially distributing, selling or separately licensing code or assets to the extent that rights holder owns or is authorized to exercise the necessary rights. Such a rights holder is not required to obtain commercial permission from itself. This reservation neither grants rights in another contributor's or third party's material nor waives any applicable third-party obligations or required permissions. Repository maintenance, official-publisher status and this reservation alone do not confer such rights. It does not revoke permissions already validly granted to recipients.
+
+## 9. Disclaimer of warranties
+
+To the maximum extent permitted by applicable law, Covered Software is provided “AS IS”, without warranties or conditions, express, implied or statutory, including merchantability, fitness for a particular purpose, title and noninfringement. No uninterrupted operation, device compatibility, physical output correctness, audio recovery, support or security result is promised. Mandatory rights that cannot lawfully be excluded remain unaffected.
+
+## 10. Limitation of liability
+
+To the maximum extent permitted by applicable law, no Licensor or contributor is liable for direct, indirect, incidental, special, consequential or exemplary loss arising from Covered Software or its Use, including loss of data, business or profits, even if advised of the possibility. This does not exclude liability for fraud, intentional misconduct, gross negligence, death or personal injury, or any other liability to the extent it cannot lawfully be excluded.
+
+## 11. Breach, termination and reinstatement
+
+11.1 The permission granted here terminates automatically when You materially breach a condition of this License. Activities outside the grant, including unauthorized Commercial Use, are not authorized while a cure is sought.
+
+11.2 For a first inadvertent, curable noncommercial compliance breach, such as an omitted notice or source attachment, permission is automatically reinstated when You fully remedy the breach within 30 calendar days after actually receiving a sufficiently specific written notice from a relevant Licensor. To remedy it, correct copies You control, stop noncompliant Distribution, and make reasonable efforts to provide missing notices or source to affected recipients. This reinstatement mechanism does not apply to deliberate breaches, unauthorized Commercial Use or repeated breaches. Other reinstatement requires written permission from the relevant Licensor.
+
+11.3 Reinstatement does not retroactively authorize prohibited activity, extinguish accrued claims or modify third-party licenses. A compliant recipient's permissions are not terminated solely because its distributor breached.
+
+## 12. Duties after termination
+
+12.1 Stop activities dependent on the terminated permission, including running, copying, modifying and distributing the affected Covered Software; disable affected deployments and stop offering downloads under that permission. Delete copies under Your control or return them if reasonably requested, except copies retained solely because of legal recordkeeping duties, dispute evidence or technically unavoidable backups. Retained copies must not be used or redistributed, must be access-restricted, and must be removed in the ordinary backup retention cycle where lawful.
+
+12.2 Do not attempt to delete recipients' lawful copies or independently licensed Third-Party Components. Your independent original material is not forfeited; continued use of a combined work still needs all necessary permissions. A separate valid commercial or other license is governed by its own terms.
+
+12.3 Notices, third-party boundaries, brand limitations, disclaimers, liability provisions, accrued claims and these post-termination duties survive to the extent relevant and lawful. No audit access, telemetry, automatic penalty, assignment of Your code or predetermined damages are imposed.
+
+## 13. Law, disputes, language and version
+
+13.1 This License makes no contractual choice of governing law, exclusive court, or compulsory arbitration. Applicable law and competent forums are determined under otherwise applicable legal rules, including mandatory protections. Separate commercial agreements identify their actual contracting parties and any agreed dispute terms.
+
+13.2 The English license is the operative text. The Chinese explanation is explanatory only; discrepancies must be corrected and do not independently expand grants or restrictions. Mandatory language requirements remain unaffected.
+
+13.3 No automatic adoption of later license versions is permitted. A later version does not retroactively replace rights validly granted for earlier material. This License does not revoke rights already granted by third parties or otherwise.

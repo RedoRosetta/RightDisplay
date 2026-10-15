@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-15",
+  "license": "RNSL 1.0 adopted by rights holder",
+  "legal_review": "reasonable text review; no lawyer review or legal certification",
+  "lgpl_reference": "unaltered GNU LGPL 2.1, sections 5, 6 and 10; retained in release-assets/Right-Display-0.1-Beta-compliance/LICENSES/zeroconf-LGPL-2.1.txt",
+  "lgpl_resolution": "LICENSE 7.3A grants required own-use combination rights without noncommercial condition and overrides conflicting first-party terms; independent library rights unaffected",
+  "scope": "source-only; no new app/helper/runtime executable or installer",
+  "unchanged_upstream_material_files": 220,
+  "source_attestation": "user personal/AI development statement; no independent originality claim",
+  "sensitive_scan_disposition": "test secret is synthetic; /Users/runner paths are unmodified publisher CI SBOM metadata, not local user data",
+  "binary_release": "not authorized or represented by this source-only change",
+  "hardware_acceptance": "Build44 incomplete; existing Build41 RC unchanged"
+}

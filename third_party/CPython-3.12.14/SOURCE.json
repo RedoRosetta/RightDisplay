@@ -1,0 +1,10 @@
+{
+  "version": "3.12.14",
+  "upstream_tag": "https://github.com/python/cpython/tree/v3.12.14",
+  "files": {
+    "LICENSE": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "Doc/license.rst": "341832873fd316a37927e79385093fbbfd40a467428480835fe435a80cadf4e5"
+  },
+  "interpreter_license_exact_match": true,
+  "scope": "upstream license texts only; standalone embedded native source correspondence incomplete"
+}

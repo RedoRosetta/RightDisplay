@@ -1,0 +1,3 @@
+# Direct versions used to build the helper embedded in Right Display 0.1 Beta.
+pyatv==0.16.1
+PyInstaller==6.22.2
