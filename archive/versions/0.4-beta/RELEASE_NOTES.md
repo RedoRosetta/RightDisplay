@@ -1,3 +1,5 @@
+> **HISTORICAL / 历史资料。** 不作为RightDisplay1.0安装、功能或兼容性指导；[版本归档说明](README.md)。
+
 # Right Display 0.4 Beta RC
 
 [简体中文](https://github.com/RedoRosetta/RightDisplay/blob/main/releases/0.4-beta-rc.md#简体中文) · [English](https://github.com/RedoRosetta/RightDisplay/blob/main/releases/0.4-beta-rc.md#english)

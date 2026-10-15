@@ -1,13 +1,5 @@
 [
   {
-    "path": ".github/ISSUE_TEMPLATE/bug_report.md",
-    "public_attribution": "Copyright © 2026 RedoRosetta",
-    "RNSL_status": "ADOPTED_RNSL_1.0",
-    "legal_contract_identity": null,
-    "category": "PROJECT_DOC_OR_RECORD",
-    "license": "project-authored expression RNSL; quoted originals retain independent terms"
-  },
-  {
     "path": ".github/PULL_REQUEST_TEMPLATE.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
@@ -32,7 +24,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "ARCHITECTURE.md",
+    "path": "docs/development/ARCHITECTURE.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -150,7 +142,7 @@
     "license": "RNSL1.0; unidentified external portions not claimed"
   },
   {
-    "path": "BRAND_ASSETS.md",
+    "path": "docs/licensing/BRAND_ASSETS.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -158,7 +150,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "BUILDING.md",
+    "path": "docs/development/BUILDING.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -182,7 +174,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "COPYRIGHT.md",
+    "path": "docs/licensing/COPYRIGHT.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -190,7 +182,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "Dependencies/Build40/license-records.json",
+    "path": "archive/versions/build40/dependency-records/license-records.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -198,7 +190,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "Dependencies/Build40/python-lock.json",
+    "path": "archive/versions/build40/dependency-records/python-lock.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -206,7 +198,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "Dependencies/Build40/wheel-hashes.json",
+    "path": "archive/versions/build40/dependency-records/wheel-hashes.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -230,7 +222,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "GITHUB_SOURCE_IMPORT_PLAN.md",
+    "path": "archive/versions/build44/docs/GITHUB_SOURCE_IMPORT_PLAN.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -238,7 +230,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "HELPER_REPLACEMENT.md",
+    "path": "docs/licensing/HELPER_REPLACEMENT.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -254,7 +246,7 @@
     "license": "RNSL1.0; unidentified external portions not claimed"
   },
   {
-    "path": "Helpers/HomePodAudioHelper/RightDisplayAppleTVHelper.baseline.spec",
+    "path": "archive/versions/0.1-beta/RightDisplayAppleTVHelper.baseline.spec",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -334,7 +326,7 @@
     "license": "RNSL1.0; unidentified external portions not claimed"
   },
   {
-    "path": "INSTALLATION.md",
+    "path": "archive/versions/0.4-beta/docs/INSTALLATION-legacy.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -366,7 +358,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "OWNERSHIP_SCOPE.md",
+    "path": "docs/licensing/OWNERSHIP_SCOPE.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -374,7 +366,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "PRIVACY.md",
+    "path": "docs/installation/PRIVACY.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -391,14 +383,6 @@
   },
   {
     "path": "README.md",
-    "public_attribution": "Copyright © 2026 RedoRosetta",
-    "RNSL_status": "ADOPTED_RNSL_1.0",
-    "legal_contract_identity": null,
-    "category": "PROJECT_DOC_OR_RECORD",
-    "license": "project-authored expression RNSL; quoted originals retain independent terms"
-  },
-  {
-    "path": "README.zh-CN.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1025,7 +1009,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "SIGNING.md",
+    "path": "docs/development/SIGNING.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1121,7 +1105,7 @@
     "license": "RNSL1.0; unidentified external portions not claimed"
   },
   {
-    "path": "THIRD_PARTY_LICENSES.md",
+    "path": "docs/licensing/THIRD_PARTY_LICENSES.md",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1521,7 +1505,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "compliance/candidate-product-sbom.cdx.json",
+    "path": "archive/versions/build44/compliance/candidate-product-sbom.cdx.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1529,7 +1513,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "compliance/compiled-product-artifacts.json",
+    "path": "archive/versions/build44/compliance/compiled-product-artifacts.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1545,7 +1529,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "compliance/custom-team-build-result.json",
+    "path": "archive/versions/build44/compliance/custom-team-build-result.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1553,7 +1537,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "compliance/engineering-result.json",
+    "path": "archive/versions/build44/compliance/engineering-result.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1633,7 +1617,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "compliance/public-input-build-result.json",
+    "path": "archive/versions/build44/compliance/public-input-build-result.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1665,7 +1649,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "compliance/signing-policy-result.json",
+    "path": "archive/versions/build44/compliance/signing-policy-result.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -1673,7 +1657,7 @@
     "license": "project-authored expression RNSL; quoted originals retain independent terms"
   },
   {
-    "path": "compliance/source-version.json",
+    "path": "archive/versions/build44/compliance/source-version.json",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0",
     "legal_contract_identity": null,
@@ -3409,7 +3393,7 @@
     "license": "original component terms"
   },
   {
-    "path": "LICENSE.zh-CN.md",
+    "path": "docs/licensing/LICENSE.zh-CN.md",
     "category": "PROJECT_DOC_OR_RECORD",
     "license": "RNSL 1.0 for project-authored portions; originals retain independent terms",
     "public_attribution": "Copyright © 2026 RedoRosetta",
@@ -3507,7 +3491,7 @@
     "RNSL_status": "ADOPTED_RNSL_1.0"
   },
   {
-    "path": "releases/1.0.0.md",
+    "path": "docs/releases/1.0.0.md",
     "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
     "license": "RNSL 1.0; original third-party rights remain separate",
     "public_attribution": "Copyright © 2026 RedoRosetta",
@@ -3524,6 +3508,198 @@
     "path": ".gitattributes",
     "category": "PROJECT_ARCHIVE_CONFIGURATION",
     "license": "RNSL 1.0",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": ".github/FUNDING.yml",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/config.yml",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/question.yml",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/legacy/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/legacy/public-sponsor/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/legacy/public-sponsor/alipay.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/legacy/public-sponsor/wechat-pay.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.1-beta/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.3-beta/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.3-beta/RELEASE_NOTES.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.3-beta/screenshots/brightness-sound.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.3-beta/screenshots/display-output.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.3-beta/screenshots/overview.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.3-beta/screenshots/quick-control.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/RELEASE_NOTES.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/screenshots/color-profiles.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/screenshots/display-output.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/screenshots/edid.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/screenshots/general.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/screenshots/overview.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/screenshots/quick-control.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/0.4-beta/screenshots/virtual-audio.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/build40/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "archive/versions/build44/README.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "assets/icons/right-display-app-icon.png",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "compliance/source-version.json",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "docs/REPOSITORY_STRUCTURE.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "docs/development/SCREENSHOTS.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "docs/installation/INSTALLATION.md",
+    "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
+    "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
     "public_attribution": "Copyright © 2026 RedoRosetta"
   }
 ]

@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 下载当前 RC / Download current RC
-    url: https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc
-    about: 0.4 Beta RC 安装包与已知问题 / App package and known issues
+  - name: 下载当前正式版 / Download current release
+    url: https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0
+    about: RightDisplay 1.0 · Build45
   - name: 安装与首次启动 / Installation and first launch
-    url: https://github.com/RedoRosetta/RightDisplay/blob/main/INSTALLATION.md
+    url: https://github.com/RedoRosetta/RightDisplay/blob/main/docs/installation/INSTALLATION.md
     about: Gatekeeper、菜单栏入口及可选音频组件 / Gatekeeper, menu-bar access and optional audio components

@@ -1,6 +1,6 @@
 # 1.0 · Build45
 
-2026-10-15：[发布说明](releases/1.0.0.md)。基于最终 UI-Aligned 45，App内SRC会话规划、灰色说明及安全Ad-hoc组件绑定；三项用户本机音频验收通过。独立包未公证，无新增完整实机回归。
+2026-10-15：[发布说明](docs/releases/1.0.0.md)。基于最终 UI-Aligned 45，App内SRC会话规划、灰色说明及安全Ad-hoc组件绑定；三项用户本机音频验收通过。独立包未公证，无新增完整实机回归。
 
 # 版本历史 / Version history
 
@@ -15,7 +15,7 @@
 
 **这是公开测试候选，不是最终 0.4 Beta。 / This is a public test candidate, not the final 0.4 Beta.**
 
-[完整说明 / Full notes](releases/0.4-beta-rc.md) · [下载 / Download](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc)
+[完整说明 / Full notes](archive/versions/0.4-beta/RELEASE_NOTES.md) · [下载 / Download](https://github.com/RedoRosetta/RightDisplay/releases/tag/v0.4-beta-rc)
 
 ## 0.3 Beta — Build 60
 
@@ -32,7 +32,7 @@
 - Consolidated brightness/audio controls, compatible Apple TV output volume and optional keyboard control.
   整合亮度／声音控制，保留兼容 Apple TV 输出音量与可选键盘控制。
 
-[Complete notes / 完整说明](releases/0.3-beta.md)
+[Complete notes / 完整说明](archive/versions/0.3-beta/RELEASE_NOTES.md)
 
 ## 0.2 Beta
 

@@ -1,4 +1,4 @@
-> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](releases/1.0.0.md) and [signature boundaries](SIGNING.md). Prior RC/build notes below retain their historical scope.
+> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](../releases/1.0.0.md) and [signature boundaries](../development/SIGNING.md). Prior RC/build notes below retain their historical scope.
 
 # Privacy & diagnostics / 隐私与诊断
 
@@ -26,10 +26,8 @@ Structured display identifiers omit the serial portion; selected display-log ide
 **分享前逐项检查附件。** 自定义名称、原始 EDID 可能识别设备或个人；原始 EDID 可能带序列号。删除个人名称、地址、路径和秘密，不公开凭据、PIN、token 或私钥。
 
 
-## Source candidate / 源码候选
+## Local audio diagnostics / 本地音频诊断
 
-Source Available, not OSI Open Source. First-party material is licensed under RNSL 1.0. Copyright © 2026 RedoRosetta is the public attribution, not a separate legal entity. This Build44-based source preparation differs from the Build41 public RC and is not fully hardware-accepted. No official signing credentials are supplied.
+Audio journals under the user Library/Logs may include CoreAudio UIDs, timestamps and failures. They are not source fixtures or automatic uploads; inspect them before sharing. Source Sponsor resources are neutral placeholders, without payment account data.
 
-Source candidate payment originals are excluded. Build43/44 sparse audio journals may contain raw CoreAudio UID, timestamps and failures under the user Library/Logs; inspect before sharing. They are not source fixtures or automatic uploads.
-
-Copyright © 2026 RedoRosetta
+首方材料采用RNSL1.0；源码公开不包含个人数据、配对凭据或签名私钥。Copyright © 2026 RedoRosetta。

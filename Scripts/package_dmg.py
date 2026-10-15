@@ -14,8 +14,8 @@ def main():
  sources=stage/'Sources';sources.mkdir();archive=sources/'RightDisplay-1.0-Build45-source.tar.gz'
  with archive.open('wb') as f:subprocess.run(['git','archive','--format=tar.gz','--prefix=RightDisplay-1.0-Build45/',commit],cwd=ROOT,stdout=f,check=True)
  (sources/'SOURCE_COMMIT.txt').write_text(commit+'\n')
- for name in ['LICENSE','LICENSE_SCOPE.md','NOTICE.md','THIRD_PARTY_LICENSES.md']:shutil.copy2(ROOT/name,stage/name)
- shutil.copy2(ROOT/'releases/1.0.0.md',stage/'READ_ME.md')
+ for name in ['LICENSE','LICENSE_SCOPE.md','NOTICE.md','THIRD_PARTY_LICENSES.md']:shutil.copy2(ROOT/({'THIRD_PARTY_LICENSES.md':'docs/licensing/THIRD_PARTY_LICENSES.md','BRAND_ASSETS.md':'docs/licensing/BRAND_ASSETS.md'}.get(name,name)),stage/name)
+ shutil.copy2(ROOT/'docs/releases/1.0.0.md',stage/'READ_ME.md')
  dmg=out/'RightDisplay-1.0-Build45.dmg'
  run(['hdiutil','create','-volname','RightDisplay 1.0','-srcfolder',stage,'-format','UDZO','-ov',dmg],out/'hdiutil-create.log');run(['hdiutil','verify',dmg],out/'hdiutil-verify.log')
  mounted=plistlib.loads(subprocess.check_output(['hdiutil','attach','-readonly','-nobrowse','-plist',str(dmg)]));vol=next(Path(x['mount-point']) for x in mounted['system-entities'] if 'mount-point' in x)
