@@ -1,0 +1,32 @@
+#!/bin/sh
+set -eu
+# Installer authorization owns this script; paths are fixed, never supplied by IPC.
+parent=/Library/Audio/Plug-Ins/HAL
+driver="$parent/RightDisplayVirtualVolume.driver"
+for path in /Library /Library/Audio /Library/Audio/Plug-Ins "$parent"; do
+ [ ! -L "$path" ] || exit 1
+done
+if [ -e "$driver" ]; then
+ [ -d "$driver" ] && [ ! -L "$driver" ] || exit 1
+ /usr/bin/codesign --verify --deep --strict "$driver" || exit 1
+ /usr/bin/codesign --verify -R '=anchor apple generic and identifier "com.rightdisplay.audio.VirtualVolume" and certificate leaf[subject.OU] = "45F25M3DS7"' "$driver" || exit 1
+ # Loaded plug-ins cannot safely be replaced while audio clients are running.
+ "$(dirname "$0")/CheckRemoval" || exit 1
+ backup=/Library/Application\ Support/RightDisplay/AudioDriverRollback
+ for path in '/Library/Application Support' '/Library/Application Support/RightDisplay' "$backup"; do
+  [ ! -L "$path" ] || exit 1
+ done
+ /bin/mkdir -p "$backup"
+ [ ! -L "$backup/RightDisplayVirtualVolume.driver" ] || exit 1
+ /usr/bin/ditto "$driver" "$backup/RightDisplayVirtualVolume.driver"
+fi
+for path in /Library/PrivilegedHelperTools /Library/LaunchDaemons; do
+ [ ! -L "$path" ] || exit 1
+done
+helper=/Library/PrivilegedHelperTools/com.rightdisplay.audio.Transport
+if [ -e "$helper" ]; then
+ [ -f "$helper" ] && [ ! -L "$helper" ] || exit 1
+ /usr/bin/codesign --verify --strict -R '=anchor apple generic and identifier "com.rightdisplay.audio.Transport" and certificate leaf[subject.OU] = "45F25M3DS7"' "$helper" || exit 1
+fi
+[ ! -L /Library/LaunchDaemons/com.rightdisplay.audio.Transport.plist ] || exit 1
+exit 0

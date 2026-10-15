@@ -1,0 +1,5 @@
+{
+  "url": "https://github.com/openssl/openssl/blob/openssl-4.0.1/LICENSE.txt",
+  "git_blob": "49cc83d2ee29d13453188217f0e4edd70c7f842f",
+  "evidence": "cryptography wheel OpenSSL SBOM plus runtime OpenSSL4.0.1 query"
+}

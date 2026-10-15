@@ -1,0 +1,225 @@
+{
+  "status": "historical inventory; download workflow not yet portable",
+  "wheels": [
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/aiohappyeyeballs-2.7.1-py3-none-any.whl",
+      "sha256": "9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472",
+      "bytes": 15038
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/aiohttp-3.14.3-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "617105e2c3018ee38d0c8ce5ee3c84f621a6d8b9f723202aacaff28449ca91ee",
+      "bytes": 511949
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/aiosignal-1.4.0-py3-none-any.whl",
+      "sha256": "053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e",
+      "bytes": 7490
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/altgraph-0.17.5-py2-none-any.whl",
+      "sha256": "f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597",
+      "bytes": 21228
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/altgraph-0.17.5-py3-none-any.whl",
+      "sha256": "f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597",
+      "bytes": 21228
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/annotated_types-0.8.0-py3-none-any.whl",
+      "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+      "bytes": 13427
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/async_timeout-5.0.1-py3-none-any.whl",
+      "sha256": "39e3809566ff85354557ec2398b55e096c8364bacac9405a7a1fa429e77fe76c",
+      "bytes": 6233
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/attrs-26.1.0-py3-none-any.whl",
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "bytes": 67548
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/certifi-2026.7.22-py3-none-any.whl",
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "bytes": 136983
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/cffi-2.1.1-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "f81b3b8f3d4e343550fa4baa0e479bba9f2d29ce9c2e9b51d1ce1718d7442fcf",
+      "bytes": 184719
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/chacha20poly1305_reuseable-0.13.2-py3-none-any.whl",
+      "sha256": "c7dba7c3604a9fa51bcfef9e4bfdaa3bfaadd88b6c5436a27be1c7e9c4081048",
+      "bytes": 8587
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/charset_normalizer-3.5.1-cp312-cp312-macosx_10_13_universal2.whl",
+      "sha256": "5b6d1386bf0096d26d3a863dc0a487a5b4eb9aa93cf5ba69683d29dde6b9d60f",
+      "bytes": 344456
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/cryptography-50.0.0-cp311-abi3-macosx_11_0_arm64.whl",
+      "sha256": "031e2d5dd4bb9caa3ca9c82e5a197fd8ae680232cee62603d1a813f3f07e3d03",
+      "bytes": 4001252
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/cython-3.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "03bc5333932f5dda3ba9315298ecdd21daa1b58410bb1f8ce04c78ec8337130a",
+      "bytes": 3143472
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/frozenlist-1.8.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "f833670942247a14eafbb675458b4e61c82e002a148f49e68257b79296e865c4",
+      "bytes": 50448
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/idna-3.19-py3-none-any.whl",
+      "sha256": "815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4",
+      "bytes": 68550
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/ifaddr-0.2.0-py3-none-any.whl",
+      "sha256": "085e0305cfe6f16ab12d72e2024030f5d52674afad6911bb1eee207177b8a748",
+      "bytes": 12314
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/macholib-1.16.4-py2-none-any.whl",
+      "sha256": "da1a3fa8266e30f0ce7e97c6a54eefaae8edd1e5f86f3eb8b95457cae90265ea",
+      "bytes": 38117
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/macholib-1.16.4-py3-none-any.whl",
+      "sha256": "da1a3fa8266e30f0ce7e97c6a54eefaae8edd1e5f86f3eb8b95457cae90265ea",
+      "bytes": 38117
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/miniaudio-1.71-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "8fc1a4f084cc1b4b25c567d22f54d1e46bfa505c17ed777c8b198e5c53d0f785",
+      "bytes": 351485
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/multidict-6.7.1-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "b0fa96985700739c4c7853a43c0b3e169360d6855780021bfc6d0f1ce7c123e7",
+      "bytes": 43872
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "bytes": 129956
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/poetry_core-2.4.1-py3-none-any.whl",
+      "sha256": "acf06f9537cd2625bdaec926d95d90b557ba15353bc71d27a3a8a441042b5316",
+      "bytes": 374834
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/propcache-0.5.2-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "e5cbfac9f61484f7e9f3597775500cd3ebe8274e9b050c38f9525c77c97520bf",
+      "bytes": 55190
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/protobuf-7.36.0-cp310-abi3-macosx_10_9_universal2.whl",
+      "sha256": "9103532dffd80c6fab7e50c65a31007680a06eb57537d437bb1b35812c138a37",
+      "bytes": 453256
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/pyatv-0.16.1-py3-none-any.whl",
+      "sha256": "ad4e9e8bb5b4a31f0324addcdcefc21ca4b03cb95091ff533b138ac6538174df",
+      "bytes": 461903
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/pycparser-3.0-py3-none-any.whl",
+      "sha256": "b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992",
+      "bytes": 48172
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/pydantic-2.13.4-py3-none-any.whl",
+      "sha256": "45a282cde31d808236fd7ea9d919b128653c8b38b393d1c4ab335c62924d9aba",
+      "bytes": 472262
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/pydantic_core-2.46.4-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "962ccbab7b642487b1d8b7df90ef677e03134cf1fd8880bf698649b22a69371f",
+      "bytes": 1951724
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/pyinstaller-6.22.2-py3-none-macosx_10_13_universal2.whl",
+      "sha256": "ebd1b1ca932d7cf25d7366ce691aaf79a5ff9425811ed7328b5116e4471b6d6d",
+      "bytes": 1062734
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/pyinstaller_hooks_contrib-2026.6-py3-none-any.whl",
+      "sha256": "fd13b8ac126b35361175edacd41a0d97080b75dd5f4b594ecefefff969509dd3",
+      "bytes": 457159
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/requests-2.34.2-py3-none-any.whl",
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "bytes": 73075
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/setuptools-84.0.0-py3-none-any.whl",
+      "sha256": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670",
+      "bytes": 818216
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/six-1.17.0-py2-none-any.whl",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "bytes": 11050
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/six-1.17.0-py3-none-any.whl",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "bytes": 11050
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/srptools-1.0.1-py2-none-any.whl",
+      "sha256": "fccb44c949eb2507ba19f349a3087cb8fed2393014d7f0887b06c3186f19d1e9",
+      "bytes": 13183
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/srptools-1.0.1-py3-none-any.whl",
+      "sha256": "fccb44c949eb2507ba19f349a3087cb8fed2393014d7f0887b06c3186f19d1e9",
+      "bytes": 13183
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/tabulate-0.10.0-py3-none-any.whl",
+      "sha256": "f0b0622e567335c8fabaaa659f1b33bcb6ddfe2e496071b743aa113f8774f2d3",
+      "bytes": 39814
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/tinytag-2.3.0-py3-none-any.whl",
+      "sha256": "231ba5b2fb7a6db478f6dd344ebf20dfdfcd5907f142d475605d516dd7e8b9a8",
+      "bytes": 37155
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "bytes": 45571
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/typing_inspection-0.4.4-py3-none-any.whl",
+      "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+      "bytes": 14750
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/urllib3-2.7.0-py3-none-any.whl",
+      "sha256": "9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897",
+      "bytes": 131087
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/yarl-1.24.5-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "9d399bdcfb4a0f659b9b3788bbc89babe63d9a6a65aacdf4d4e7065ff2e6316c",
+      "bytes": 97323
+    },
+    {
+      "path": "builds/dependencies/apple-tv-helper-wheelhouse/zeroconf-0.150.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "1aba87b6c1cdb6859d0c2291c67dc7d3ac06612250fddd95f68b7632e1e89a79",
+      "bytes": 1684292
+    }
+  ]
+}

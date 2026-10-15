@@ -1,0 +1,17 @@
+{
+  "profiles": [
+    {
+      "team": "45F25M3DS7",
+      "C_Swift_policy_consistent": true,
+      "ad_hoc_forged_identity_rejected": true
+    },
+    {
+      "team": "ABCDE12345",
+      "C_Swift_policy_consistent": true,
+      "ad_hoc_forged_identity_rejected": true
+    }
+  ],
+  "system_producer_requirement_retained": true,
+  "invalid_team_rejected": true,
+  "HAL_or_XPC": "not invoked"
+}

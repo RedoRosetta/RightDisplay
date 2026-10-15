@@ -1,0 +1,9 @@
+{
+  "python": "3.12.14",
+  "openssl": "OpenSSL 3.5.8 25 Aug 2026",
+  "sqlite": "3.53.1",
+  "expat": "expat_2.8.3",
+  "libmpdec": "4.0.0",
+  "zlib": "1.2.12",
+  "scope": "CPython interpreter native library identities; statically linked subcomponent provenance/licenses not fully supplied"
+}

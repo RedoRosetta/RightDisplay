@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A40000000000000000000003 /* ColorProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000003; };
+		A40000000000000000000002 /* ColorProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000002; };
+		A40000000000000000000001 /* ICCProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000001; };
+		A30000000000000000000001 /* LinkPixelEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000001 /* LinkPixelEncoding.swift */; };
+		A10000000000000000000001 /* RightDisplayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* RightDisplayApp.swift */; };
+		A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* AppDelegate.swift */; };
+		A10000000000000000000003 /* DisplaySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* DisplaySnapshot.swift */; };
+		A10000000000000000000004 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* Preferences.swift */; };
+		A10000000000000000000005 /* DisplayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* DisplayStore.swift */; };
+		A10000000000000000000006 /* HUDWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* HUDWindowController.swift */; };
+		A10000000000000000000007 /* SignalBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* SignalBadge.swift */; };
+		A10000000000000000000008 /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* HUDView.swift */; };
+		A1000000000000000000000A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* SettingsView.swift */; };
+		A1000000000000000000000B /* RightDisplay-AppIcon-0.1-Beta-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* RightDisplay-AppIcon-0.1-Beta-1024.png */; };
+		A1000000000000000000000C /* LGTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000D /* LGTVController.swift */; };
+		A1000000000000000000000D /* AudioOutputStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000E /* AudioOutputStore.swift */; };
+		A1000000000000000000000E /* QuickPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000F /* QuickPanelView.swift */; };
+		A1000000000000000000000F /* DisplayBrightnessStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* DisplayBrightnessStore.swift */; };
+		A10000000000000000000010 /* AppleTVAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* AppleTVAudioController.swift */; };
+		A10000000000000000000011 /* EDIDStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000012 /* EDIDStore.swift */; };
+		A10000000000000000000012 /* DiagnosticReportExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000013 /* DiagnosticReportExporter.swift */; };
+		A10000000000000000000013 /* DisplayCapabilityProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000014 /* DisplayCapabilityProfile.swift */; };
+		A10000000000000000000014 /* ReleaseNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000015 /* ReleaseNotes.swift */; };
+		A10000000000000000000015 /* ReleaseHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000016 /* ReleaseHistoryView.swift */; };
+		A10000000000000000000016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000017 /* Assets.xcassets */; };
+		A10000000000000000000017 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000018 /* Localization.swift */; };
+		A10000000000000000000018 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000019 /* Localizable.strings */; };
+		A10000000000000000000019 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000001C /* InfoPlist.strings */; };
+		A20000000000000000000001 /* AppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* AppNotifications.swift */; };
+		A20000000000000000000002 /* DisplayOutputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000002 /* DisplayOutputController.swift */; };
+		A20000000000000000000003 /* SettingsSupportViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000003 /* SettingsSupportViews.swift */; };
+		A50000000000000000000001 /* VirtualVolumeState.swift in Sources */ = {isa = PBXBuildFile;fileRef = B50000000000000000000001; };
+		A50000000000000000000002 /* AudioDeviceProvider.swift in Sources */ = {isa = PBXBuildFile;fileRef = B50000000000000000000002; };
+		A50000000000000000000003 /* AudioBridgeEngine.swift in Sources */ = {isa = PBXBuildFile;fileRef = B50000000000000000000003; };
+		A50000000000000000000004 /* VirtualVolumeController.swift in Sources */ = {isa = PBXBuildFile;fileRef = B50000000000000000000004; };
+		A50000000000000000000005 /* VirtualVolumeView.swift in Sources */ = {isa = PBXBuildFile;fileRef = B50000000000000000000005; };
+		A50000000000000000000006 /* core.cpp in Sources */ = {isa = PBXBuildFile;fileRef = B50000000000000000000006;settings = {COMPILER_FLAGS = "-fblocks -O2 -Wall -Wextra -Wpedantic -Werror -fno-fast-math"; }; };
+		A50000000000000000000007 /* hal.cpp in Sources */ = {isa = PBXBuildFile;fileRef = B50000000000000000000007;settings = {COMPILER_FLAGS = "-fblocks -O2 -Wall -Wextra -Wpedantic -Werror -fno-fast-math"; }; };
+		A60000000000000000000001 /* VirtualAudioDeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000001; };
+		A60000000000000000000002 /* route.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000002; settings = {COMPILER_FLAGS = "-fblocks -O2 -Wall -Wextra -Wpedantic -Werror -fno-fast-math"; }; };
+		A60000000000000000000004 /* VirtualAudioPackages in Resources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000004; };
+		A19000000000000000000001 /* Sponsor in Resources */ = {isa = PBXBuildFile; fileRef = B19000000000000000000001; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B40000000000000000000003 /* ColorProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProfilesView.swift; sourceTree = "<group>"; };
+		B40000000000000000000002 /* ColorProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProfileStore.swift; sourceTree = "<group>"; };
+		B40000000000000000000001 /* ICCProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICCProfile.swift; sourceTree = "<group>"; };
+		B30000000000000000000001 /* LinkPixelEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPixelEncoding.swift; sourceTree = "<group>"; };
+		B10000000000000000000001 /* RightDisplayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDisplayApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* DisplaySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySnapshot.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* DisplayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayStore.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* HUDWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDWindowController.swift; sourceTree = "<group>"; };
+		B10000000000000000000007 /* SignalBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalBadge.swift; sourceTree = "<group>"; };
+		B10000000000000000000008 /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000B /* RightDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RightDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1000000000000000000000C /* RightDisplay-AppIcon-0.1-Beta-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RightDisplay-AppIcon-0.1-Beta-1024.png"; sourceTree = "<group>"; };
+		B1000000000000000000000D /* LGTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGTVController.swift; sourceTree = "<group>"; };
+		B1000000000000000000000E /* AudioOutputStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioOutputStore.swift; sourceTree = "<group>"; };
+		B1000000000000000000000F /* QuickPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPanelView.swift; sourceTree = "<group>"; };
+		B10000000000000000000010 /* DisplayBrightnessStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayBrightnessStore.swift; sourceTree = "<group>"; };
+		B10000000000000000000011 /* AppleTVAudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleTVAudioController.swift; sourceTree = "<group>"; };
+		B10000000000000000000012 /* EDIDStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDIDStore.swift; sourceTree = "<group>"; };
+		B10000000000000000000013 /* DiagnosticReportExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticReportExporter.swift; sourceTree = "<group>"; };
+		B10000000000000000000014 /* DisplayCapabilityProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCapabilityProfile.swift; sourceTree = "<group>"; };
+		B10000000000000000000015 /* ReleaseNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseNotes.swift; sourceTree = "<group>"; };
+		B10000000000000000000016 /* ReleaseHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseHistoryView.swift; sourceTree = "<group>"; };
+		B10000000000000000000017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10000000000000000000018 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		B1000000000000000000001A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1000000000000000000001B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B1000000000000000000001D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1000000000000000000001E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B20000000000000000000001 /* AppNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifications.swift; sourceTree = "<group>"; };
+		B20000000000000000000002 /* DisplayOutputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOutputController.swift; sourceTree = "<group>"; };
+		B20000000000000000000003 /* SettingsSupportViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSupportViews.swift; sourceTree = "<group>"; };
+		B50000000000000000000001 /* VirtualVolumeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualVolumeState.swift; sourceTree = "<group>"; };
+		B50000000000000000000002 /* AudioDeviceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceProvider.swift; sourceTree = "<group>"; };
+		B50000000000000000000003 /* AudioBridgeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBridgeEngine.swift; sourceTree = "<group>"; };
+		B50000000000000000000004 /* VirtualVolumeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualVolumeController.swift; sourceTree = "<group>"; };
+		B50000000000000000000005 /* VirtualVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualVolumeView.swift; sourceTree = "<group>"; };
+		B50000000000000000000006 /* core.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = core.cpp; sourceTree = "<group>"; };
+		B50000000000000000000007 /* hal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hal.cpp; sourceTree = "<group>"; };
+		B50000000000000000000008 /* core.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core.hpp; sourceTree = "<group>"; };
+		B50000000000000000000009 /* hal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hal.hpp; sourceTree = "<group>"; };
+		B5000000000000000000000A /* AudioBridgeC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioBridgeC.h; sourceTree = "<group>"; };
+		B60000000000000000000001 /* VirtualAudioDeviceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualAudioDeviceStore.swift; sourceTree = "<group>"; };
+		B60000000000000000000002 /* route.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = route.cpp; sourceTree = "<group>"; };
+		B60000000000000000000003 /* route_buffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route_buffer.hpp; sourceTree = "<group>"; };
+		B60000000000000000000004 /* VirtualAudioPackages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Build/VirtualAudio/VirtualAudioPackages; sourceTree = SOURCE_ROOT; };
+		B19000000000000000000001 /* Sponsor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sponsor; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				D10000000000000000000002 /* RightDisplay */,
+				D10000000000000000000007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D10000000000000000000002 /* RightDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				D50000000000000000000001,
+				B10000000000000000000001 /* RightDisplayApp.swift */,
+				B10000000000000000000002 /* AppDelegate.swift */,
+				D10000000000000000000003 /* Models */,
+				D10000000000000000000004 /* Services */,
+				D10000000000000000000005 /* Controllers */,
+				D10000000000000000000006 /* Views */,
+				D10000000000000000000008 /* Resources */,
+			);
+			path = RightDisplay;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B50000000000000000000001,
+				B40000000000000000000001 /* ICCProfile.swift */,
+				B10000000000000000000018 /* Localization.swift */,
+				B20000000000000000000001 /* AppNotifications.swift */,
+				B10000000000000000000003 /* DisplaySnapshot.swift */,
+				B30000000000000000000001 /* LinkPixelEncoding.swift */,
+				B10000000000000000000004 /* Preferences.swift */,
+				B10000000000000000000014 /* DisplayCapabilityProfile.swift */,
+				B10000000000000000000015 /* ReleaseNotes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000004 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B60000000000000000000001,
+				B50000000000000000000004,
+				B50000000000000000000003,
+				B50000000000000000000002,
+				B40000000000000000000002 /* ColorProfileStore.swift */,
+				B10000000000000000000005 /* DisplayStore.swift */,
+				B20000000000000000000002 /* DisplayOutputController.swift */,
+				B1000000000000000000000D /* LGTVController.swift */,
+				B1000000000000000000000E /* AudioOutputStore.swift */,
+				B10000000000000000000010 /* DisplayBrightnessStore.swift */,
+				B10000000000000000000011 /* AppleTVAudioController.swift */,
+				B10000000000000000000012 /* EDIDStore.swift */,
+				B10000000000000000000013 /* DiagnosticReportExporter.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000005 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (B10000000000000000000006 /* HUDWindowController.swift */);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B50000000000000000000005,
+				B40000000000000000000003 /* ColorProfilesView.swift */,
+				B10000000000000000000007 /* SignalBadge.swift */,
+				B10000000000000000000008 /* HUDView.swift */,
+				B1000000000000000000000A /* SettingsView.swift */,
+				B20000000000000000000003 /* SettingsSupportViews.swift */,
+				B1000000000000000000000F /* QuickPanelView.swift */,
+				B10000000000000000000016 /* ReleaseHistoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000007 /* Products */ = {
+			isa = PBXGroup;
+			children = (B1000000000000000000000B /* RightDisplay.app */);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000008 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B19000000000000000000001,
+				B60000000000000000000004,
+				B10000000000000000000019 /* Localizable.strings */,
+				B1000000000000000000001C /* InfoPlist.strings */,
+				B1000000000000000000000C /* RightDisplay-AppIcon-0.1-Beta-1024.png */,
+				B10000000000000000000017 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D50000000000000000000001 /* AudioBridgeRealtime */ = {isa = PBXGroup;children = (
+				B60000000000000000000003,
+				B60000000000000000000002,
+				B5000000000000000000000A,
+				B50000000000000000000009,
+				B50000000000000000000008,
+				B50000000000000000000007,
+				B50000000000000000000006,);path = AudioBridgeRealtime;sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E10000000000000000000001 /* RightDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000002 /* Build configuration list for PBXNativeTarget "RightDisplay" */;
+			buildPhases = (
+				C10000000000000000000003 /* Sources */,
+				C10000000000000000000001 /* Frameworks */,
+				C10000000000000000000002 /* Resources */,
+				C10000000000000000000004 /* Embed Apple TV Audio Helper */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = RightDisplay;
+			productName = RightDisplay;
+			productReference = B1000000000000000000000B /* RightDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = { E10000000000000000000001 = { CreatedOnToolsVersion = 26.6; }; };
+			};
+			buildConfigurationList = F10000000000000000000001 /* Build configuration list for PBXProject "RightDisplay" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = zh-Hans;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base, "zh-Hans");
+			mainGroup = D10000000000000000000001;
+			productRefGroup = D10000000000000000000007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (E10000000000000000000001 /* RightDisplay */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C10000000000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19000000000000000000001,
+				A60000000000000000000004,
+				A10000000000000000000018 /* Localizable.strings in Resources */,
+				A10000000000000000000019 /* InfoPlist.strings in Resources */,
+				A1000000000000000000000B /* RightDisplay-AppIcon-0.1-Beta-1024.png in Resources */,
+				A10000000000000000000016 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C10000000000000000000004 /* Embed Apple TV Audio Helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = ();
+			inputFileListPaths = ();
+			inputPaths = (
+				"$(SRCROOT)/Build/HelperExternalZeroconf/dist/RightDisplayAppleTVHelper",
+			);
+			name = "Embed Apple TV Audio Helper";
+			outputFileListPaths = ();
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/AppleTVAudioHelper/RightDisplayAppleTVHelper",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n/usr/bin/python3 \"$SRCROOT/Scripts/preflight.py\"\nSOURCE=\"$SRCROOT/Build/HelperExternalZeroconf/dist/RightDisplayAppleTVHelper\"\nDESTINATION=\"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/AppleTVAudioHelper\"\n/usr/bin/ditto \"$SOURCE\" \"$DESTINATION\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B10000000000000000000019 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1000000000000000000001A /* en */,
+				B1000000000000000000001B /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B1000000000000000000001C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1000000000000000000001D /* en */,
+				B1000000000000000000001E /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10000000000000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60000000000000000000002,
+				A60000000000000000000001,
+				A50000000000000000000007,
+				A50000000000000000000006,
+				A50000000000000000000005,
+				A50000000000000000000004,
+				A50000000000000000000003,
+				A50000000000000000000002,
+				A50000000000000000000001,
+				A40000000000000000000003 /* ColorProfilesView.swift in Sources */,
+				A40000000000000000000002 /* ColorProfileStore.swift in Sources */,
+				A40000000000000000000001 /* ICCProfile.swift in Sources */,
+				A20000000000000000000001 /* AppNotifications.swift in Sources */,
+				A20000000000000000000002 /* DisplayOutputController.swift in Sources */,
+				A20000000000000000000003 /* SettingsSupportViews.swift in Sources */,
+				A10000000000000000000017 /* Localization.swift in Sources */,
+				A10000000000000000000001 /* RightDisplayApp.swift in Sources */,
+				A10000000000000000000002 /* AppDelegate.swift in Sources */,
+				A10000000000000000000003 /* DisplaySnapshot.swift in Sources */,
+				A30000000000000000000001 /* LinkPixelEncoding.swift in Sources */,
+				A10000000000000000000004 /* Preferences.swift in Sources */,
+				A10000000000000000000005 /* DisplayStore.swift in Sources */,
+				A10000000000000000000006 /* HUDWindowController.swift in Sources */,
+				A10000000000000000000007 /* SignalBadge.swift in Sources */,
+				A10000000000000000000008 /* HUDView.swift in Sources */,
+				A1000000000000000000000A /* SettingsView.swift in Sources */,
+				A1000000000000000000000D /* AudioOutputStore.swift in Sources */,
+				A1000000000000000000000E /* QuickPanelView.swift in Sources */,
+				A1000000000000000000000F /* DisplayBrightnessStore.swift in Sources */,
+				A10000000000000000000010 /* AppleTVAudioController.swift in Sources */,
+				A10000000000000000000011 /* EDIDStore.swift in Sources */,
+				A10000000000000000000012 /* DiagnosticReportExporter.swift in Sources */,
+				A10000000000000000000013 /* DisplayCapabilityProfile.swift in Sources */,
+				A10000000000000000000014 /* ReleaseNotes.swift in Sources */,
+				A10000000000000000000015 /* ReleaseHistoryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F10000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F10000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F10000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 44;
+				DEVELOPMENT_TEAM = "";
+				RD_COMPONENT_TEAM = 45F25M3DS7;
+				GCC_PREPROCESSOR_DEFINITIONS = ("$(inherited)", "RD_SIGNING_TEAM=\\\"$(RD_COMPONENT_TEAM)\\\"");
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				CODE_SIGN_ENTITLEMENTS = RightDisplay/Resources/RightDisplay.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RightDisplay/Resources/RightDisplay-Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Right Display";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "用于查找并连接同一局域网中的 Apple TV 与兼容 AirPlay 的音频设备。";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				MARKETING_VERSION = 0.4;
+				OTHER_LDFLAGS = ("$(inherited)", "-Wl,-random_uuid", "-lc++");
+				PRODUCT_BUNDLE_IDENTIFIER = com.rightdisplay.gui;
+				PRODUCT_NAME = "Right Display";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				SWIFT_OBJC_BRIDGING_HEADER = RightDisplay/AudioBridgeRealtime/AudioBridgeC.h;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+			};
+			name = Debug;
+		};
+		F10000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 44;
+				DEVELOPMENT_TEAM = "";
+				RD_COMPONENT_TEAM = 45F25M3DS7;
+				GCC_PREPROCESSOR_DEFINITIONS = ("$(inherited)", "RD_SIGNING_TEAM=\\\"$(RD_COMPONENT_TEAM)\\\"");
+				ENABLE_HARDENED_RUNTIME = YES;
+				CODE_SIGN_ENTITLEMENTS = RightDisplay/Resources/RightDisplay.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RightDisplay/Resources/RightDisplay-Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Right Display";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "用于查找并连接同一局域网中的 Apple TV 与兼容 AirPlay 的音频设备。";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				MARKETING_VERSION = 0.4;
+				OTHER_LDFLAGS = ("$(inherited)", "-lc++");
+				PRODUCT_BUNDLE_IDENTIFIER = com.rightdisplay.gui;
+				PRODUCT_NAME = "Right Display";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				SWIFT_OBJC_BRIDGING_HEADER = RightDisplay/AudioBridgeRealtime/AudioBridgeC.h;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10000000000000000000001 /* Build configuration list for PBXProject "RightDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000003 /* Debug */,
+				F10000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10000000000000000000002 /* Build configuration list for PBXNativeTarget "RightDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000005 /* Debug */,
+				F10000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E10000000000000000000002 /* Project object */;
+}

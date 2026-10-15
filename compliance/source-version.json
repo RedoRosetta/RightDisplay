@@ -1,0 +1,11 @@
+{
+  "source_baseline": "complete isolated Build44 plus explicit source-preparation changes",
+  "app_version": "0.4",
+  "inherited_build": "44",
+  "component": "21",
+  "protocol": "21",
+  "new_production_change": "build-time own-component Team parameterization, official default unchanged; no audio/display policy change",
+  "public_RC": "Build41-based, not this source state",
+  "release_or_stable_claim": false,
+  "closeout_changes": "first-party copyright comments and source-only non-payment Sponsor placeholders; audio/display/signing behavior unchanged"
+}

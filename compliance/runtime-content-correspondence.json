@@ -1,0 +1,13 @@
+{
+  "raw_file_sha256_equal": false,
+  "comparison": {
+    "sections": true,
+    "symbols": true,
+    "dyld_tables": true,
+    "dylibs": true,
+    "uuid": true
+  },
+  "content_sections": 15,
+  "exported_symbols": 2532,
+  "scope": "matching code/data sections, UUID, dylib dependencies, dyld tables and exported symbols; raw signature/local-symbol layout differs, not byte-reproducibility"
+}

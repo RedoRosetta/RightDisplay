@@ -1,0 +1,58 @@
+{
+  "basis": "user confirms first-party increments; original Apple permission text retained",
+  "upstream_notice": "AudioVirtualDevice/Driver/APPLE-LICENSE.txt",
+  "upstream_rightsholder_from_existing_notice": "Apple Inc.",
+  "upstream_year_from_existing_notice": "2024",
+  "files": [
+    {
+      "path": "AudioVirtualDevice/Driver/VirtualVolume.c",
+      "upstream_line_ranges": null,
+      "first_party_line_ranges": null,
+      "status": "USER_ATTESTED_PROJECT_DEVELOPMENT_WITH_RETAINED_UPSTREAM_NOTICES",
+      "first_party_increment_policy": "RNSL1.0 per user confirmation",
+      "upstream_policy": "original Apple terms; no user ownership asserted",
+      "reason": "earlier Git and comparison evidence retained; not presumed exclusively original from absence of matches",
+      "verified_actual_upstream_project": null,
+      "verified_actual_upstream_version": null,
+      "source_process_evidence": "direct user statement in current task",
+      "third_party_expressions": "not assigned to RedoRosetta; original terms retained"
+    },
+    {
+      "path": "AudioVirtualDevice/Driver/Producer.h",
+      "upstream_line_ranges": null,
+      "first_party_line_ranges": null,
+      "status": "USER_ATTESTED_PROJECT_DEVELOPMENT_WITH_RETAINED_UPSTREAM_NOTICES",
+      "first_party_increment_policy": "RNSL1.0 per user confirmation",
+      "upstream_policy": "original Apple terms; no user ownership asserted",
+      "reason": "earlier Git and comparison evidence retained; not presumed exclusively original from absence of matches",
+      "verified_actual_upstream_project": null,
+      "verified_actual_upstream_version": null,
+      "source_process_evidence": "direct user statement in current task",
+      "third_party_expressions": "not assigned to RedoRosetta; original terms retained"
+    }
+  ],
+  "unknown_contributors_not_claimed": true,
+  "public_first_party_attribution": "Copyright \u00a9 2026 RedoRosetta",
+  "official_sample_review": {
+    "source": "Apple official BuildingAnAudioServerPlugInAndDriverExtension sample",
+    "evidence": "reviewed in this round; not established as the actual original revision",
+    "line_similarity_not_ownership_evidence": true
+  },
+  "unverified_portions_in_RNSL_scope": false,
+  "review_date": "2026-10-15",
+  "official_license_text_origin": "VERIFIED against requested Apple NullAudio sample commit88460220d88e9d5f2230bcbc5f11a0655f351dd5",
+  "actual_candidate_upstream_origin": "user/AI project development per direct rights-holder statement; no specific Apple derivation independently established",
+  "source_blocker_closed": true,
+  "latest_user_attestation": {
+    "record_date": "2026-10-15",
+    "evidence": "direct current user confirmation",
+    "declaration": "VirtualVolume.c and Producer.h were developed by the user personally or generated using AI coding tools for RightDisplay",
+    "acceptance": "recorded as rights-holder source-process attestation, not independent proof of originality or absence of third-party similarity",
+    "original_Apple_notice": "retained unchanged",
+    "historical_Git_official_sample_diffs": "retained unchanged",
+    "source_rewritten": false
+  },
+  "source_documentation_gate": "RESOLVED_BY_USER_ATTESTATION_WITH_RETAINED_THIRD_PARTY_CAVEAT",
+  "independent_originality_or_noninfringement_proof": false,
+  "source_blocker_closure_basis": "direct user/AI development attestation; forensic proof and third-party similarity caveats retained"
+}

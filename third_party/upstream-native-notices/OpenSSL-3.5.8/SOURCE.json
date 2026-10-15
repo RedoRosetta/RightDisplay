@@ -1,0 +1,5 @@
+{
+  "url": "https://github.com/openssl/openssl/blob/openssl-3.5.8/LICENSE.txt",
+  "git_blob": "49cc83d2ee29d13453188217f0e4edd70c7f842f",
+  "scope": "exact upstream tag notice; does not prove standalone binary source correspondence"
+}

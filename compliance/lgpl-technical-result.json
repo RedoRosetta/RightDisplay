@@ -1,0 +1,11 @@
+{
+  "actual_packaged_executable": true,
+  "modified_external_zeroconf_loaded": true,
+  "network": "denied by outer sandbox",
+  "user_Library_writes": "denied",
+  "command": "--help only; argparse exits before storage/discovery/serve",
+  "app_started": false,
+  "hardware_or_pairing": false,
+  "signed_official_bundle_replacement": "NOT_TESTED; user must re-sign modified bundle under its own identity",
+  "legal_combination": "Engineering test does not establish legal compatibility; current adopted LICENSE section 7.3A and rnsl-adoption.json record the separate text review and required-rights reservation."
+}

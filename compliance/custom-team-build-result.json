@@ -1,0 +1,10 @@
+{
+  "custom_component_team": "ABCDE12345",
+  "component_compile": "PASS",
+  "Xcode_app_compile": "PASS",
+  "source_reads": "private/history/original candidates denied by outer sandbox",
+  "offline_suites": 9,
+  "signing": "ad-hoc components/unsigned main compile only; no actual third-party certificate",
+  "installed": false,
+  "HAL_XPC_playback": "UNVERIFIED"
+}
