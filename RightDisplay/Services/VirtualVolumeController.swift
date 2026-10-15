@@ -137,6 +137,7 @@ final class VirtualVolumeController: ObservableObject {
             controlUID:AudioOutputStore.shared.selectedAudioDevice?.id)
         if targetReturnPolicy.consume(uid:model.uid, eligible:eligible, virtualSelected:selectedVirtual,
                                       manuallyDisabled:autoStartPolicy.manuallyDisabled) {
+            engine.recordBoundary("REBUILD_TARGET_RETURN_REQUESTED", generation:model.generation)
             record("AUDIO_ROUTE_TARGET_RETURN",result:"same physical UID returned; one fresh session; old endpoint retired")
             startRoute(automatic:true);return
         }
@@ -153,6 +154,7 @@ final class VirtualVolumeController: ObservableObject {
             autoStartPolicy.userStarted()
             defaults.set(false,forKey:Self.manualStopKey)
         }
+        engine.recordBoundary(automatic ? "SESSION_PREPARE_AUTOMATIC_REQUESTED" : "SESSION_PREPARE_MANUAL_REQUESTED", generation:model.generation)
         startTest(fixture:"system")
     }
     func startTest(fixture: String) {
@@ -216,7 +218,7 @@ final class VirtualVolumeController: ObservableObject {
         let target = aliases.alias(model.uid)
         let device = selectedDevice
         var result = "target=\(target) state=\(model.state.rawValue) generation=\(model.generation) SYSTEM_AUDIO_ROUTING=\(Self.systemAudioRouting)\nrate=\(device?.rate ?? 0) channels=\(device?.channels ?? 0) processing=Float32 physicalBits=\(device?.physicalBits.map(String.init) ?? "UNAVAILABLE") \(isSystemRoute ? (model.hasSession ? "SYSTEM_ROUTE CLOCK_DRIFT_SRC_CONFIGURED" : "SYSTEM_ROUTE_STOPPED") : "DIRECT_PATH BRIDGE_SRC_INACTIVE")\nbuffer=\(device?.buffer.description ?? "UNAVAILABLE") deviceLatency=\(device?.latency?.description ?? "UNAVAILABLE") safety=\(device?.safety?.description ?? "UNAVAILABLE") streamLatency=\(device?.streamLatency?.description ?? "UNAVAILABLE")"
-        if let t = telemetry { result += "\nfailure=\(t.failure) origin=\(t.failureDetail ?? "UNAVAILABLE") transportUnderrun=\(t.transportUnderrun.map(String.init) ?? "UNAVAILABLE") transportOverrun=\(t.transportOverrun.map(String.init) ?? "UNAVAILABLE")\nepoch=\(t.epoch) callbacks=\(t.callbacks) frames=\(t.frames) fill=\(t.fill) min=\(t.minFill) max=\(t.maxFill) capacity=\(t.capacity) targetFill=\(t.targetFill) underrun=\(t.underrun) overrun=\(t.overrun) ESTIMATED_SOFTWARE_ADDED_LATENCY ringMS=\(t.ringMS) bufferMS=\(t.bufferMS) (separate components; acoustic latency UNKNOWN) ringResidenceStartupInclusiveMS=\(t.residenceMS?.description ?? "UNAVAILABLE")" }
+        if let t = telemetry { if let details=t.bufferDetails { result += "\nbufferPlan=\(details)" };result += "\nfailure=\(t.failure) origin=\(t.failureDetail ?? "UNAVAILABLE") transportUnderrun=\(t.transportUnderrun.map(String.init) ?? "UNAVAILABLE") transportOverrun=\(t.transportOverrun.map(String.init) ?? "UNAVAILABLE")\nepoch=\(t.epoch) callbacks=\(t.callbacks) frames=\(t.frames) fill=\(t.fill) min=\(t.minFill) max=\(t.maxFill) capacity=\(t.capacity) targetFill=\(t.targetFill) underrun=\(t.underrun) overrun=\(t.overrun) ESTIMATED_SOFTWARE_ADDED_LATENCY ringMS=\(t.ringMS) bufferMS=\(t.bufferMS) (separate components; acoustic latency UNKNOWN) ringResidenceStartupInclusiveMS=\(t.residenceMS?.description ?? "UNAVAILABLE")" }
         return result
     }
 }

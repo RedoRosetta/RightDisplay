@@ -15,4 +15,5 @@ jobs:
         run: |
           python3 Scripts/offline_targeted.py
           python3 Scripts/offline_recovery.py
+          python3 Scripts/offline_build45.py
           python3 Scripts/test_signing.py

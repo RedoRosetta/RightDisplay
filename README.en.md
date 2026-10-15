@@ -1,6 +1,8 @@
-> **Source Available candidate, not OSI Open Source.** First-party rights and the source/build-script/necessary-doc scope have been confirmed by the user. First-party material is licensed under RNSL 1.0 (Noncommercial). This Build44-based source preparation is not a fully hardware-accepted stable release and differs from the Build41-based public RC. Official signing credentials are not supplied.
+> **RightDisplay 1.0 · Build45** — RNSL 1.0 Noncommercial Source Available. [Download](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [Release notes](releases/1.0.0.md). Ad-hoc signed, not notarized. Three user-reported current-machine audio checks passed; no full hardware regression of this rebuilt package.
 
 <p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/right-display-app-icon.png" width="88" alt="Right Display app icon"></p>
+
+## 0.4 Beta RC 历史介绍 / Historical RC overview
 
 <h1 align="center">Right Display</h1>
 

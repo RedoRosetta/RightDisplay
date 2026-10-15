@@ -50,16 +50,18 @@ struct VirtualVolumeView: View {
                 Divider()
                 HStack(spacing:11) {
                     rowIcon("speaker.wave.2.fill")
-                    Text(l("虚拟音量","Virtual volume")).font(RightDisplayUI.rowLabel)
+                    VStack(alignment:.leading,spacing:3) {
+                        Text(l("虚拟音量","Virtual volume")).font(RightDisplayUI.rowLabel)
+                        Text(l("虚拟音量通过软件调节声音并转发至所选真实输出；使用前需将系统输出设为虚拟设备，并启用转发。","Virtual volume adjusts audio in software and forwards it to the selected physical output. To use it, select the virtual device as the system output and enable forwarding."))
+                            .font(.caption).foregroundStyle(.secondary)
+                            .fixedSize(horizontal:false,vertical:true)
+                    }
                     Spacer()
                     if let output = systemAudio.virtualOutput, let volume = output.volume, output.systemVolumeWritable {
                         VolumeLevelControl(value:Binding(get:{systemAudio.virtualOutput?.volume ?? volume},set:{systemAudio.setVirtualVolume($0)}),percent:Int(((systemAudio.virtualOutput?.volume ?? volume)*100).rounded()),accessibilityLabel:l("虚拟音量","Virtual volume"),onEditingChanged:playVolumeFeedback)
                     } else { Text(l("不可用","Unavailable")).foregroundStyle(.secondary) }
                 }.frame(minHeight:RightDisplayUI.rowHeight)
                  .modifier(CardSubmenuInset(amount:RightDisplayUI.submenuIndent))
-                if virtualDevice.status.isDefault && !controller.busy {
-                    Text(l("系统已选虚拟输出，但转发尚未运行：请选择真实目标并启用转发，否则没有声音。","Virtual output is selected but forwarding is stopped: select a physical target and start forwarding to hear audio.")).font(.callout).foregroundStyle(.orange)
-                }
                 Divider()
                 Button { detailsExpanded.toggle() } label: {
                     HStack(spacing:11) {

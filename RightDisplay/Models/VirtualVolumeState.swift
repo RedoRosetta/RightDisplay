@@ -27,6 +27,7 @@ struct AudioBridgeDevice: Codable, Identifiable, Equatable {
     var usable: Bool { eligibility == "USABLE_DIRECT_PATH" }
 }
 struct AudioBridgeTelemetry: Codable, Equatable {
+    var bufferDetails: String? = nil
     var failureDetail: String? = nil
     var validationPending: Bool? = nil
     var validationSilencedCallbacks: UInt64? = nil

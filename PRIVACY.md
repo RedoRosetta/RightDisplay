@@ -1,3 +1,5 @@
+> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](releases/1.0.0.md) and [signature boundaries](SIGNING.md). Prior RC/build notes below retain their historical scope.
+
 # Privacy & diagnostics / 隐私与诊断
 
 Reports are saved locally on request through the system save dialog, not automatically uploaded to GitHub. Device discovery/pairing/control communicates over the network when used.

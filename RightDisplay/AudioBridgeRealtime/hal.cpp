@@ -28,7 +28,7 @@ Device inspect(AudioDeviceID id){Device d;d.id=id;d.uid=stringValue(id,kAudioDev
  auto a=address(kAudioDevicePropertyStreamConfiguration,kAudioObjectPropertyScopeOutput);UInt32 bytes=0;if(AudioObjectGetPropertyDataSize(id,&a,0,nullptr,&bytes)==noErr&&bytes>=offsetof(AudioBufferList,mBuffers)&&bytes<=65536){std::vector<unsigned char> storage(bytes);UInt32 got=bytes;if(AudioObjectGetPropertyData(id,&a,0,nullptr,&got,storage.data())==noErr){auto* list=reinterpret_cast<AudioBufferList*>(storage.data());if(got>=offsetof(AudioBufferList,mBuffers)&&got<=bytes&&list->mNumberBuffers<=(got-offsetof(AudioBufferList,mBuffers))/sizeof(AudioBuffer)){for(UInt32 i=0;i<list->mNumberBuffers;++i){d.buffers.push_back(list->mBuffers[i].mNumberChannels);d.channels+=list->mBuffers[i].mNumberChannels;}}}}
  for(auto s:array<AudioStreamID>(id,kAudioDevicePropertyStreams,kAudioObjectPropertyScopeOutput)){uint32_t active=1;if(!get(s,kAudioStreamPropertyIsActive,active))throw std::runtime_error("stream activity unavailable");if(!active)continue;Stream st;st.id=s;get(s,kAudioStreamPropertyVirtualFormat,st.client);get(s,kAudioStreamPropertyPhysicalFormat,st.physical);st.latency=optional(s,kAudioStreamPropertyLatency,kAudioObjectPropertyScopeGlobal);d.streams.push_back(st);}return d;}
 void zero(AudioBufferList* out)noexcept{if(!out)return;for(UInt32 i=0;i<out->mNumberBuffers;++i)if(out->mBuffers[i].mData)std::memset(out->mBuffers[i].mData,0,out->mBuffers[i].mDataByteSize);}
-struct Context {Playback engine;const AudioDeviceID id;std::vector<Frame> scratch;bool planar;uint64_t deadlineHost=0;std::atomic<uint64_t> changeTime{0},observationSequence{0},validatedSequence{0},validationSilencedCallbacks{0};std::atomic<uint32_t> changeSelector{0};Context(const Device& d,const std::string& f,float gain,size_t target,size_t cap,uint64_t epoch):engine(f,d.rate,gain,epoch),id(d.id),scratch(d.maxBlock),planar((d.streams[0].client.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0){(void)cap;(void)target;}};
+struct Context {Playback engine;const AudioDeviceID id;std::vector<Frame> scratch;bool planar;uint64_t deadlineHost=0;std::atomic<uint64_t> changeTime{0},observationSequence{0},validatedSequence{0},validationSilencedCallbacks{0};std::atomic<uint32_t> changeSelector{0};Context(const Device& d,const std::string& f,float gain,size_t target,size_t cap,uint64_t epoch,BufferPlan plan):engine(f,d.rate,gain,epoch,plan),id(d.id),scratch(d.maxBlock),planar((d.streams[0].client.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0){(void)cap;(void)target;}};
 // Stable callback endpoint: removed-device callbacks may arrive late. The
 // endpoint remains allocated, but can no longer reach a retired Context.
 struct CallbackAnchor {
@@ -109,6 +109,20 @@ char* copied(const std::string& s){return strdup(s.c_str());}
 std::string deviceJSON(const Device& d){std::ostringstream s;s<<"{\"uid\":"<<quote(d.uid)<<",\"deviceID\":"<<d.id<<",\"name\":"<<quote(d.name)<<",\"transport\":"<<d.transport<<",\"rate\":"<<d.rate<<",\"channels\":"<<d.channels<<",\"buffer\":"<<d.buffer<<",\"maxBlock\":"<<d.maxBlock<<",\"latency\":"<<optionalJSON(d.latency)<<",\"safety\":"<<optionalJSON(d.safety)<<",\"eligibility\":"<<quote(eligibility(d));if(!d.streams.empty()){auto& a=d.streams[0].physical;s<<",\"physicalBits\":"<<a.mBitsPerChannel<<",\"physicalFloat\":"<<((a.mFormatFlags&kAudioFormatFlagIsFloat)?"true":"false")<<",\"streamLatency\":"<<optionalJSON(d.streams[0].latency);}s<<"}";return s.str();}
 }
 }
+namespace bridge {
+BufferPlan sessionBufferPlan(const Device& output,bool system){
+ Device source;
+ if(system)source=resolve("RightDisplay.VirtualVolume");
+ else {source.rate=48000;source.buffer=512;source.maxBlock=8192;Stream stream;stream.client={48000,kAudioFormatLinearPCM,kAudioFormatFlagIsFloat|kAudioFormatFlagIsPacked,8,1,8,2,32,0};source.streams.push_back(stream);}
+ if(source.streams.size()!=1||(!source.alive&&system))throw std::runtime_error("SOURCE_FORMAT_UNAVAILABLE");
+ if(!clientFormatAllowed(source.streams[0].client)||(system&&(source.channels!=2||source.buffers!=std::vector<uint32_t>{2})))throw std::runtime_error("UNSUPPORTED_SOURCE_PCM_FORMAT");
+ auto spec=[](const Device& d){const auto& f=d.streams.at(0).client;
+  if(!std::isfinite(f.mSampleRate)||f.mSampleRate!=std::floor(f.mSampleRate)||f.mSampleRate<1||f.mSampleRate>192000||f.mFormatID!=kAudioFormatLinearPCM)throw std::runtime_error("UNSUPPORTED_SESSION_BUFFER_SPEC");
+  return SessionAudioSpec{uint32_t(f.mSampleRate),f.mChannelsPerFrame,f.mBitsPerChannel,f.mBytesPerFrame,d.buffer,d.maxBlock,(f.mFormatFlags&kAudioFormatFlagIsFloat)!=0,(f.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0};
+ };
+ return BufferPlan::make(spec(source),spec(output));
+}
+}
 struct ABSession {
  bridge::Device device;
  std::unique_ptr<bridge::Context> context;
@@ -123,7 +137,7 @@ struct ABSession {
    size_t target=std::max<size_t>(512,device.maxBlock),capacity=4096;
    while(capacity<target+device.maxBlock)capacity*=2;
    bridge::validationTrace("AUDIO_CONTEXT_BUILD");
-   context=std::make_unique<bridge::Context>(device,f,muted?0:gain,target,capacity,bridge::nextEpoch.fetch_add(1));
+   context=std::make_unique<bridge::Context>(device,f,muted?0:gain,target,capacity,bridge::nextEpoch.fetch_add(1),bridge::sessionBufferPlan(device,f=="system"));
    anchor->context.store(context.get());
    context->engine.commandGain(gain);context->engine.commandMute(muted!=0);
    listeners.reserve(8+2*device.streams.size());
@@ -223,6 +237,6 @@ extern "C" ABSession *ABStartTest(const char* uid,const char* fixture,float gain
  }catch(const std::exception& e){bool closed=!session||session->close();if(error)*error=bridge::copied(std::string(e.what())+(closed?"":"; HAL_TEARDOWN_UNCONFIRMED"));return nullptr;}
 }
 extern "C" char *ABPollJSON(ABSession* s){if(!s)return nullptr;try{s->observe();auto& e=s->context->engine;
- std::ostringstream o;o<<"{\"epoch\":"<<e.epoch<<",\"callbacks\":"<<e.telemetry.callbacks.load()<<",\"frames\":"<<e.telemetry.frames.load()<<",\"fill\":"<<e.fill()<<",\"minFill\":0,\"maxFill\":0,\"capacity\":32768,\"targetFill\":4096,\"underrun\":"<<e.underruns()<<",\"overrun\":"<<e.overruns()<<",\"ringMS\":"<<e.ringMS()<<",\"bufferMS\":"<<double(s->device.buffer)*1000/s->device.rate<<",\"residenceMS\":null,\"inputCallbacks\":"<<e.producerBlocks()<<",\"transportUnderrun\":"<<e.transportUnderruns()<<",\"transportOverrun\":"<<e.transportOverruns()<<",\"validationPending\":"<<(s->context->observationSequence.load()!=s->context->validatedSequence.load()?"true":"false")<<",\"validationSilencedCallbacks\":"<<s->context->validationSilencedCallbacks.load()<<",\"failureDetail\":"<<bridge::quote(s->failureDetail)<<",\"failure\":"<<bridge::quote(bridge::failureName(bridge::Failure(e.gate.failure.load())))<<"}";return bridge::copied(o.str());}catch(...){s->context->engine.gate.invalidate(bridge::Failure::HALFailure);return bridge::copied("{\"error\":\"HAL_POLL_FAILED\"}");}}
+ std::ostringstream o;o<<"{\"epoch\":"<<e.epoch<<",\"callbacks\":"<<e.telemetry.callbacks.load()<<",\"frames\":"<<e.telemetry.frames.load()<<",\"fill\":"<<e.fill()<<",\"minFill\":0,\"maxFill\":"<<e.localPeak()<<",\"capacity\":"<<e.bufferPlan().capacity<<",\"targetFill\":"<<e.bufferPlan().target<<",\"underrun\":"<<e.underruns()<<",\"overrun\":"<<e.overruns()<<",\"ringMS\":"<<e.ringMS()<<",\"bufferMS\":"<<double(s->device.buffer)*1000/s->device.rate<<",\"residenceMS\":null,\"inputCallbacks\":"<<e.producerBlocks()<<",\"transportUnderrun\":"<<e.transportUnderruns()<<",\"transportOverrun\":"<<e.transportOverruns()<<",\"validationPending\":"<<(s->context->observationSequence.load()!=s->context->validatedSequence.load()?"true":"false")<<",\"validationSilencedCallbacks\":"<<s->context->validationSilencedCallbacks.load()<<",\"bufferDetails\":"<<bridge::quote(e.bufferDetails())<<",\"failureDetail\":"<<bridge::quote(s->failureDetail)<<",\"failure\":"<<bridge::quote(bridge::failureName(bridge::Failure(e.gate.failure.load())))<<"}";return bridge::copied(o.str());}catch(...){s->context->engine.gate.invalidate(bridge::Failure::HALFailure);return bridge::copied("{\"error\":\"HAL_POLL_FAILED\"}");}}
 extern "C" void ABSetGain(ABSession* s,float gain,int muted){if(!s)return;try{s->context->engine.commandGain(gain);s->context->engine.commandMute(muted!=0);}catch(...){s->context->engine.gate.invalidate(bridge::Failure::HALFailure);}}
 extern "C" int ABStop(ABSession* s){if(!s)return 0;bool ok=s->close();delete s;return ok?0:-1;}

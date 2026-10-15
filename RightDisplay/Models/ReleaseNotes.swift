@@ -12,11 +12,15 @@ struct ReleaseNote: Identifiable {
 enum RightDisplayReleaseHistory {
     static let currentVersion: String = {
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "未提供"
-        let stage = "Beta"
-        return [version, stage].joined(separator: " ")
+        return version
     }()
 
     static let notes: [ReleaseNote] = [
+        ReleaseNote(id:"release10",version:"1.0",title:"RightDisplay 1.0",changes:[
+            "App 内 SRC 缓冲按会话规格准备，修正大 I/O 消费窗口。",
+            "保留目标返回恢复与手动停止行为；虚拟音量采用固定灰色说明。",
+            "RNSL 1.0 非商业源码许可；独立发行包采用 Ad-hoc 签名，未经 Apple 公证。"
+        ]),
         ReleaseNote(id:"beta04",version:"0.4 Beta",title:"显示诊断、虚拟音频与界面完善",changes:[
             "新增虚拟音频转发与软件音量控制，支持保存目标设备、自动启动及异常中断后的恢复操作。",
             "新增 ICC 描述文件检查、色域与校准曲线展示，以及描述文件管理。",

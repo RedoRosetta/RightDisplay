@@ -1,3 +1,5 @@
+> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](releases/1.0.0.md) and [signature boundaries](SIGNING.md). Prior RC/build notes below retain their historical scope.
+
 # Third-party licenses / 第三方许可 — candidate
 
 2026-10-15。针对本轮新建Helper及Build44候选；**不是Build41公开RC的SBOM，也不是最终法律合规PASS**。首方采用RNSL1.0；所有第三方材料保留原许可。

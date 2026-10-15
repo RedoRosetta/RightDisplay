@@ -1,3 +1,7 @@
+# 1.0 · Build45
+
+2026-10-15：[发布说明](releases/1.0.0.md)。基于最终 UI-Aligned 45，App内SRC会话规划、灰色说明及安全Ad-hoc组件绑定；三项用户本机音频验收通过。独立包未公证，无新增完整实机回归。
+
 # 版本历史 / Version history
 
 ## 0.4 Beta RC

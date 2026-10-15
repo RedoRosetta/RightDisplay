@@ -1,4 +1,4 @@
-> Source Available，不是OSI Open Source。RNSL 1.0 已采用；Build44基础源码未完整实机验收，与Build41公开RC不同；不提供官方签名凭据。
+> **RightDisplay 1.0 · Build45** — RNSL 1.0 非商业 Source Available。[下载1.0](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [发布说明](releases/1.0.0.md)。Ad-hoc签名，未经Apple公证；原Build45三项本机验收通过，重打包后未做完整实机回归。
 
 # RightDisplay · 简体中文
 

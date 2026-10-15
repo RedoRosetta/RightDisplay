@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "build": 45,
+  "signature": "ad-hoc",
+  "notarized": false,
+  "nested_macho_verified": 18,
+  "exact_content_requirements": true,
+  "same_identifier_replacement_rejected": true,
+  "tampered_binary_rejected": true,
+  "anonymous_XPC_matching_peer_accepted": true,
+  "anonymous_XPC_wrong_pin_rejected": true,
+  "Apple_system_producer_requirement_unchanged": true,
+  "packaged_helper_help_network_denied": true,
+  "hardware_tests_performed": false,
+  "installed_app_changed": false,
+  "user_acceptance": {
+    "basis": "direct user report for UI-Aligned Build45 on current machine",
+    "continuous_playback": "PASS",
+    "wake_recovery": "PASS",
+    "manual_stop_persists": "PASS",
+    "repackaged_adhoc_full_hardware_regression": "NOT_PERFORMED"
+  }
+}

@@ -6,12 +6,12 @@
     "component": {
       "type": "application",
       "name": "RightDisplayAppleTVHelper",
-      "version": "candidate-from-Build44-source"
+      "version": "1.0-Build45"
     },
     "properties": [
       {
         "name": "rightdisplay:scope",
-        "value": "actual newly rebuilt helper; CPython static closure mapped, cryptography OpenSSL confirmed; no public package released"
+        "value": "Build45 freshly collected Python runtime, exact unchanged CPython/wheel inputs; native supplement retained from verified provenance"
       },
       {
         "name": "rightdisplay:nested-completeness",

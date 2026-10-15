@@ -1,0 +1,2 @@
+# Historical payment images are not needed to build and are excluded from source archives.
+assets/sponsor/ export-ignore

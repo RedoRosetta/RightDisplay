@@ -1,3 +1,5 @@
+> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](releases/1.0.0.md) and [signature boundaries](SIGNING.md). Prior RC/build notes below retain their historical scope.
+
 # Notices
 
 Copyright © 2026 RedoRosetta

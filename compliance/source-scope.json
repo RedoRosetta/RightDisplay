@@ -3428,5 +3428,102 @@
     "license": "RNSL 1.0",
     "public_attribution": "Copyright © 2026 RedoRosetta",
     "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "RightDisplay/AudioBridgeRealtime/buffer_plan.hpp",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Scripts/build_adhoc.py",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Scripts/offline_build45.py",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Scripts/verify_adhoc.py",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/AdaptiveBufferConcurrencyTests.cpp",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/AdaptiveFormatGuardTests.cpp",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/AdaptivePlaybackHALTests.cpp",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/AdhocPeerRequirement.c",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/SessionBufferPlanTests.cpp",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "compliance/build45-native-payload.json",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "compliance/build45-release-checks.json",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "releases/1.0.0.md",
+    "category": "FIRST_PARTY_SOURCE_OR_PROJECT_DOCUMENT",
+    "license": "RNSL 1.0; original third-party rights remain separate",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Scripts/package_dmg.py",
+    "category": "FIRST_PARTY_BUILD_SCRIPT",
+    "license": "RNSL 1.0",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": ".gitattributes",
+    "category": "PROJECT_ARCHIVE_CONFIGURATION",
+    "license": "RNSL 1.0",
+    "public_attribution": "Copyright © 2026 RedoRosetta"
   }
 ]

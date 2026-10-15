@@ -49,8 +49,14 @@ def main():
   if expr:comp['licenses']=[{'expression':expr}]
   components.append(comp);selected.append({'name':name,'version':ver,'collected_files':sorted({x['source'] for x in rec['paths']}),'license_materials':inv.get('materials',[]),'license_expression':expr,'status':'actual collection observed; licensing review separate'})
  components.append({'type':'platform','bom-ref':'cpython-3.12.14','name':'CPython','version':'3.12.14','properties':[{'name':'rightdisplay:evidence','value':'build interpreter verified and libpython collected; bundled native subcomponents require separate inventory'}]})
- sbom={'bomFormat':'CycloneDX','specVersion':'1.5','version':1,'metadata':{'component':{'type':'application','name':'RightDisplayAppleTVHelper','version':'candidate-from-Build44-source'},'properties':[{'name':'rightdisplay:scope','value':'actual newly rebuilt helper only; not old RC, not final app'},{'name':'rightdisplay:completeness','value':'Python distributions from TOCs; native embedded and nested component review incomplete'}]},'components':components}
+ sbom={'bomFormat':'CycloneDX','specVersion':'1.5','version':1,'metadata':{'component':{'type':'application','name':'RightDisplayAppleTVHelper','version':'1.0-Build45'},'properties':[{'name':'rightdisplay:scope','value':'actual newly rebuilt helper only; not old RC, not final app'},{'name':'rightdisplay:completeness','value':'Python distributions from TOCs; native embedded and nested component review incomplete'}]},'components':components}
  pub=ROOT/'compliance';pub.mkdir(exist_ok=True)
+ baseline=pub/'helper-sbom.cdx.json'
+ if baseline.exists():
+  previous=json.loads(baseline.read_text());expected={x['name']:x['version'] for x in previous['components'] if x.get('purl','').startswith('pkg:pypi/')};actual={x['name']:x['version'] for x in sbom['components'] if x.get('purl','').startswith('pkg:pypi/')}
+  if expected!=actual:raise RuntimeError('Runtime inputs changed: revalidate native supplement before overwriting SBOM')
+  seen={x['bom-ref'] for x in sbom['components']};sbom['components'] += [x for x in previous['components'] if x['bom-ref'] not in seen]
+  sbom['metadata']['properties']=previous['metadata'].get('properties',sbom['metadata']['properties'])
  (pub/'helper-sbom.cdx.json').write_text(json.dumps(sbom,indent=2));(pub/'helper-collected-distributions.json').write_text(json.dumps(selected,indent=2))
  manifest=[]
  for p in sorted(payload.rglob('*')):

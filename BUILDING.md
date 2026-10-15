@@ -1,6 +1,6 @@
 # 构建 / Building
 
-**已验证：Xcode 27.0 / macOS SDK27.0 / Apple silicon arm64，候选0.4 Build44编译与完整资源装配。** 不等于签名可安装版本、HAL加载、真实播放或恢复验收。App target为macOS14；Virtual Audio产品要求macOS27+；Swift语言模式5、C11、C++20。
+**已验证：Xcode 27.0 / macOS SDK27.0 / Apple silicon arm64，1.0 Build45编译与完整资源装配。** 不等于签名可安装版本、HAL加载、真实播放或恢复验收。App target为macOS14；Virtual Audio产品要求macOS27+；Swift语言模式5、C11、C++20。
 
 ## 明确输入
 
@@ -40,18 +40,13 @@ python3 Scripts/offline_recovery.py
 
 顺序执行，9组诊断/控制器/transport/fake-HAL/恢复/在途回调/容量测试。只使用fake backends，不播放、不安装、不操作GUI/Link Test/显示模式/默认输出。历史UI/设备runner不在此安全入口内，先读Tests/README。
 
-## 签名参数化及尚未闭合
+## Signature profiles and verification boundaries
 
-默认官方Team和自选Team两套策略均通过C/Swift安全测试；实际自选Team贯通App、Driver、Broker及生成安装脚本，并完整编译。见 [SIGNING.md](SIGNING.md)。这不是实际第三方证书或HAL运行验收。
+默认 Apple/team 策略与自选 Team 参数化保留。1.0 另提供显式 Ad-hoc 精确发行内容绑定；不是把摘要冒充 Team 或发布者身份，不能仅凭名称/路径接受代码。见 SIGNING.md。
 
-1. 自身Team已参数化，官方默认策略保留；实际第三方证书签名、安装/HAL/XPC和跨机发行仍待人工验收，不能用path/name/CDHash绕过。
-2. CPython八个实际静态原生依赖来源、版本、全文许可及模块链接已补齐；内容段/UUID/dyld表/导出符号与官方档案一致，整文件摘要因元数据布局不同不相同。其他wheel的目标级嵌套闭包仍需最终审查，见THIRD_PARTY_LICENSES。
-3. LGPL技术替换：实际打包可执行程序已在网络拒绝下加载修改外置zeroconf。组合的自行修改/逆向调试法律权利、签名官方包替换后的实际设备功能仍未确认；详见HELPER_REPLACEMENT。
-4. RNSL、首方权属和品牌审查；Build44恢复UNVERIFIED、overrun根因UNKNOWN；公开RC ad-hoc问题仍未修复。
+用户确认原 Build45 持续播放、唤醒恢复及手动停止三项通过。重新构建包只完成定向自动化，不代表跨机/HAL加载及完整硬件回归。历史 overrun 触发仍未全部解释。CPython 与 wheel 原始固定输入不变，原生许可补充和实际 Helper TOC SBOM 保留；未来二进制依赖改变须重新核对对应许可/源码。
 
-English: complete source compilation/assembly is validated with explicit inputs, not a signed or runtime-accepted release. Build the helper from fresh hash-pinned dependencies, compile local components, then compile-only the app. Missing inputs fail closed. Clean-path source compilation is distinguished from a cold public-network bootstrap. No install, GUI or audio action is part of this workflow.
-
-新增安全回归：`python3 Scripts/test_signing.py`。普通source编译可用自己的10位Team配置，官方默认值不是必须拥有的身份；真实运行仍须自己的有效Apple签名。
+`Scripts/test_signing.py` 验证原 Team 策略；`Scripts/verify_adhoc.py` 验证发行组件精确绑定与匿名 XPC 正反例。二者都不播放或安装音频。
 
 ## 授权状态更新 / Authorization status
 
@@ -60,3 +55,9 @@ English: complete source compilation/assembly is validated with explicit inputs,
 ## Source-only Sponsor resources
 
 Copyright © 2026 RedoRosetta. Both Sponsor PNG filenames are retained as neutral generated placeholders, containing no payment/QR/account data. Regenerate with `python3 Scripts/generate_sponsor_placeholders.py`. The Xcode folder reference and bundle resource lookup remain intact; source builds cannot use these images to pay. No original payment image is included.
+
+## 1.0 · Build45 Ad-hoc 发行
+
+按上面的显式runtime/wheel合同构建Helper后，运行 `python3 Scripts/build_adhoc.py`，再运行 `python3 Scripts/verify_adhoc.py`。组件pkg由该脚本生成，不能拿普通compile-only pkg替代。完整流程无官方证书、无自动安装/播放。签名边界及旧组件升级限制见SIGNING.md；公开main/Release所指源码为Build45 UI-Aligned，历史Build41 RC不对应本源码。新增回归入口：`python3 Scripts/offline_build45.py`。
+
+用户确认原Build45三项本机验收通过；重打包后的自动化结果不冒充新完整实机验收。

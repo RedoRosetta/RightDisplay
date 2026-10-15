@@ -43,7 +43,7 @@ final class VirtualAudioDeviceStore: ObservableObject {
             let exists = FileManager.default.fileExists(atPath:path)
             var code: SecStaticCode?
             var requirement: SecRequirement?
-            let condition = "anchor apple generic and identifier \"com.rightdisplay.audio.VirtualVolume\" and certificate leaf[subject.OU] = \"\(String(cString: RDComponentSigningTeam()))\""
+            let condition = String(cString: RDDriverRequirement())
             let valid = exists && SecStaticCodeCreateWithPath(URL(fileURLWithPath:path) as CFURL,[],&code) == errSecSuccess
                 && SecRequirementCreateWithString(condition as CFString,[],&requirement) == errSecSuccess
                 && code != nil && requirement != nil

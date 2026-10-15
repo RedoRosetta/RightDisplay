@@ -1,3 +1,11 @@
+# Install RightDisplay 1.0
+
+将 DMG 内的 Right Display.app 拖到 Applications。先正常打开；如被阻止，在系统设置 → 隐私与安全性核对来源后使用系统提供的“仍要打开”并确认。此版本Ad-hoc签名、未公证，不保证系统一定提供允许选项；不要求关闭Gatekeeper/SIP。Virtual Audio安装由应用打开macOS Installer，由用户自行授权；不会自动安装、改系统默认输出或重启服务。版本升级限制见SIGNING.md。
+
+Drag the app from the DMG to Applications. If blocked, verify the source and use macOS Privacy & Security → Open Anyway where available. Do not disable Gatekeeper/SIP. Audio components require the normal user-authorized Installer flow.
+
+> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](releases/1.0.0.md) and [signature boundaries](SIGNING.md). Prior RC/build notes below retain their historical scope.
+
 # 安装与首次使用 / Installation
 
 [简体中文](#简体中文) · [English](#english) · [返回首页 / Home](README.md)

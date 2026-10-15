@@ -1,6 +1,8 @@
-> **源码候选：Source Available，不是 OSI 定义下的 Open Source。** 首方源码、构建脚本和必要文档采用 RNSL 1.0 非商业许可；Apple 和第三方材料保留原许可。本Build44基础候选不是完整实机验收的稳定发行版，与Build41基础公开RC不同，也不提供官方签名凭据。
+> **RightDisplay 1.0 · Build45** — RNSL 1.0 非商业 Source Available。[下载1.0](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [发布说明](releases/1.0.0.md)。Ad-hoc签名，未经Apple公证；原Build45三项本机验收通过，重打包后未做完整实机回归。
 
 <p align="center"><img src="https://raw.githubusercontent.com/RedoRosetta/RightDisplay/e1bdd1b5295c36e7c7e69e44479f1b41771ebc50/right-display-app-icon.png" width="88" alt="Right Display 应用图标"></p>
+
+## 0.4 Beta RC 历史介绍 / Historical RC overview
 
 <h1 align="center">Right Display · 正确显示</h1>
 
@@ -129,7 +131,7 @@ Source builds use non-payment placeholders. No personal payment QR image is supp
 
 ## 源码与贡献
 
-这是首次源码导入审核分支。公开下载仍为上面的 0.4 Beta RC；候选源码包含后续有限目标返回恢复，尚未完成真实设备验收，不能视为稳定版。overrun 的根因仍未确认，不能视为已修复。
+本次源码对应1.0/Build45；下述旧RC说明保留作历史参考。公开下载仍为上面的 0.4 Beta RC；候选源码包含后续有限目标返回恢复，尚未完成真实设备验收，不能视为稳定版。overrun 的根因仍未确认，不能视为已修复。
 
 [从源码构建](BUILDING.md) · [架构](ARCHITECTURE.md) · [参与贡献](CONTRIBUTING.md) · [RNSL 1.0](LICENSE)
 
