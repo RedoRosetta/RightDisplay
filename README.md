@@ -338,6 +338,15 @@ RightDisplay 仍会持续维护和改进。
 
 如果 RightDisplay 对你有帮助，也欢迎自愿支持项目开发。
 
+<table align="center">
+  <tr><th>支付宝 · Alipay</th><th>微信支付 · WeChat Pay</th></tr>
+  <tr>
+    <td align="center"><img src="archive/legacy/public-sponsor/alipay.png" width="220" alt="支付宝自愿赞助二维码 / Alipay voluntary support"></td>
+    <td align="center"><img src="archive/legacy/public-sponsor/wechat-pay.png" width="220" alt="微信支付自愿赞助二维码 / WeChat Pay voluntary support"></td>
+  </tr>
+</table>
+
+
 使用、测试和反馈同样是对项目的支持。
 
 ## 历史版本
