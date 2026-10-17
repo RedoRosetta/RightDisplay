@@ -45,4 +45,13 @@ First-party material is **RNSL 1.0 Noncommercial Source Available**, not OSI Ope
 <a id="support"></a>
 Feedback, testing and voluntary support are welcome. Review diagnostics for personal information before posting.
 
+<table align="center">
+  <tr><th>支付宝 · Alipay</th><th>微信支付 · WeChat Pay</th></tr>
+  <tr>
+    <td align="center"><img src="archive/legacy/public-sponsor/alipay.png" width="220" alt="支付宝自愿赞助二维码 / Alipay voluntary support"></td>
+    <td align="center"><img src="archive/legacy/public-sponsor/wechat-pay.png" width="220" alt="微信支付自愿赞助二维码 / WeChat Pay voluntary support"></td>
+  </tr>
+</table>
+
+
 Copyright © 2026 RedoRosetta
