@@ -71,7 +71,7 @@ struct VirtualVolumeStateModel {
         guard let uid else { state = .disabled;return }
         let matches = devices.filter { $0.uid == uid }
         guard matches.count == 1 else { state = .targetUnavailable;return }
-        state = matches[0].usable ? .ready : .unsupportedFormat
+        state = matches[0].usable ? .ready : (matches[0].eligibility == "TARGET_UNAVAILABLE" ? .targetUnavailable : .unsupportedFormat)
     }
     mutating func requestStart() -> UInt64? {
         guard state == .ready, !starting, !hasSession, !suspended else { return nil }

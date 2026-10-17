@@ -2,7 +2,7 @@
 
 未链接的源码/脚本/数据路径均以仓库根目录为基准；命令也从仓库根目录执行。 Unlinked source paths and commands are relative to the repository root.
 
-**已验证：Xcode 27.0 / macOS SDK27.0 / Apple silicon arm64，1.0 Build45编译与完整资源装配。** 不等于签名可安装版本、HAL加载、真实播放或恢复验收。App target为macOS14；Virtual Audio产品要求macOS27+；Swift语言模式5、C11、C++20。
+**已验证：Xcode 27.0 / macOS SDK27.0 / Apple silicon arm64，1.0.1 Build46编译与完整资源装配。** 不等于签名可安装版本、HAL加载、真实播放或恢复验收。App target为macOS14；Virtual Audio产品要求macOS27+；Swift语言模式5、C11、C++20。
 
 ## 明确输入
 
@@ -31,7 +31,7 @@ Xcode嵌入阶段和build wrapper均要求preflight：缺Helper、runtime、zero
 
 本轮显式导入冻结合同的独立CPython和45份摘要校验wheel（不导入旧venv/Helper/pkg），从零新建Helper。随后在无DerivedData的新源码副本中使用**本轮生成的**Helper/pkg装配编译，外层沙箱拒绝访问私有开发目录、旧聊天目录及原候选目录；这些拒读规则通过实际拒读检查。
 
-macOS拒绝Swift宏的嵌套sandbox时，独立验证runner使用 `--inherit-outer-sandbox`。该选项仅让宏继承已有外层拒读规则；普通构建无需启用。外层规则、产品代码和认证校验不因此移除。首次失败日志保留。历史隔离构建记录见[Build44归档](../../archive/versions/build44/README.md)；当前发行核验见[Build45记录](../../compliance/build45-release-checks.json)；未把“提供了全部本地输入”写成“另一台Mac从公开网络冷启动已通过”。
+macOS拒绝Swift宏的嵌套sandbox时，独立验证runner使用 `--inherit-outer-sandbox`。该选项仅让宏继承已有外层拒读规则；普通构建无需启用。外层规则、产品代码和认证校验不因此移除。首次失败日志保留。历史隔离构建记录见[Build44归档](../../archive/versions/build44/README.md)；当前发行核验见[Build46记录](../../compliance/build46-release-checks.json)；未把“提供了全部本地输入”写成“另一台Mac从公开网络冷启动已通过”。
 
 ## 离线回归
 
@@ -58,8 +58,10 @@ python3 Scripts/offline_recovery.py
 
 Copyright © 2026 RedoRosetta. Both Sponsor PNG filenames are retained as neutral generated placeholders, containing no payment/QR/account data. Regenerate with `python3 Scripts/generate_sponsor_placeholders.py`. The Xcode folder reference and bundle resource lookup remain intact; source builds cannot use these images to pay. No original payment image is included.
 
-## 1.0 · Build45 Ad-hoc 发行
+## 1.0.1 · Build46 Ad-hoc 发行
 
-按上面的显式runtime/wheel合同构建Helper后，运行 `python3 Scripts/build_adhoc.py`，再运行 `python3 Scripts/verify_adhoc.py`。组件pkg由该脚本生成，不能拿普通compile-only pkg替代。完整流程无官方证书、无自动安装/播放。签名边界及旧组件升级限制见SIGNING.md；公开main/Release所指源码为Build45 UI-Aligned，历史Build41 RC不对应本源码。新增回归入口：`python3 Scripts/offline_build45.py`。
+按上面的显式runtime/wheel合同构建Helper后，运行 `python3 Scripts/build_adhoc.py`，再运行 `python3 Scripts/verify_adhoc.py`。组件pkg由该脚本生成，不能拿普通compile-only pkg替代。完整流程无官方证书、无自动安装/播放。签名边界及旧组件升级限制见SIGNING.md；当前发行源码为Build46 HDMI多声道PCM修订，基于Build45 UI-Aligned，历史Build41 RC不对应本源码。新增回归入口：`python3 Scripts/offline_build45.py`。
 
 用户确认原Build45三项本机验收通过；重打包后的自动化结果不冒充新完整实机验收。
+
+Build46新增定向验证：`python3 Tests/run_hdmi_pcm_tests.py --sanitize`。不访问真实设备；不宣称新增硬件验收。

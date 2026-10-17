@@ -24,3 +24,5 @@ Driver/Broker 为 C，实时桥为 C++，Swift AudioBridgeEngine 串行管理 HA
 ## English
 
 Swift controls system-reported display state; EDID describes capabilities and ICC describes profiles, neither measures physical output. C Driver/Broker feed a C++ output-only transport and a UID-selected physical output. Swift owns lifecycle and one-shot conditional target-return policy. Preserve producer authentication, single ownership, bounds, epochs, stale-context checks and fail-silent behavior. No microphone or speaker fallback. The user reported continuous playback, wake recovery and persistent manual-stop acceptance on the original UI-Aligned Build45. The repackaged release did not receive a new full hardware regression; not every historical overrun cause is resolved.
+
+1.0.1/Build46在HAL输出端使用准备期固定PCMOutput，将Playback产生的双声道Float32转换至已验证的目标PCM布局，依据明确元数据映射左右声道并静音其他通道；源端、共享协议21及单stream限制保持，不更改全局设备格式。

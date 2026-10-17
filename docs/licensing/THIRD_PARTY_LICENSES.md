@@ -1,10 +1,10 @@
-> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](../releases/1.0.0.md) and [signature boundaries](../development/SIGNING.md). Prior RC/build notes below retain their historical scope.
+> Current: RightDisplay 1.0.1 / Build46, Ad-hoc signed, not notarized. See [1.0 release notes](../releases/1.0.1.md) and [signature boundaries](../development/SIGNING.md). Prior RC/build notes below retain their historical scope.
 
 未链接的源码/脚本/数据路径均以仓库根目录为基准；命令也从仓库根目录执行。 Unlinked source paths and commands are relative to the repository root.
 
 # Third-party licenses / 第三方许可
 
-2026-10-15。当前1.0/Build45沿用精确锁定的运行时输入并重新收集Helper载荷；原Build44阶段验证作为依赖来源依据保留，候选产物报告单独归档。**这不是Build41公开RC的SBOM，也不表示法律认证。**首方采用RNSL1.0；所有第三方材料保留原许可。
+2026-10-15。当前1.0.1/Build46沿用精确锁定的运行时输入并重新收集Helper载荷；原Build44阶段验证作为依赖来源依据保留，候选产物报告单独归档。**这不是Build41公开RC的SBOM，也不表示法律认证。**首方采用RNSL1.0；所有第三方材料保留原许可。
 
 ## 实际完成
 
@@ -84,7 +84,7 @@
 
 ## SBOM范围
 
-helper-sbom.cdx.json来自实际COLLECT/PYZ/PKG而非锁文件猜测；归档的candidate-product-sbom.cdx.json对应历史Build44编译装配产物，记录关键artifact摘要。历史候选产物记录不是当前发行SBOM；当前Build45实际载荷见[载荷清单](../../compliance/build45-native-payload.json)，Python集合及原生补充见[Helper SBOM](../../compliance/helper-sbom.cdx.json)。source-scope.json是拟上传源码范围，不包含Build、venv、pkg、App、日志和私有证据。
+helper-sbom.cdx.json来自实际COLLECT/PYZ/PKG而非锁文件猜测；归档的candidate-product-sbom.cdx.json对应历史Build44编译装配产物，记录关键artifact摘要。历史候选产物记录不是当前发行SBOM；当前Build45实际载荷见[载荷清单](../../compliance/build46-native-payload.json)，Python集合及原生补充见[Helper SBOM](../../compliance/helper-sbom.cdx.json)。source-scope.json是拟上传源码范围，不包含Build、venv、pkg、App、日志和私有证据。
 
 English: exact wheel legal materials and CPython upstream notices are now present. Actual runtime collection, pure-Python zeroconf replacement import and compilation are verified. Source-only authorization is adopted with the explicit LGPL reservation; future binary payloads still require their own exact source/relink compliance. No third-party license was changed.
 

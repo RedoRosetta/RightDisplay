@@ -3701,5 +3701,54 @@
     "category": "PROJECT_DOCUMENT_OR_ARCHIVE_INDEX",
     "license": "RNSL 1.0 for project-authored expression; original third-party terms remain independent",
     "public_attribution": "Copyright © 2026 RedoRosetta"
+  },
+  {
+    "path": "RightDisplay/AudioBridgeRealtime/pcm_output.hpp",
+    "category": "FIRST_PARTY_SOURCE_TEST_OR_RELEASE_DOCUMENT",
+    "license": "RNSL 1.0 for project-authored portions; original third-party rights remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/HDMIPCMTests.cpp",
+    "category": "FIRST_PARTY_SOURCE_TEST_OR_RELEASE_DOCUMENT",
+    "license": "RNSL 1.0 for project-authored portions; original third-party rights remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/HDMIPlaybackHALTests.cpp",
+    "category": "FIRST_PARTY_SOURCE_TEST_OR_RELEASE_DOCUMENT",
+    "license": "RNSL 1.0 for project-authored portions; original third-party rights remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "Tests/run_hdmi_pcm_tests.py",
+    "category": "FIRST_PARTY_SOURCE_TEST_OR_RELEASE_DOCUMENT",
+    "license": "RNSL 1.0 for project-authored portions; original third-party rights remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "compliance/build46-native-payload.json",
+    "category": "FIRST_PARTY_SOURCE_TEST_OR_RELEASE_DOCUMENT",
+    "license": "RNSL 1.0 for project-authored portions; original third-party rights remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "compliance/build46-release-checks.json",
+    "category": "FIRST_PARTY_SOURCE_TEST_OR_RELEASE_DOCUMENT",
+    "license": "RNSL 1.0 for project-authored portions; original third-party rights remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
+  },
+  {
+    "path": "docs/releases/1.0.1.md",
+    "category": "FIRST_PARTY_SOURCE_TEST_OR_RELEASE_DOCUMENT",
+    "license": "RNSL 1.0 for project-authored portions; original third-party rights remain independent",
+    "public_attribution": "Copyright © 2026 RedoRosetta",
+    "RNSL_status": "ADOPTED_RNSL_1.0"
   }
 ]

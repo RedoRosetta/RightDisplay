@@ -244,11 +244,24 @@ struct VirtualVolumeView: View {
         case .ready:return l("已就绪；转发未启用","Ready; forwarding stopped")
         case .running:return controller.isSystemRoute ? l("系统音频转发中","System audio forwarding") : l("测试音运行中","Test running")
         case .targetUnavailable:return l("输出设备不可用","Target unavailable")
-        case .unsupportedFormat:return l("当前格式不支持","Unsupported current format")
+        case .unsupportedFormat:
+            switch controller.selectedDevice?.eligibility {
+            case "CHANNEL_LAYOUT_UNAVAILABLE": return l("无法确认输出左右声道布局", "Output left/right channel layout unavailable")
+            case "UNSUPPORTED_STREAM_LAYOUT", "UNSUPPORTED_BUFFER_LAYOUT": return l("输出缓冲区布局不支持", "Unsupported output buffer layout")
+            case "UNSUPPORTED_RATE": return l("输出采样率不支持", "Unsupported output sample rate")
+            case "UNSUPPORTED_BUFFER_SIZE": return l("输出缓冲区大小不支持", "Unsupported output buffer size")
+            default: return l("无法建立兼容的 PCM 输出路径", "No compatible PCM output path")
+            }
         case .formatChanged:return l("格式已变化；测试已停止","Format changed; stopped")
         case .deviceLost:return l("设备已断开；测试已停止","Device lost; stopped")
         case .stopping:return l("正在停止","Stopping")
-        case .failed:return l("音频路径失败","Audio path failed")
+        case .failed:
+            let reason = controller.lastFailure ?? ""
+            if reason.contains("PERMISSION") || reason.contains("not permitted") { return l("音频设备访问被系统拒绝", "Audio device access denied") }
+            if reason.contains("HAL_CREATE_FAILED") { return l("输出设备初始化失败", "Output device initialization failed") }
+            if reason.contains("HAL_START_FAILED") { return l("输出设备启动失败", "Output device start failed") }
+            if reason.contains("SOURCE_FORMAT_UNAVAILABLE") || reason.contains("BROKER") || reason.contains("XPC") { return l("虚拟音频驱动或连接未就绪", "Virtual audio driver or connection not ready") }
+            return l("音频路径失败", "Audio path failed")
         }
     }
     private func failureDescription(_ reason: String) -> String {

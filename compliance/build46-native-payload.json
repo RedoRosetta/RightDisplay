@@ -1,0 +1,106 @@
+{
+  "version": "1.0.1",
+  "build": 46,
+  "signing": "ad-hoc",
+  "native_files": [
+    {
+      "path": "Contents/MacOS/Right Display",
+      "bytes": 4436944,
+      "sha256": "7560f901d0df29c1c0d8c9660e1b8d11468c9b4090c845481148f6b2fc13e3ed"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/RightDisplayAppleTVHelper",
+      "bytes": 6873760,
+      "sha256": "8a76ce272b7b42c5e27bdbd98042c56bd4108a7f0d320d77fcb447aa68e1fce0"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/_cffi_backend.cpython-312-darwin.so",
+      "bytes": 228320,
+      "sha256": "1ee5b47df891612f60d335a48fc5e2b939a81ad144008acd4d811cfd21a6fedc"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/_miniaudio.abi3.so",
+      "bytes": 861168,
+      "sha256": "6741801c14328f3b032fd8ddb70a32a3814189f42e784359ca1f3c9e47767724"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/aiohttp/_http_parser.cpython-312-darwin.so",
+      "bytes": 442960,
+      "sha256": "4d2f502b462ba356d393550ba3325c650c724030d0c6fb5ddaf2a4bbb58a3c91"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/aiohttp/_http_writer.cpython-312-darwin.so",
+      "bytes": 91216,
+      "sha256": "c4c9b5a69281e924946b0e68517dcbf15658716602a2a40e1f465c9edd7d543a"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/aiohttp/_websocket/mask.cpython-312-darwin.so",
+      "bytes": 85296,
+      "sha256": "312df0109b89a3437a4a64092dc4efd4d8e6795420180d800a018336f4410be2"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/aiohttp/_websocket/reader_c.cpython-312-darwin.so",
+      "bytes": 230688,
+      "sha256": "84104c37801d08f16cc9e377d7c5d614e659b005e77d4885571408a4fa8612c7"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/charset_normalizer/cd.cpython-312-darwin.so",
+      "bytes": 166592,
+      "sha256": "951afbb17f927c7f20f03db2a18cf18bf3efcc3d19e73d5afe20a47754cdc754"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/charset_normalizer/md.cpython-312-darwin.so",
+      "bytes": 249040,
+      "sha256": "194f40cce71d6677c2afbaf4ac303e89686d067a6a61377d3704b9c7c6a0b54a"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/cryptography/hazmat/bindings/_rust.abi3.so",
+      "bytes": 11724000,
+      "sha256": "6f117e7fa3cc8dff8297a137666cbf982f518c23b0a94b1ccf24e186f8d2b26e"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/frozenlist/_frozenlist.cpython-312-darwin.so",
+      "bytes": 144112,
+      "sha256": "3f6a1ca9459c79d2495783a5c3b915d58f14d72efa01dc916e62ea166e971aaf"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/google/_upb/_message.abi3.so",
+      "bytes": 349712,
+      "sha256": "7ef4e99950eec00fd8932478737be45c8a42db2005b8b2dbad5113dad13d85ce"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/libpython3.12.dylib",
+      "bytes": 17936960,
+      "sha256": "2ced058b3b9874956fbfb9f46484a8b99c3aabe94c6924849fde9da653ac6c3c"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/multidict/_multidict.cpython-312-darwin.so",
+      "bytes": 120976,
+      "sha256": "8cfdbe72b401444a7bf9c3b6d9c7dad375433d926be08fc8a811b0c2d39d2e55"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/propcache/_helpers_c.cpython-312-darwin.so",
+      "bytes": 157568,
+      "sha256": "af91539cfd7c1f9bf14f2585a5e4b4ad62f1586e5a2ab90aa7c64ba96a0c692e"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/pydantic_core/_pydantic_core.cpython-312-darwin.so",
+      "bytes": 4144944,
+      "sha256": "77ba5be68e384a1bc2d11d5c77b7d17e69ea4fa99bc384b3c23df55ce93e86cb"
+    },
+    {
+      "path": "Contents/Resources/AppleTVAudioHelper/_internal/yarl/_quoting_c.cpython-312-darwin.so",
+      "bytes": 127136,
+      "sha256": "dff3932e2327faa3dc2d7c73d1d3351cf5aa6892f19a0c3d64d3aab6cece6845"
+    }
+  ],
+  "component_pins": {
+    "broker": "9a27351da2abac5240660235434aec4b94164a78",
+    "driver": "5c7229b43d34432c60a1d2a546d3787998fb2f60",
+    "profile": "ad-hoc exact release content; not publisher authentication",
+    "component": 21,
+    "protocol": 21
+  },
+  "python_sbom": "helper-sbom.cdx.json",
+  "no_new_dependencies": true
+}

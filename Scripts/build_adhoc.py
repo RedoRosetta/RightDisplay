@@ -58,10 +58,10 @@ def main():
  args=['xcodebuild','-project',ROOT/'RightDisplay.xcodeproj','-scheme','RightDisplay','-configuration','Release','-destination','platform=macOS,arch=arm64','-derivedDataPath',out/'DerivedData','ARCHS=arm64','ONLY_ACTIVE_ARCH=YES','CODE_SIGNING_ALLOWED=NO','CODE_SIGNING_REQUIRED=NO','DEVELOPMENT_TEAM=','GCC_PREPROCESSOR_DEFINITIONS='+defs,'DEPLOYMENT_POSTPROCESSING=YES','DEPLOYMENT_LOCATION=NO','STRIP_INSTALLED_PRODUCT=YES','STRIP_STYLE=debugging']
  if a.inherit_outer_sandbox:args+=['OTHER_SWIFT_FLAGS=-disable-sandbox']
  run(args+['build'],out/'xcodebuild.log')
- app=out/'DerivedData/Build/Products/Release/Right Display.app';pl=plistlib.loads((app/'Contents/Info.plist').read_bytes());assert (pl['CFBundleShortVersionString'],pl['CFBundleVersion'])==('1.0','45')
+ app=out/'DerivedData/Build/Products/Release/Right Display.app';pl=plistlib.loads((app/'Contents/Info.plist').read_bytes());assert (pl['CFBundleShortVersionString'],pl['CFBundleVersion'])==('1.0.1','46')
  legal=app/'Contents/Resources/Legal';legal.mkdir(exist_ok=True)
  for name in ['LICENSE','LICENSE_SCOPE.md','NOTICE.md','THIRD_PARTY_LICENSES.md','BRAND_ASSETS.md']:shutil.copy2(ROOT/({'THIRD_PARTY_LICENSES.md':'docs/licensing/THIRD_PARTY_LICENSES.md','BRAND_ASSETS.md':'docs/licensing/BRAND_ASSETS.md'}.get(name,name)),legal/name)
  sign(app,'com.rightdisplay.gui');run(['codesign','--verify','--deep','--strict',app])
- (out/'result.json').write_text(json.dumps({'version':'1.0','build':45,'signing':'ad-hoc','notarized':False,'pins':pins,'app':str(app.relative_to(ROOT)),'installed':False,'hardware_testing':'not performed on repackaged artifact'},indent=2)+'\n')
+ (out/'result.json').write_text(json.dumps({'version':'1.0.1','build':46,'signing':'ad-hoc','notarized':False,'pins':pins,'app':str(app.relative_to(ROOT)),'installed':False,'hardware_testing':'not performed on repackaged artifact'},indent=2)+'\n')
  print('Ad-hoc build complete; run verify_adhoc.py before distribution.',flush=True)
 if __name__=='__main__':main()

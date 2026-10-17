@@ -1,0 +1,23 @@
+{
+  "version": "1.0.1",
+  "build": 46,
+  "signature": "ad-hoc",
+  "notarized": false,
+  "nested_macho_verified": 18,
+  "exact_content_requirements": true,
+  "same_identifier_replacement_rejected": true,
+  "tampered_binary_rejected": true,
+  "anonymous_XPC_matching_peer_accepted": true,
+  "anonymous_XPC_wrong_pin_rejected": true,
+  "Apple_system_producer_requirement_unchanged": true,
+  "packaged_helper_help_network_denied": true,
+  "hardware_tests_performed": false,
+  "installed_app_changed": false,
+  "PCM_assertions": 1068,
+  "HDMI_fake_HAL_assertions": 12755,
+  "ASan_UBSan": "PASS",
+  "existing_audio_and_recovery_regressions": "PASS",
+  "HDMI_hardware_acceptance": "NOT_PERFORMED",
+  "claim_scope": "HDMI multichannel PCM conversion and explicit stereo-channel mapping; no brand-specific claim",
+  "Gatekeeper": "rejected; not notarized; no approval claimed"
+}

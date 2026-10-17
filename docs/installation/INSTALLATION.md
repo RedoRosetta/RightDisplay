@@ -1,10 +1,10 @@
-# RightDisplay 1.0 · Build45 安装与卸载
+# RightDisplay 1.0.1 · Build46 安装与卸载
 
 [首页](../../README.md) · [English](#english) · [签名说明](../development/SIGNING.md)
 
 ## 安装
 
-1. 从[正式 Release](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0)下载 `RightDisplay-1.0-Build45.dmg`，核对 Release 提供的 SHA-256；Source code ZIP/TAR 是源码，不是应用。
+1. 从[正式 Release](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.1)下载 `RightDisplay-1.0.1-Build46.dmg`，核对 Release 提供的 SHA-256；Source code ZIP/TAR 是源码，不是应用。
 2. 退出旧版本，保留需要的回退副本。挂载 DMG，将 Right Display.app 拖到 Applications。
 3. 此包为 Ad-hoc 签名，未经过 Apple 公证，不是 Developer ID 签名。先正常打开；如被系统阻止，核对来源后在“系统设置 → 隐私与安全性”使用系统提供的“仍要打开”并确认。系统不提供允许选项时不要绕过策略，不关闭 Gatekeeper/SIP。
 
@@ -22,8 +22,8 @@
 
 ## English
 
-Download the official 1.0 Build45 DMG, verify its published SHA-256, quit the old app and drag the app to Applications. Source archives are not installers. This package is Ad-hoc signed and not notarized. Where macOS offers it, verify the source and use Privacy & Security → Open Anyway. Never disable Gatekeeper/SIP or bypass an unavailable allow action.
+Download the official 1.0.1 Build46 DMG, verify its published SHA-256, quit the old app and drag the app to Applications. Source archives are not installers. This package is Ad-hoc signed and not notarized. Where macOS offers it, verify the source and use Privacy & Security → Open Anyway. Never disable Gatekeeper/SIP or bypass an unavailable allow action.
 
 Base app: macOS14+ on Apple silicon; optional Virtual Audio: macOS27+. Audio installation uses user-authorized macOS Installer. Exact component pins restrict upgrades: use the matching previous uninstaller when required. To remove components, stop forwarding, select another system output and stop virtual-device clients before running the matching uninstaller. Quit and remove the app separately. No automatic audio restart or private-data cleanup is prescribed.
 
-[Privacy](PRIVACY.md) · [Release notes](../releases/1.0.0.md)
+[Privacy](PRIVACY.md) · [Release notes](../releases/1.0.1.md)

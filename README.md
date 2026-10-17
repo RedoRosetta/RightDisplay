@@ -9,9 +9,9 @@
 一款专为 macOS 设计的显示器管理工具。  
 查看显示状态、调整输出参数、管理色彩配置，并通过菜单栏快速控制常用功能。
 
-**RightDisplay 1.0 · Build45**
+**RightDisplay 1.0.1 · Build46**
 
-[**下载 RightDisplay 1.0**](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [安装指南](docs/installation/INSTALLATION.md) · [反馈问题](https://github.com/RedoRosetta/RightDisplay/issues/new/choose) · [English](README.en.md)
+[**下载 RightDisplay 1.0.1**](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.1) · [安装指南](docs/installation/INSTALLATION.md) · [反馈问题](https://github.com/RedoRosetta/RightDisplay/issues/new/choose) · [English](README.en.md)
 
 macOS 14+ · Apple Silicon
 
@@ -183,7 +183,7 @@ Virtual Audio 提供：
 - 唤醒后的恢复处理
 - 保留用户手动停止状态
 
-在 **RightDisplay 1.0 · Build45** 的本机验收中，以下三项测试已经通过：
+在此前 **RightDisplay 1.0 · Build45** 的本机验收中，以下三项测试已经通过（不作为Build46新硬件验收）：
 
 | 测试项目 | 结果 |
 |---|---|
@@ -197,18 +197,22 @@ Virtual Audio 提供：
 
 Virtual Audio 是可选功能。使用显示管理、ICC、EDID 等功能不需要安装虚拟音频组件。
 
+## 1.0.1更新
+
+改进HDMI多声道PCM在虚拟音频软件音量链路中的格式适配和明确声道映射。自动化字节/边界/布局及模拟输出验证通过，不代表新增实机播放或唤醒验收。[技术变更与边界](docs/releases/1.0.1.md)。
+
 ## 下载与安装
 
-### 下载 RightDisplay 1.0
+### 下载 RightDisplay 1.0.1
 
-**[前往 GitHub Releases 下载正式版](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0)**
+**[前往 GitHub Releases 下载正式版](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.1)**
 
 当前版本：
 
 | 项目 | 信息 |
 |---|---|
-| 版本 | 1.0 |
-| Build | 45 |
+| 版本 | 1.0.1 |
+| Build | 46 |
 | 平台 | macOS |
 | 处理器 | Apple Silicon |
 | 安装包 | DMG |
@@ -217,14 +221,14 @@ Virtual Audio 是可选功能。使用显示管理、ICC、EDID 等功能不需�
 
 安装步骤：
 
-1. 从 GitHub Releases 下载 RightDisplay 1.0 的 DMG。
+1. 从 GitHub Releases 下载 RightDisplay 1.0.1 的 DMG。
 2. 打开 DMG，将 `Right Display.app` 拖入「应用程序」文件夹。
 3. 从「应用程序」启动 RightDisplay。
 4. 根据需要授予相关权限，并配置显示或音频功能。
 
 ### 关于 macOS 安全提示
 
-RightDisplay 1.0 使用 Ad-hoc 签名，**尚未经过 Apple 公证**。
+RightDisplay 1.0.1 使用 Ad-hoc 签名，**尚未经过 Apple 公证**。
 
 因此，macOS 可能阻止应用首次打开，并显示无法验证开发者或无法检查应用安全性的提示。
 
@@ -244,7 +248,7 @@ RightDisplay 1.0 使用 Ad-hoc 签名，**尚未经过 Apple 公证**。
 
 ### 文件完整性
 
-RightDisplay 1.0 · Build45 官方 DMG：
+RightDisplay 1.0.1 · Build46 官方 DMG：
 
 **SHA-256**
 
@@ -255,7 +259,7 @@ ae1964e06ed83b54ab5ec60cd20ef8820f4c68c6e5eecc14fc1a87f51c1c7f3e
 可以在终端中使用以下命令验证下载文件：
 
 ```bash
-shasum -a 256 RightDisplay-1.0-Build45.dmg
+shasum -a 256 RightDisplay-1.0-Build46.dmg
 ```
 
 计算结果应与上方 SHA-256 一致。
@@ -338,7 +342,7 @@ RightDisplay 仍会持续维护和改进。
 
 ## 历史版本
 
-RightDisplay 1.0 是当前正式发布版本。
+RightDisplay 1.0.1 是当前正式发布版本。
 
 此前的 0.4 Beta RC 已作为历史版本保留：
 

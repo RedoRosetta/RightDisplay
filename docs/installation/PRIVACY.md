@@ -1,4 +1,4 @@
-> Current: RightDisplay 1.0 / Build45, Ad-hoc signed, not notarized. See [1.0 release notes](../releases/1.0.0.md) and [signature boundaries](../development/SIGNING.md). Prior RC/build notes below retain their historical scope.
+> Current: RightDisplay 1.0.1 / Build46, Ad-hoc signed, not notarized. See [1.0 release notes](../releases/1.0.1.md) and [signature boundaries](../development/SIGNING.md). Prior RC/build notes below retain their historical scope.
 
 # Privacy & diagnostics / 隐私与诊断
 

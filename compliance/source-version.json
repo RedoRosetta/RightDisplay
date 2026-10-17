@@ -1,10 +1,10 @@
 {
-  "app_version": "1.0",
-  "build": "45",
-  "revision": "UI-Aligned",
+  "app_version": "1.0.1",
+  "build": 46,
   "component": 21,
   "protocol": 21,
-  "release_tag": "v1.0.0",
-  "release_source_commit": "fa807474592d1b63a8a5b52d73b2e61278efed82",
-  "maintenance_scope": "repository organization only; no product logic or new binary release"
+  "release_tag": "v1.0.1",
+  "release_source_ref": "refs/tags/v1.0.1",
+  "product_change": "HDMI multichannel PCM HAL output adaptation and channel mapping",
+  "hardware_acceptance": "new HDMI hardware playback/wake/latency unverified"
 }

@@ -1,6 +1,6 @@
 # Archive / 历史资料
 
-**HISTORICAL：这里不是RightDisplay1.0安装指南。** 当前版本为1.0/Build45，见[当前安装](../docs/installation/INSTALLATION.md)。
+**HISTORICAL：这里不是RightDisplay1.0安装指南。** 当前版本为1.0.1/Build46，见[当前安装](../docs/installation/INSTALLATION.md)。
 
 | 目录 | 对应范围 |
 |---|---|

@@ -8,7 +8,7 @@ from build_adhoc import run,cdhash,requirement,ROOT
 
 def main():
  out=ROOT/'Build/Adhoc';pins=json.loads((out/'pins.json').read_text());app=out/'DerivedData/Build/Products/Release/Right Display.app';res=app/'Contents/Resources';test=Path(tempfile.mkdtemp(prefix='verification-',dir=out))
- pl=plistlib.loads((app/'Contents/Info.plist').read_bytes());assert (pl['CFBundleShortVersionString'],pl['CFBundleVersion'])==('1.0','45')
+ pl=plistlib.loads((app/'Contents/Info.plist').read_bytes());assert (pl['CFBundleShortVersionString'],pl['CFBundleVersion'])==('1.0.1','46')
  run(['codesign','--verify','--deep','--strict',app])
  text=run(['codesign','-dvvv',app]);assert 'Signature=adhoc' in text and 'runtime' in text and 'TeamIdentifier=not set' in text
  macho=app/'Contents/MacOS/Right Display'
@@ -41,6 +41,6 @@ def main():
  assert not list((helper.parent/'_internal/zeroconf').rglob('*.so'))
  assert (helper.parent/'Legal/CorrespondingSources/zeroconf-0.150.0.tar.gz').is_file()
  broker_src=(ROOT/'AudioVirtualDevice/Broker/main.c').read_text();assert 'anchor apple and (identifier \"com.apple.audio.coreaudiod\"' in broker_src.replace('\\"','\"')
- result={'version':'1.0','build':45,'signature':'ad-hoc','notarized':False,'nested_macho_verified':count,'exact_content_requirements':True,'same_identifier_replacement_rejected':True,'tampered_binary_rejected':True,'anonymous_XPC_matching_peer_accepted':True,'anonymous_XPC_wrong_pin_rejected':True,'Apple_system_producer_requirement_unchanged':True,'packaged_helper_help_network_denied':True,'hardware_tests_performed':False,'installed_app_changed':False}
+ result={'version':'1.0.1','build':46,'signature':'ad-hoc','notarized':False,'nested_macho_verified':count,'exact_content_requirements':True,'same_identifier_replacement_rejected':True,'tampered_binary_rejected':True,'anonymous_XPC_matching_peer_accepted':True,'anonymous_XPC_wrong_pin_rejected':True,'Apple_system_producer_requirement_unchanged':True,'packaged_helper_help_network_denied':True,'hardware_tests_performed':False,'installed_app_changed':False}
  (out/'verification.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result),flush=True)
 if __name__=='__main__':main()

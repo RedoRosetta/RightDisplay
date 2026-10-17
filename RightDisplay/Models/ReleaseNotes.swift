@@ -16,6 +16,11 @@ enum RightDisplayReleaseHistory {
     }()
 
     static let notes: [ReleaseNote] = [
+        ReleaseNote(id:"release101",version:"1.0.1",title:"HDMI 多声道虚拟音频改进",changes:[
+            "扩展 HDMI 多声道 PCM 输出适配，支持整数与浮点、交错与非交错格式。",
+            "根据设备明确声道布局映射左右声道，其余声道静音；布局不明时安全拒绝。",
+            "保留源端双声道、软件音量、身份验证和恢复策略。"
+        ]),
         ReleaseNote(id:"release10",version:"1.0",title:"RightDisplay 1.0",changes:[
             "App 内 SRC 缓冲按会话规格准备，修正大 I/O 消费窗口。",
             "保留目标返回恢复与手动停止行为；虚拟音量采用固定灰色说明。",

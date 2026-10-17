@@ -5,9 +5,9 @@
 
 **Display status and everyday controls for your Mac.**
 
-**RightDisplay 1.0 · Build45**
+**RightDisplay 1.0.1 · Build46**
 
-[Download 1.0](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0) · [Installation](docs/installation/INSTALLATION.md#english) · [简体中文](README.md) · [Feedback](https://github.com/RedoRosetta/RightDisplay/issues/new/choose)
+[Download 1.0.1](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.1) · [Installation](docs/installation/INSTALLATION.md#english) · [简体中文](README.md) · [Feedback](https://github.com/RedoRosetta/RightDisplay/issues/new/choose)
 
 macOS14+ · Apple silicon
 </div>
@@ -22,9 +22,13 @@ View resolution, HiDPI, refresh rate, HDR, color output and display capabilities
 
 System-reported state is not a physical receiver measurement. EDID capability is not current output; DSC remains an inference; ICC charts describe profiles rather than measured screen performance. Virtual Audio adjusts forwarded audio, not television hardware volume, and separately requires macOS27+.
 
+## 1.0.1 update
+
+HDMI multichannel PCM conversion and explicit stereo-channel mapping improve the Virtual Audio software-volume path. Byte/bounds/layout and simulated output checks do not constitute new physical HDMI or wake acceptance. [Details](docs/releases/1.0.1.md).
+
 ## Install and trust
 
-The 1.0 DMG is **Ad-hoc signed, not Developer ID signed, and not Apple notarized**. macOS may require its normal Privacy & Security → Open Anyway flow after you verify the download. Do not disable Gatekeeper or SIP. Follow the [current installation and removal guide](docs/installation/INSTALLATION.md).
+The 1.0.1 DMG is **Ad-hoc signed, not Developer ID signed, and not Apple notarized**. macOS may require its normal Privacy & Security → Open Anyway flow after you verify the download. Do not disable Gatekeeper or SIP. Follow the [current installation and removal guide](docs/installation/INSTALLATION.md).
 
 Continuous playback, wake recovery and persistent manual-stop behavior passed the user's current-machine Build45 acceptance. The repackaged release received automated checks, not a new full hardware regression. Not all hardware/system combinations are verified, and not every historical dropout cause is resolved.
 
@@ -36,7 +40,7 @@ First-party material is **RNSL 1.0 Noncommercial Source Available**, not OSI Ope
 
 ## History
 
-1.0 Build45 is current. Older releases remain available; archived instructions do not apply to 1.0. [Changelog](CHANGELOG.md) · [1.0 notes](docs/releases/1.0.0.md) · [Archive](archive/README.md)
+1.0.1 Build46 is current. Older releases remain available; archived instructions do not apply to 1.0. [Changelog](CHANGELOG.md) · [1.0.1 notes](docs/releases/1.0.1.md) · [Archive](archive/README.md)
 
 <a id="support"></a>
 Feedback, testing and voluntary support are welcome. Review diagnostics for personal information before posting.

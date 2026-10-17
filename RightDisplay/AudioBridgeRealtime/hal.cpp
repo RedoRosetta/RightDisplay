@@ -24,11 +24,26 @@ std::string stringValue(AudioObjectID id,AudioObjectPropertySelector s){CFString
 std::optional<uint32_t> optional(AudioObjectID id,AudioObjectPropertySelector s,AudioObjectPropertyScope scope){uint32_t v=0;return get(id,s,v,scope)?std::optional<uint32_t>(v):std::nullopt;}
 Device inspect(AudioDeviceID id){Device d;d.id=id;d.uid=stringValue(id,kAudioDevicePropertyDeviceUID);d.name=stringValue(id,kAudioObjectPropertyName);get(id,kAudioDevicePropertyTransportType,d.transport);get(id,kAudioDevicePropertyNominalSampleRate,d.rate);get(id,kAudioDevicePropertyDeviceIsAlive,d.alive);get(id,kAudioDevicePropertyDeviceIsRunningSomewhere,d.running);get(id,kAudioDevicePropertyBufferFrameSize,d.buffer);d.maxBlock=d.buffer;uint32_t largest=0;if(get(id,kAudioDevicePropertyUsesVariableBufferFrameSizes,largest)&&largest)d.maxBlock=largest;
  d.latency=optional(id,kAudioDevicePropertyLatency,kAudioObjectPropertyScopeOutput);d.safety=optional(id,kAudioDevicePropertySafetyOffset,kAudioObjectPropertyScopeOutput);
- UInt32 stereo[2]{};auto stereoAddress=address(kAudioDevicePropertyPreferredChannelsForStereo,kAudioObjectPropertyScopeOutput);UInt32 count=sizeof(stereo);d.stereoMap=AudioObjectGetPropertyData(id,&stereoAddress,0,nullptr,&count,stereo)==noErr&&count==sizeof(stereo)&&stereo[0]==1&&stereo[1]==2;
+ UInt32 stereo[2]{};auto stereoAddress=address(kAudioDevicePropertyPreferredChannelsForStereo,kAudioObjectPropertyScopeOutput);UInt32 count=sizeof(stereo);d.stereoMap=AudioObjectGetPropertyData(id,&stereoAddress,0,nullptr,&count,stereo)==noErr&&count==sizeof(stereo)&&stereo[0]>0&&stereo[1]>0&&stereo[0]!=stereo[1];if(d.stereoMap){d.left=stereo[0]-1;d.right=stereo[1]-1;}
  auto a=address(kAudioDevicePropertyStreamConfiguration,kAudioObjectPropertyScopeOutput);UInt32 bytes=0;if(AudioObjectGetPropertyDataSize(id,&a,0,nullptr,&bytes)==noErr&&bytes>=offsetof(AudioBufferList,mBuffers)&&bytes<=65536){std::vector<unsigned char> storage(bytes);UInt32 got=bytes;if(AudioObjectGetPropertyData(id,&a,0,nullptr,&got,storage.data())==noErr){auto* list=reinterpret_cast<AudioBufferList*>(storage.data());if(got>=offsetof(AudioBufferList,mBuffers)&&got<=bytes&&list->mNumberBuffers<=(got-offsetof(AudioBufferList,mBuffers))/sizeof(AudioBuffer)){for(UInt32 i=0;i<list->mNumberBuffers;++i){d.buffers.push_back(list->mBuffers[i].mNumberChannels);d.channels+=list->mBuffers[i].mNumberChannels;}}}}
- for(auto s:array<AudioStreamID>(id,kAudioDevicePropertyStreams,kAudioObjectPropertyScopeOutput)){uint32_t active=1;if(!get(s,kAudioStreamPropertyIsActive,active))throw std::runtime_error("stream activity unavailable");if(!active)continue;Stream st;st.id=s;get(s,kAudioStreamPropertyVirtualFormat,st.client);get(s,kAudioStreamPropertyPhysicalFormat,st.physical);st.latency=optional(s,kAudioStreamPropertyLatency,kAudioObjectPropertyScopeGlobal);d.streams.push_back(st);}return d;}
+ if(!d.stereoMap){
+  // Use explicit layout metadata only. Never infer an 8-channel speaker order.
+  try{auto storage=array<unsigned char>(id,kAudioDevicePropertyPreferredChannelLayout,kAudioObjectPropertyScopeOutput);
+   if(storage.size()>=offsetof(AudioChannelLayout,mChannelDescriptions)){
+    auto* layout=reinterpret_cast<const AudioChannelLayout*>(storage.data());
+    if(layout->mChannelLayoutTag==kAudioChannelLayoutTag_Stereo&&d.channels==2){d.left=0;d.right=1;d.stereoMap=true;}
+    else if(layout->mChannelLayoutTag==kAudioChannelLayoutTag_UseChannelDescriptions&&layout->mNumberChannelDescriptions==d.channels&&layout->mNumberChannelDescriptions<=(storage.size()-offsetof(AudioChannelLayout,mChannelDescriptions))/sizeof(AudioChannelDescription)){
+     unsigned leftCount=0,rightCount=0;for(unsigned i=0;i<d.channels;++i){auto label=layout->mChannelDescriptions[i].mChannelLabel;if(label==kAudioChannelLabel_Left){d.left=i;++leftCount;}if(label==kAudioChannelLabel_Right){d.right=i;++rightCount;}}
+     d.stereoMap=leftCount==1&&rightCount==1;
+    }else if(layout->mChannelLayoutTag==kAudioChannelLayoutTag_UseChannelBitmap&&(layout->mChannelBitmap&3U)==3U&&std::popcount(layout->mChannelBitmap)==int(d.channels)){d.left=0;d.right=1;d.stereoMap=true;}
+   }
+  }catch(...){/* Missing layout is an explicit ineligible state below. */}
+ }
+ for(auto s:array<AudioStreamID>(id,kAudioDevicePropertyStreams,kAudioObjectPropertyScopeOutput)){uint32_t active=1;if(!get(s,kAudioStreamPropertyIsActive,active))throw std::runtime_error("stream activity unavailable");if(!active)continue;Stream st;st.id=s;get(s,kAudioStreamPropertyVirtualFormat,st.client);get(s,kAudioStreamPropertyPhysicalFormat,st.physical);st.latency=optional(s,kAudioStreamPropertyLatency,kAudioObjectPropertyScopeGlobal);
+ try{st.available=array<AudioStreamRangedDescription>(s,kAudioStreamPropertyAvailableVirtualFormats);}catch(...){/* Current readback, not advertised formats, determines eligibility. */}
+ d.streams.push_back(st);}return d;}
 void zero(AudioBufferList* out)noexcept{if(!out)return;for(UInt32 i=0;i<out->mNumberBuffers;++i)if(out->mBuffers[i].mData)std::memset(out->mBuffers[i].mData,0,out->mBuffers[i].mDataByteSize);}
-struct Context {Playback engine;const AudioDeviceID id;std::vector<Frame> scratch;bool planar;uint64_t deadlineHost=0;std::atomic<uint64_t> changeTime{0},observationSequence{0},validatedSequence{0},validationSilencedCallbacks{0};std::atomic<uint32_t> changeSelector{0};Context(const Device& d,const std::string& f,float gain,size_t target,size_t cap,uint64_t epoch,BufferPlan plan):engine(f,d.rate,gain,epoch,plan),id(d.id),scratch(d.maxBlock),planar((d.streams[0].client.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0){(void)cap;(void)target;}};
+struct Context {Playback engine;const AudioDeviceID id;std::vector<Frame> scratch;PCMOutput output;uint64_t deadlineHost=0;std::atomic<uint64_t> changeTime{0},observationSequence{0},validatedSequence{0},validationSilencedCallbacks{0};std::atomic<uint32_t> changeSelector{0};Context(const Device& d,const std::string& f,float gain,size_t target,size_t cap,uint64_t epoch,BufferPlan plan):engine(f,d.rate,gain,epoch,plan),id(d.id),scratch(d.maxBlock),output(PCMOutput::make(d.streams[0].client,d.left,d.right).value()){(void)cap;(void)target;}};
 // Stable callback endpoint: removed-device callbacks may arrive late. The
 // endpoint remains allocated, but can no longer reach a retired Context.
 struct CallbackAnchor {
@@ -44,10 +59,10 @@ struct CallbackAccess {
 // Control queue owns this bounded process-lifetime quarantine. Never reuse an
 // endpoint which CoreAudio may still call. Exhaustion retains restart-required.
 std::array<CallbackAnchor*,32> retiredAnchors{};size_t retiredAnchorCount=0;
-OSStatus callback(AudioDeviceID id,const AudioTimeStamp*,const AudioBufferList*,const AudioTimeStamp*,AudioBufferList* out,const AudioTimeStamp* stamp,void* user)noexcept{zero(out);CallbackAccess access(user);if(!access.context)return noErr;auto& c=*access.context;if(c.deadlineHost&&mach_absolute_time()>=c.deadlineHost){c.engine.gate.invalidate(Failure::Stopped);return noErr;}if(id!=c.id||!c.engine.gate.accepts(c.engine.epoch)){c.engine.telemetry.staleCallbacks.fetch_add(1,std::memory_order_relaxed);return noErr;}if(!out||out->mNumberBuffers!=(c.planar?2U:1U)){c.engine.gate.invalidate(Failure::InvalidBuffer);return noErr;}const auto observation=c.observationSequence.load(std::memory_order_acquire);if(observation!=c.validatedSequence.load(std::memory_order_acquire)){c.validationSilencedCallbacks.fetch_add(1,std::memory_order_relaxed);return noErr;}size_t frames=0;for(UInt32 i=0;i<out->mNumberBuffers;++i){const auto& b=out->mBuffers[i];size_t stride=c.planar?sizeof(float):sizeof(Frame);size_t n=b.mDataByteSize/stride;if(!b.mData||b.mNumberChannels!=(c.planar?1U:2U)||b.mDataByteSize%stride||!n||n>c.scratch.size()||(i&&n!=frames)){c.engine.gate.invalidate(Failure::InvalidBuffer);return noErr;}frames=n;}
+OSStatus callback(AudioDeviceID id,const AudioTimeStamp*,const AudioBufferList*,const AudioTimeStamp*,AudioBufferList* out,const AudioTimeStamp* stamp,void* user)noexcept{zero(out);CallbackAccess access(user);if(!access.context)return noErr;auto& c=*access.context;if(c.deadlineHost&&mach_absolute_time()>=c.deadlineHost){c.engine.gate.invalidate(Failure::Stopped);return noErr;}if(id!=c.id||!c.engine.gate.accepts(c.engine.epoch)){c.engine.telemetry.staleCallbacks.fetch_add(1,std::memory_order_relaxed);return noErr;}if(!out){c.engine.gate.invalidate(Failure::InvalidBuffer);return noErr;}const auto observation=c.observationSequence.load(std::memory_order_acquire);if(observation!=c.validatedSequence.load(std::memory_order_acquire)){c.validationSilencedCallbacks.fetch_add(1,std::memory_order_relaxed);return noErr;}size_t frames=c.output.frames(out,c.scratch.size());if(!frames){c.engine.gate.invalidate(Failure::InvalidBuffer);return noErr;}
  uint64_t host=mach_absolute_time();if(stamp&&(stamp->mFlags&kAudioTimeStampHostTimeValid)){c.engine.telemetry.hostTime.store(stamp->mHostTime,std::memory_order_relaxed);if(stamp->mFlags&kAudioTimeStampSampleTimeValid){c.engine.telemetry.sampleBits.store(std::bit_cast<uint64_t>(stamp->mSampleTime),std::memory_order_relaxed);c.engine.telemetry.sampleTimeCount.fetch_add(1,std::memory_order_relaxed);}c.engine.telemetry.timestampCount.fetch_add(1,std::memory_order_relaxed);}
  if(!c.engine.render(c.scratch.data(),frames,c.engine.epoch,host))return noErr;
- if(c.planar){auto* l=static_cast<float*>(out->mBuffers[0].mData);auto* r=static_cast<float*>(out->mBuffers[1].mData);for(size_t i=0;i<frames;++i){l[i]=c.scratch[i].l;r[i]=c.scratch[i].r;}}else std::memcpy(out->mBuffers[0].mData,c.scratch.data(),frames*sizeof(Frame));
+ if(!c.output.write(c.scratch.data(),frames,out)){c.engine.gate.invalidate(Failure::InvalidBuffer);return noErr;}
  if(!c.engine.gate.accepts(c.engine.epoch)||observation!=c.observationSequence.load(std::memory_order_acquire))zero(out);return noErr;}
 OSStatus changed(AudioObjectID,UInt32 n,const AudioObjectPropertyAddress* addresses,void* user)noexcept{
  CallbackAccess access(user);if(!access.context)return noErr;auto& c=*access.context;if(n){c.changeSelector.store(addresses[0].mSelector);c.changeTime.store(mach_absolute_time());c.observationSequence.fetch_add(1,std::memory_order_release);}return noErr;
@@ -57,27 +72,28 @@ OSStatus changed(AudioObjectID,UInt32 n,const AudioObjectPropertyAddress* addres
 bool sameFormat(const AudioStreamBasicDescription& a,const AudioStreamBasicDescription& b)noexcept{
  return a.mSampleRate==b.mSampleRate&&a.mFormatID==b.mFormatID&&a.mFormatFlags==b.mFormatFlags&&a.mBytesPerPacket==b.mBytesPerPacket&&a.mFramesPerPacket==b.mFramesPerPacket&&a.mBytesPerFrame==b.mBytesPerFrame&&a.mChannelsPerFrame==b.mChannelsPerFrame&&a.mBitsPerChannel==b.mBitsPerChannel;
 }
-bool sameImpl(const Device& a,const Device& b){if(a.id!=b.id||a.uid!=b.uid||a.transport!=b.transport||a.rate!=b.rate||a.buffer!=b.buffer||a.maxBlock!=b.maxBlock||a.stereoMap!=b.stereoMap||a.buffers!=b.buffers||a.streams.size()!=b.streams.size())return false;for(size_t i=0;i<a.streams.size();++i){const auto& x=a.streams[i];const auto& y=b.streams[i];if(x.id!=y.id||!sameFormat(x.client,y.client)||!sameFormat(x.physical,y.physical))return false;}return true;}
+bool sameImpl(const Device& a,const Device& b){if(a.id!=b.id||a.uid!=b.uid||a.transport!=b.transport||a.rate!=b.rate||a.buffer!=b.buffer||a.maxBlock!=b.maxBlock||a.stereoMap!=b.stereoMap||a.left!=b.left||a.right!=b.right||a.buffers!=b.buffers||a.streams.size()!=b.streams.size())return false;for(size_t i=0;i<a.streams.size();++i){const auto& x=a.streams[i];const auto& y=b.streams[i];if(x.id!=y.id||!sameFormat(x.client,y.client)||!sameFormat(x.physical,y.physical))return false;}return true;}
 
 }
 bool supportedRate(double r)noexcept{return r==44100||r==48000||r==88200||r==96000||r==176400||r==192000;}
 bool physicalTransport(uint32_t t)noexcept {switch(t){case kAudioDeviceTransportTypeBuiltIn:case kAudioDeviceTransportTypePCI:case kAudioDeviceTransportTypeUSB:case kAudioDeviceTransportTypeFireWire:case kAudioDeviceTransportTypeBluetooth:case kAudioDeviceTransportTypeBluetoothLE:case kAudioDeviceTransportTypeHDMI:case kAudioDeviceTransportTypeDisplayPort:case kAudioDeviceTransportTypeThunderbolt:return true;default:return false;}}
-bool clientFormatAllowed(const AudioStreamBasicDescription& a)noexcept {bool planar=(a.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0;return a.mFormatID==kAudioFormatLinearPCM&&supportedRate(a.mSampleRate)&&a.mChannelsPerFrame==2&&a.mBitsPerChannel==32&&a.mFramesPerPacket==1&&a.mBytesPerFrame==(planar?4U:8U)&&a.mBytesPerPacket==a.mBytesPerFrame&&!(a.mFormatFlags&~UInt32(kAudioFormatFlagIsFloat|kAudioFormatFlagIsPacked|kAudioFormatFlagIsNonInterleaved))&&(a.mFormatFlags&kAudioFormatFlagIsFloat)&&(a.mFormatFlags&kAudioFormatFlagIsPacked)&&!(a.mFormatFlags&(kAudioFormatFlagIsBigEndian|kAudioFormatFlagIsAlignedHigh|kAudioFormatFlagIsNonMixable));}
-bool physicalFormatAllowed(const AudioStreamBasicDescription& a)noexcept {
- bool planar=(a.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0;
- unsigned channels=planar?1:2;unsigned bits=a.mBitsPerChannel;unsigned bytes=a.mBytesPerFrame/channels;
- bool fp=(a.mFormatFlags&kAudioFormatFlagIsFloat)!=0;
- return a.mFormatID==kAudioFormatLinearPCM&&supportedRate(a.mSampleRate)&&a.mChannelsPerFrame==2&&a.mFramesPerPacket==1
- &&(bits==16||bits==24||bits==32)&&a.mBytesPerFrame%channels==0&&a.mBytesPerPacket==a.mBytesPerFrame
- &&(bytes==2||bytes==3||bytes==4)&&bits<=bytes*8&&!(a.mFormatFlags&kAudioFormatFlagIsBigEndian)
- &&(fp ? bits==32&&bytes==4 : bool(a.mFormatFlags&kAudioFormatFlagIsSignedInteger))
- &&!(a.mFormatFlags&~UInt32(kAudioFormatFlagIsFloat|kAudioFormatFlagIsSignedInteger|kAudioFormatFlagIsPacked|kAudioFormatFlagIsAlignedHigh|kAudioFormatFlagIsNonInterleaved|kAudioFormatFlagIsNonMixable))
- &&(!fp||!(a.mFormatFlags&(kAudioFormatFlagIsSignedInteger|kAudioFormatFlagIsAlignedHigh)))
- &&((bits==bytes*8&&bool(a.mFormatFlags&kAudioFormatFlagIsPacked))||(bits==24&&bytes==4&&!fp&&!(a.mFormatFlags&kAudioFormatFlagIsPacked)));
-}
+bool clientFormatAllowed(const AudioStreamBasicDescription& a)noexcept {return supportedRate(a.mSampleRate)&&PCMOutput::make(a).has_value();}
+bool physicalFormatAllowed(const AudioStreamBasicDescription& a)noexcept {return clientFormatAllowed(a);}
 bool layoutAllowed(const std::vector<uint32_t>& v,bool planar)noexcept{return planar?v.size()==2&&v[0]==1&&v[1]==1:v.size()==1&&v[0]==2;}
 
-std::string eligibility(const Device& d){if(d.uid.empty()||!d.alive)return "TARGET_UNAVAILABLE";if(!supportedRate(d.rate))return "UNSUPPORTED_RATE";if(!physicalTransport(d.transport))return "UNSUPPORTED_TRANSPORT";if(d.channels!=2||!d.stereoMap||d.streams.size()!=1)return "UNSUPPORTED_STEREO_LAYOUT";if(d.streams[0].client.mSampleRate!=d.rate||d.streams[0].physical.mSampleRate!=d.rate||!clientFormatAllowed(d.streams[0].client)||!physicalFormatAllowed(d.streams[0].physical))return "UNSUPPORTED_PCM_FORMAT";if(!layoutAllowed(d.buffers,(d.streams[0].client.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0))return "UNSUPPORTED_BUFFER_LAYOUT";if(!d.buffer||d.maxBlock<d.buffer||d.maxBlock>65536)return "UNSUPPORTED_BUFFER_SIZE";return "USABLE_DIRECT_PATH";}
+std::string eligibility(const Device& d){
+ if(d.uid.empty()||!d.alive)return "TARGET_UNAVAILABLE";
+ if(!supportedRate(d.rate))return "UNSUPPORTED_RATE";
+ if(!physicalTransport(d.transport))return "UNSUPPORTED_TRANSPORT";
+ if(d.streams.size()!=1)return "UNSUPPORTED_STREAM_LAYOUT";
+ if(!d.stereoMap||d.left>=d.channels||d.right>=d.channels||d.left==d.right)return "CHANNEL_LAYOUT_UNAVAILABLE";
+ const auto& a=d.streams[0].client;auto output=PCMOutput::make(a,d.left,d.right);
+ if(a.mSampleRate!=d.rate||!output||!physicalFormatAllowed(d.streams[0].physical)||a.mChannelsPerFrame!=d.channels)return "UNSUPPORTED_PCM_FORMAT";
+ if(output->planar){if(d.buffers.size()!=d.channels||!std::all_of(d.buffers.begin(),d.buffers.end(),[](auto n){return n==1;}))return "UNSUPPORTED_BUFFER_LAYOUT";}
+ else if(d.buffers!=std::vector<uint32_t>{d.channels})return "UNSUPPORTED_BUFFER_LAYOUT";
+ if(!d.buffer||d.maxBlock<d.buffer||d.maxBlock>65536)return "UNSUPPORTED_BUFFER_SIZE";
+ return "USABLE_DIRECT_PATH";
+}
 std::vector<Device> devices(){std::vector<Device> result;for(auto id:array<AudioDeviceID>(kAudioObjectSystemObject,kAudioHardwarePropertyDevices)){try{auto d=inspect(id);if(d.channels)result.push_back(std::move(d));}catch(const std::exception& e){std::cerr<<"device "<<id<<" inspection failed: "<<e.what()<<'\n';}}return result;}
 bool contextMatches(const Device& a,const Device& b){return sameImpl(a,b);}
 Device resolveFrom(const std::vector<Device>& all,const std::string& uid){if(uid.empty())throw std::runtime_error("explicit UID required");std::optional<Device> found;for(auto d:all)if(d.uid==uid){if(found)throw std::runtime_error("AMBIGUOUS_UID");found=std::move(d);}if(!found)throw std::runtime_error("TARGET_UNAVAILABLE");return *found;}
@@ -115,12 +131,16 @@ BufferPlan sessionBufferPlan(const Device& output,bool system){
  if(system)source=resolve("RightDisplay.VirtualVolume");
  else {source.rate=48000;source.buffer=512;source.maxBlock=8192;Stream stream;stream.client={48000,kAudioFormatLinearPCM,kAudioFormatFlagIsFloat|kAudioFormatFlagIsPacked,8,1,8,2,32,0};source.streams.push_back(stream);}
  if(source.streams.size()!=1||(!source.alive&&system))throw std::runtime_error("SOURCE_FORMAT_UNAVAILABLE");
- if(!clientFormatAllowed(source.streams[0].client)||(system&&(source.channels!=2||source.buffers!=std::vector<uint32_t>{2})))throw std::runtime_error("UNSUPPORTED_SOURCE_PCM_FORMAT");
+ if(!clientFormatAllowed(source.streams[0].client)||source.streams[0].client.mBytesPerFrame!=8||(source.streams[0].client.mFormatFlags&~UInt32(kAudioFormatFlagIsFloat|kAudioFormatFlagIsPacked))||source.streams[0].client.mChannelsPerFrame!=2||source.streams[0].client.mBitsPerChannel!=32||!(source.streams[0].client.mFormatFlags&kAudioFormatFlagIsFloat)||(system&&(source.channels!=2||source.buffers!=std::vector<uint32_t>{2})))throw std::runtime_error("UNSUPPORTED_SOURCE_PCM_FORMAT");
  auto spec=[](const Device& d){const auto& f=d.streams.at(0).client;
   if(!std::isfinite(f.mSampleRate)||f.mSampleRate!=std::floor(f.mSampleRate)||f.mSampleRate<1||f.mSampleRate>192000||f.mFormatID!=kAudioFormatLinearPCM)throw std::runtime_error("UNSUPPORTED_SESSION_BUFFER_SPEC");
   return SessionAudioSpec{uint32_t(f.mSampleRate),f.mChannelsPerFrame,f.mBitsPerChannel,f.mBytesPerFrame,d.buffer,d.maxBlock,(f.mFormatFlags&kAudioFormatFlagIsFloat)!=0,(f.mFormatFlags&kAudioFormatFlagIsNonInterleaved)!=0};
  };
- return BufferPlan::make(spec(source),spec(output));
+ // Playback/SRC remains stereo Float32. Endpoint packing and channel expansion
+ // occur after render, and do not change the ring's frame units or target fill.
+ auto destination=spec(output);destination.channels=2;destination.bits=32;
+ destination.bytesPerFrame=8;destination.floating=true;destination.planar=false;
+ return BufferPlan::make(spec(source),destination);
 }
 }
 struct ABSession {
@@ -227,6 +247,7 @@ extern "C" ABSession *ABStartTest(const char* uid,const char* fixture,float gain
   add(kAudioObjectSystemObject,kAudioHardwarePropertyDevices,kAudioObjectPropertyScopeGlobal);
   for(auto selector:std::array<AudioObjectPropertySelector,4>{kAudioDevicePropertyDeviceIsAlive,kAudioDevicePropertyNominalSampleRate,kAudioDevicePropertyBufferFrameSize,kAudioDevicePropertyUsesVariableBufferFrameSizes})add(d.id,selector,kAudioObjectPropertyScopeGlobal);
   add(d.id,kAudioDevicePropertyStreams,kAudioObjectPropertyScopeOutput);
+  for(auto selector:std::array<AudioObjectPropertySelector,3>{kAudioDevicePropertyPreferredChannelsForStereo,kAudioDevicePropertyPreferredChannelLayout,kAudioDevicePropertyStreamConfiguration}){auto a=bridge::address(selector,kAudioObjectPropertyScopeOutput);if(AudioObjectHasProperty(d.id,&a))add(d.id,selector,kAudioObjectPropertyScopeOutput);}
   for(auto& stream:d.streams){add(stream.id,kAudioStreamPropertyVirtualFormat,kAudioObjectPropertyScopeGlobal);add(stream.id,kAudioStreamPropertyPhysicalFormat,kAudioObjectPropertyScopeGlobal);}
   OSStatus create=AudioDeviceCreateIOProcID(d.id,bridge::callback,session->anchor.get(),&session->proc);if(create!=noErr)throw std::runtime_error("HAL_CREATE_FAILED "+std::to_string(create));
   if(!bridge::contextMatches(d,bridge::resolve(uid))||!c.engine.gate.accepts(c.engine.epoch))throw std::runtime_error("FORMAT_CHANGED");

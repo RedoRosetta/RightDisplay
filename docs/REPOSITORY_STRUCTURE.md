@@ -1,6 +1,6 @@
 # Repository structure / 仓库结构
 
-当前版本：RightDisplay1.0 · Build45。[下载](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.0)。本次是结构维护，不重新发行二进制；v1.0.0继续指向原发行提交。
+当前版本：RightDisplay1.0.1 · Build46。[下载](https://github.com/RedoRosetta/RightDisplay/releases/tag/v1.0.1)。当前为1.0.1产品更新；此前仓库整理不改变原v1.0.0发行物。
 
 | 目录/文件 | 用途 |
 |---|---|
@@ -15,8 +15,8 @@
 | docs/installation/ | [安装/卸载](installation/INSTALLATION.md)、[隐私](installation/PRIVACY.md) |
 | docs/development/ | [构建](development/BUILDING.md)、[架构](development/ARCHITECTURE.md)、[签名](development/SIGNING.md)、截图说明 |
 | docs/licensing/ | 第三方清单、品牌/权属、中文许可解释、LGPL替换说明 |
-| docs/releases/ | 当前1.0发布说明；旧版本专属说明归档 |
-| compliance/ | 当前有效SBOM、许可来源/权利记录和Build45实际载荷证据 |
+| docs/releases/ | 当前1.0.1及已发布1.0说明；旧版本专属说明归档 |
+| compliance/ | 当前有效SBOM、许可来源/权利记录和当前Build46实际载荷证据 |
 | third_party/ | 上游原许可、notice、原生来源资料，不删除重复但独立必需的声明 |
 | release-assets/Right-Display-0.1-Beta-compliance/ | 名称虽旧，当前Helper脚本仍读取其中的对应源码和许可证，必须保留位置 |
 | archive/ | [历史索引](../archive/README.md)：旧说明、截图和阶段报告，不重复存放完整历史源码 |
